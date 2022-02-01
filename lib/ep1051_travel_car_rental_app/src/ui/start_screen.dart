@@ -12,7 +12,22 @@ class StartScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: Stack(
-              children: [],
+              children: [
+                Positioned(
+                  child: Text(
+                    "DON'T SIT AT HOME. GO\nFOR\nA RIDE!",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontSize: 90,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  left: 16,
+                  top: 16,
+                  right: 16,
+                  bottom: 0,
+                )
+              ],
             )),
             Padding(
               padding: const EdgeInsets.only(bottom: 32, left: 16, right: 16, top: 24),
