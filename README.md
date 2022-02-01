@@ -7,7 +7,7 @@
 - by Conceptzilla
 - https://dribbble.com/shots/17393850-Travel-Car-Rental-App-Concept/attachments/12518700?mode=media
 
-<img src="https://cdn.dribbble.com/users/1963775/screenshots/17393850/media/51494a11e05f39f1e9c5eb298f884adf.png", width = 400>
+<img src="https://cdn.dribbble.com/users/1963775/screenshots/17393850/media/51494a11e05f39f1e9c5eb298f884adf.png", width = 400 />
 
 
 A new Flutter Notebook project.
