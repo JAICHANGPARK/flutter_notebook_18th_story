@@ -10,14 +10,16 @@ class StartScreen extends StatelessWidget {
         children: [
           Expanded(child: Stack()),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.only(bottom: 32, left: 16, right: 16, top: 24),
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12,),
-              decoration:  BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(24)
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 12,
               ),
-
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(24),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
@@ -25,6 +27,7 @@ class StartScreen extends StatelessWidget {
                     "Get Started",
                     style: TextStyle(
                       color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   Icon(
