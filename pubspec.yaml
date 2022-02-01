@@ -17,7 +17,7 @@ dependencies:
   json_annotation: any
 
   fl_chart: any
-  badge: any
+#  badge: any
 
 dev_dependencies:
   flutter_test:
