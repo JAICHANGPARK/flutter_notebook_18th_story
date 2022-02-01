@@ -11,12 +11,23 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.4
+  google_fonts: any
+  flutter_riverpod: any
+  freezed_annotation: any
+  json_annotation: any
+
+  fl_chart: any
+  badge: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.4
+  build_runner: any
+  freezed: any
+  json_serializable: any
+
 
 flutter:
 
