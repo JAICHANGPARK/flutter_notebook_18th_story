@@ -12,11 +12,26 @@ class StartScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12,),
+              decoration:  BoxDecoration(
                 color: Colors.black,
+                borderRadius: BorderRadius.circular(24)
               ),
+
               child: Row(
-                children: [],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    "Get Started",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
+                  )
+                ],
               ),
             ),
           )
