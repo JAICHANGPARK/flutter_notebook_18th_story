@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
@@ -19,7 +21,10 @@ class StartScreen extends StatelessWidget {
                   child: Container(
                     height: 200,
                     width: 200,
-                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.blueAccent),
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.cyan,
+                    ),
                   ),
                 ),
                 Positioned(
@@ -28,11 +33,30 @@ class StartScreen extends StatelessWidget {
                   child: Container(
                     height: 420,
                     width: 340,
-                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.tealAccent),
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.lightGreen
+                    ),
                   ),
                 ),
-                Positioned(child: Container()),
                 Positioned(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.4),
+                    ),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                      child: Container(
+                        color: Colors.white.withOpacity(0.4),
+                      ),
+                    ),
+                  ),
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  top: 0,
+                ),
+                const Positioned(
                   left: 16,
                   top: 16,
                   right: 16,
