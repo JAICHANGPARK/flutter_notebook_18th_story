@@ -17,6 +17,7 @@ dependencies:
   json_annotation: any
 
   fl_chart: any
+  go_router: ^3.0.1
 #  badge: any
 
 dev_dependencies:
