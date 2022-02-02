@@ -68,7 +68,10 @@ class _RentalMainPageState extends State<RentalMainPage> {
                     padding: EdgeInsets.all(16.0),
                     child: Text(
                       "Popular destinations",
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                   Padding(
@@ -76,6 +79,7 @@ class _RentalMainPageState extends State<RentalMainPage> {
                     child: SizedBox(
                       height: 42,
                       child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.only(right: 16),
@@ -97,7 +101,6 @@ class _RentalMainPageState extends State<RentalMainPage> {
                             ),
                           );
                         },
-                        scrollDirection: Axis.horizontal,
                       ),
                     ),
                   ),
