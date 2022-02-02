@@ -21,16 +21,32 @@ class _RentalMainPageState extends State<RentalMainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [Text("Hi, Dreamwalker"), Spacer(), CircleAvatar()],
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: const [
+                        Text(
+                          "Hi, Dreamwalker",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Spacer(),
+                        CircleAvatar(),
+                      ],
+                    ),
                   ),
-                  Container(
-                    height: 48,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.black,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Container(
+                      height: 48,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                        ),
+                        borderRadius: BorderRadius.circular(24),
                       ),
-                      borderRadius: BorderRadius.circular(24),
                     ),
                   )
                 ],
@@ -44,7 +60,7 @@ class _RentalMainPageState extends State<RentalMainPage> {
                   children: [
                     Expanded(
                       child: Row(
-                        children: [],
+                        children: const [],
                       ),
                     ),
                     Expanded(
