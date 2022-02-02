@@ -14,17 +14,24 @@ class StartScreen extends StatelessWidget {
                 child: Stack(
               children: [
                 Positioned(
+                  left: 8,
+                  bottom: 100,
+                  child: Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.blueAccent),
+                  ),
+                ),
+                Positioned(
                   right: -16,
                   top: 48,
                   child: Container(
-                    height: 240,
-                    width: 240,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.tealAccent
-                    ),
+                    height: 420,
+                    width: 340,
+                    decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.tealAccent),
                   ),
                 ),
+                Positioned(child: Container()),
                 Positioned(
                   left: 16,
                   top: 16,
