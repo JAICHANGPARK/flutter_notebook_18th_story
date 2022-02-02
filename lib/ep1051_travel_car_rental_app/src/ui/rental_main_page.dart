@@ -12,12 +12,16 @@ class _RentalMainPageState extends State<RentalMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           children: [
             Expanded(
                 child: Container(
-              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24)),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(24),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -41,20 +45,68 @@ class _RentalMainPageState extends State<RentalMainPage> {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Container(
                       height: 48,
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.black,
                         ),
                         borderRadius: BorderRadius.circular(24),
                       ),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          suffixIcon: Icon(Icons.search),
+                          hintText: "Where do you want to go?",
+                        ),
+                      ),
                     ),
-                  )
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "Popular destinations",
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: SizedBox(
+                      height: 42,
+                      child: ListView.builder(
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 16),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 32,
+                                  width: 32,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 12,
+                                ),
+                                const Text("Norway")
+                              ],
+                            ),
+                          );
+                        },
+                        scrollDirection: Axis.horizontal,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             )),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
+              child: SizedBox(
                 height: 64,
                 child: Row(
                   children: [
