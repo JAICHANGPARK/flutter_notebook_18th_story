@@ -12,7 +12,19 @@ class StartScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: Stack(
-              children: const [
+              children: [
+                Positioned(
+                  right: -16,
+                  top: 48,
+                  child: Container(
+                    height: 240,
+                    width: 240,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.tealAccent
+                    ),
+                  ),
+                ),
                 Positioned(
                   left: 16,
                   top: 16,
@@ -26,8 +38,7 @@ class StartScreen extends StatelessWidget {
                       fontWeight: FontWeight.w900,
                     ),
                   ),
-
-                )
+                ),
               ],
             )),
             Padding(
