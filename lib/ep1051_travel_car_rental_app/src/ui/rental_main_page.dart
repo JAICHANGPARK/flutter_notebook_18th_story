@@ -127,8 +127,16 @@ class _RentalMainPageState extends State<RentalMainPage> {
                           ),
                           child: Row(
                             children: [
-                              Expanded(child: Placeholder(), flex: 3,),
-                              Expanded(child: Placeholder(), flex: 6,)
+                              Expanded(child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                ),
+                              ), flex: 3,),
+                              Expanded(child: Container(
+                                decoration: BoxDecoration(
+
+                                ),
+                              ), flex: 6,)
                             ],
                           ),
                         )
