@@ -161,7 +161,9 @@ class _RentalMainPageState extends State<RentalMainPage> {
                                           color: Colors.white,
                                         ),
                                       ),
-                                      SizedBox(height: 4,),
+                                      SizedBox(
+                                        height: 4,
+                                      ),
                                       Text(
                                         "344 km",
                                         style: TextStyle(
@@ -180,7 +182,7 @@ class _RentalMainPageState extends State<RentalMainPage> {
                                       topRight: Radius.circular(8),
                                       bottomRight: Radius.circular(8),
                                     ),
-                                    image: const DecorationImage(
+                                    image: DecorationImage(
                                       image: CachedNetworkImageProvider(
                                         "https://cdn.pixabay.com/photo/2015/05/18/23/53/backpacker-772991__340.jpg",
                                       ),
@@ -195,6 +197,27 @@ class _RentalMainPageState extends State<RentalMainPage> {
                         )
                       ],
                     ),
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "Most Popular cars",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 42,
+                        child: ListView.builder(
+                          itemBuilder: (context, index) => Container(),
+                          scrollDirection: Axis.horizontal,
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
