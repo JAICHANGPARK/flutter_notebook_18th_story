@@ -110,14 +110,14 @@ class _RentalMainPageState extends State<RentalMainPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Trip collection",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 12,
                         ),
                         Container(
@@ -130,16 +130,53 @@ class _RentalMainPageState extends State<RentalMainPage> {
                             children: [
                               Expanded(
                                 child: Container(
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.black,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(16),
+                                      bottomLeft: Radius.circular(16),
+                                    ),
+                                  ),
+                                  padding: const EdgeInsets.all(12),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        'Northern',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Norway',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        "Distance",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      SizedBox(height: 4,),
+                                      Text(
+                                        "344 km",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                    ],
                                   ),
                                 ),
                                 flex: 3,
                               ),
                               Expanded(
                                 child: Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
+                                  decoration: const BoxDecoration(
+                                    image: const DecorationImage(
                                       image: CachedNetworkImageProvider(
                                         "https://cdn.pixabay.com/photo/2015/05/18/23/53/backpacker-772991__340.jpg",
                                       ),
