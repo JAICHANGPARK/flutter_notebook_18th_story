@@ -120,10 +120,15 @@ class _RentalMainPageState extends State<RentalMainPage> {
                           height: 12,
                         ),
                         Container(
-                          height: 120,
+                          height: 150,
                           decoration: BoxDecoration(
                             color: Colors.lightGreen,
                             borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Row(
+                            children: [
+
+                            ],
                           ),
                         )
                       ],
