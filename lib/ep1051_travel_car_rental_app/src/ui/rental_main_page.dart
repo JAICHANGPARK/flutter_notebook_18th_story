@@ -217,15 +217,15 @@ class _RentalMainPageState extends State<RentalMainPage> {
                           height: 8,
                         ),
                         SizedBox(
-                          height: 58,
+                          height: 64,
                           child: ListView.builder(
                             itemBuilder: (context, index) => Padding(
-                              padding: const EdgeInsets.only(right: 8),
+                              padding: const EdgeInsets.only(right: 12),
                               child: Container(
                                 width: 160,
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.black),
-                                  borderRadius: BorderRadius.circular(8),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                                 padding: const EdgeInsets.only(left: 8),
                                 child: Row(
@@ -234,8 +234,12 @@ class _RentalMainPageState extends State<RentalMainPage> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
-                                        const Text("New"),
-                                        const Text("DW01"),
+                                        const Text("New",style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                        const Text("DW01", style: TextStyle(
+                                          fontSize: 12,
+                                        ),),
                                       ],
                                     ),
                                     SizedBox(
