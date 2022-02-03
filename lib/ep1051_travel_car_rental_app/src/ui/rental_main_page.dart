@@ -127,7 +127,8 @@ class _RentalMainPageState extends State<RentalMainPage> {
                           ),
                           child: Row(
                             children: [
-
+                              Expanded(child: Placeholder()),
+                              Expanded(child: Placeholder(),)
                             ],
                           ),
                         )
