@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class RentalMainPage extends StatefulWidget {
@@ -127,16 +128,27 @@ class _RentalMainPageState extends State<RentalMainPage> {
                           ),
                           child: Row(
                             children: [
-                              Expanded(child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.black,
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                  ),
                                 ),
-                              ), flex: 3,),
-                              Expanded(child: Container(
-                                decoration: BoxDecoration(
-
+                                flex: 3,
+                              ),
+                              Expanded(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                        "https://cdn.pixabay.com/photo/2015/05/18/23/53/backpacker-772991__340.jpg",
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
-                              ), flex: 6,)
+                                flex: 6,
+                              )
                             ],
                           ),
                         )
