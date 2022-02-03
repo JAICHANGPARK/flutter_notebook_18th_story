@@ -116,9 +116,13 @@ class _RentalMainPageState extends State<RentalMainPage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        SizedBox(
+                          height: 12,
+                        ),
                         Container(
                           height: 120,
                           decoration: BoxDecoration(
+                            color: Colors.lightGreen,
                             borderRadius: BorderRadius.circular(8),
                           ),
                         )
