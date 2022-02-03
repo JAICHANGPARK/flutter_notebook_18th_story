@@ -104,6 +104,19 @@ class _RentalMainPageState extends State<RentalMainPage> {
                       ),
                     ),
                   ),
+
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Trip collection"),
+                      Container(
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             )),
