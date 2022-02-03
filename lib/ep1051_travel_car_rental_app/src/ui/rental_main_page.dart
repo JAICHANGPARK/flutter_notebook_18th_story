@@ -111,14 +111,14 @@ class _RentalMainPageState extends State<RentalMainPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Trip collection",
+                          "Trip collections",
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         const SizedBox(
-                          height: 12,
+                          height: 16,
                         ),
                         Container(
                           height: 150,
@@ -133,8 +133,8 @@ class _RentalMainPageState extends State<RentalMainPage> {
                                   decoration: const BoxDecoration(
                                     color: Colors.black,
                                     borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(16),
-                                      bottomLeft: Radius.circular(16),
+                                      topLeft: Radius.circular(8),
+                                      bottomLeft: Radius.circular(8),
                                     ),
                                   ),
                                   padding: const EdgeInsets.all(12),
@@ -176,6 +176,10 @@ class _RentalMainPageState extends State<RentalMainPage> {
                               Expanded(
                                 child: Container(
                                   decoration: const BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(8),
+                                      bottomRight: Radius.circular(8),
+                                    ),
                                     image: const DecorationImage(
                                       image: CachedNetworkImageProvider(
                                         "https://cdn.pixabay.com/photo/2015/05/18/23/53/backpacker-772991__340.jpg",
