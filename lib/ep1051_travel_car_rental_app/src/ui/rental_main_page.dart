@@ -213,7 +213,22 @@ class _RentalMainPageState extends State<RentalMainPage> {
                       SizedBox(
                         height: 42,
                         child: ListView.builder(
-                          itemBuilder: (context, index) => Container(),
+                          itemBuilder: (context, index) => Container(
+                            width: 160,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Row(
+                              children: [
+                                Column(
+                                  children: [
+                                    
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
                           scrollDirection: Axis.horizontal,
                         ),
                       )
