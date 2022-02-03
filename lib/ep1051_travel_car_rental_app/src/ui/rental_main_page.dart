@@ -201,38 +201,60 @@ class _RentalMainPageState extends State<RentalMainPage> {
                   const SizedBox(
                     height: 24,
                   ),
-                  Column(
-                    children: [
-                      Text(
-                        "Most Popular cars",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 42,
-                        child: ListView.builder(
-                          itemBuilder: (context, index) => Container(
-                            width: 160,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Row(
-                              children: [
-                                Column(
-                                  children: [
-                                    
-                                  ],
-                                )
-                              ],
-                            ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Most Popular cars",
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
-                          scrollDirection: Axis.horizontal,
                         ),
-                      )
-                    ],
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        SizedBox(
+                          height: 58,
+                          child: ListView.builder(
+                            itemBuilder: (context, index) => Padding(
+                              padding: const EdgeInsets.only(right: 8),
+                              child: Container(
+                                width: 160,
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                padding: const EdgeInsets.only(left: 8),
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Text("New"),
+                                        const Text("DW01"),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Expanded(
+                                        child: CachedNetworkImage(
+                                      imageUrl:
+                                          "https://cdn.pixabay.com/photo/2013/07/12/12/56/ford-mustang-146580_960_720.png",
+                                    ))
+                                  ],
+                                ),
+                              ),
+                            ),
+                            scrollDirection: Axis.horizontal,
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
