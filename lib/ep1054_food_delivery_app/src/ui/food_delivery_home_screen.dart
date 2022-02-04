@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class FoodDeliveryHomeScreen extends StatefulWidget {
   const FoodDeliveryHomeScreen({Key? key}) : super(key: key);
@@ -26,11 +27,31 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                   ),
                   child: Row(
                     children: [
-                      Expanded(child: Placeholder(),flex: 2,),
-                      Expanded(child: Placeholder(), flex: 2,),
-                      Expanded(child: Placeholder(), flex: 4,),
-                      Expanded(child: Placeholder(),flex: 2,),
-                      Expanded(child: Placeholder(),flex: 2,),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            Icon(Ionicons.home_outline),
+                            Text("Home"),
+                          ],
+                        ),
+                        flex: 2,
+                      ),
+                      Expanded(
+                        child: Placeholder(),
+                        flex: 2,
+                      ),
+                      Expanded(
+                        child: Placeholder(),
+                        flex: 4,
+                      ),
+                      Expanded(
+                        child: Placeholder(),
+                        flex: 2,
+                      ),
+                      Expanded(
+                        child: Placeholder(),
+                        flex: 2,
+                      ),
                     ],
                   ),
                 )),
@@ -52,10 +73,7 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                     backgroundColor: Colors.deepPurpleAccent,
                     child: Text(
                       "E",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 32
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 32),
                     ),
                   ),
                 ),
