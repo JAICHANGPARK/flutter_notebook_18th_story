@@ -25,7 +25,13 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                     color: Colors.white,
                   ),
                   child: Row(
-                    children: [],
+                    children: [
+                      Expanded(child: Placeholder(),flex: 2,),
+                      Expanded(child: Placeholder(), flex: 2,),
+                      Expanded(child: Placeholder(), flex: 4,),
+                      Expanded(child: Placeholder(),flex: 2,),
+                      Expanded(child: Placeholder(),flex: 2,),
+                    ],
                   ),
                 )),
             Positioned(
