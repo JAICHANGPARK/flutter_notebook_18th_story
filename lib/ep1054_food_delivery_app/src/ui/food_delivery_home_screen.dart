@@ -31,11 +31,11 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
             Positioned(
               left: 0,
               right: 0,
-              bottom: 24,
+              bottom: 16,
               child: Center(
                 child: Container(
-                  height: 72,
-                  width: 72,
+                  height: 84,
+                  width: 84,
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.white,
