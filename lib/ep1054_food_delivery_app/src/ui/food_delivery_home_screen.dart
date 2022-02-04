@@ -22,33 +22,46 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                 right: 0,
                 child: Container(
                   height: 64,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Row(
                     children: [
                       Expanded(
                         child: Column(
-                          children: [
-                            Icon(Ionicons.home_outline),
-                            Text("Home"),
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Ionicons.home_outline,
+                              color: Colors.deepPurpleAccent,
+                            ),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            Text(
+                              "Home",
+                              style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.deepPurpleAccent,
+                              ),
+                            ),
                           ],
                         ),
                         flex: 2,
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Placeholder(),
                         flex: 2,
                       ),
-                      Expanded(
-                        child: Placeholder(),
+                      const Expanded(
+                        child: const Placeholder(),
                         flex: 4,
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Placeholder(),
                         flex: 2,
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Placeholder(),
                         flex: 2,
                       ),
@@ -63,17 +76,17 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                 child: Container(
                   height: 84,
                   width: 84,
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(8),
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.deepPurpleAccent,
-                    child: Text(
+                    child: const Text(
                       "E",
-                      style: TextStyle(color: Colors.white, fontSize: 32),
+                      style: const TextStyle(color: Colors.white, fontSize: 32),
                     ),
                   ),
                 ),
