@@ -24,12 +24,19 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
               child: Column(
                 children: [
                   Expanded(
-                    flex: 4,
-                    child: Placeholder(),),
-                  Expanded(
+                    flex: 5,
+                    child: Column(
+                      children: const [
+                        Expanded(child: Placeholder()),
+                        Expanded(child: Placeholder()),
+                        Expanded(child: Placeholder()),
+                      ],
+                    ),
+                  ),
+                  const Expanded(
                     flex: 10,
-                    child: Placeholder(),),
-
+                    child: Placeholder(),
+                  ),
                 ],
               ),
             ),
@@ -155,9 +162,9 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                   child: const CircleAvatar(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.deepPurpleAccent,
-                    child: const Text(
+                    child: Text(
                       "E",
-                      style: const TextStyle(color: Colors.white, fontSize: 32),
+                      style: TextStyle(color: Colors.white, fontSize: 32),
                     ),
                   ),
                 ),
