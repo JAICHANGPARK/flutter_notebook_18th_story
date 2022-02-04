@@ -233,16 +233,16 @@ class _RentalMainPageState extends State<RentalMainPage> {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        const Text("New",style: TextStyle(
+                                      children: const [
+                                        Text("New",style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                         ),),
-                                        const Text("DW01", style: TextStyle(
+                                        Text("DW01", style: TextStyle(
                                           fontSize: 12,
                                         ),),
                                       ],
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 8,
                                     ),
                                     Expanded(
