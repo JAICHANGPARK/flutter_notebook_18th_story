@@ -17,6 +17,23 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
         child: Stack(
           children: [
             Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0,
+              top: 0,
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 4,
+                    child: Placeholder(),),
+                  Expanded(
+                    flex: 10,
+                    child: Placeholder(),),
+
+                ],
+              ),
+            ),
+            Positioned(
                 bottom: 0,
                 left: 0,
                 right: 0,
@@ -49,7 +66,7 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                         ),
                         flex: 2,
                       ),
-                       Expanded(
+                      Expanded(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
@@ -71,9 +88,9 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                         ),
                         flex: 2,
                       ),
-                       Expanded(
-                        child:  Container(),
-                        flex: 4,
+                      Expanded(
+                        child: Container(),
+                        flex: 3,
                       ),
                       Expanded(
                         child: Column(
