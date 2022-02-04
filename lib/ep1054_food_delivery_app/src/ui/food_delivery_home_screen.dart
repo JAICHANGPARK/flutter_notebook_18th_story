@@ -11,6 +11,7 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: SafeArea(
         child: Stack(
           children: [
@@ -36,6 +37,10 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                   height: 72,
                   width: 72,
                   padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
                   child: CircleAvatar(
                     backgroundColor: Colors.deepPurpleAccent,
                   ),
