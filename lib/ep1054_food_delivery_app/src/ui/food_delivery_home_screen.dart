@@ -49,8 +49,26 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                         ),
                         flex: 2,
                       ),
-                      const Expanded(
-                        child: Placeholder(),
+                       Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Ionicons.compass_outline,
+                              // color: Colors.deepPurpleAccent,
+                            ),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            Text(
+                              "Offers",
+                              style: TextStyle(
+                                fontSize: 10,
+                                // color: Colors.deepPurpleAccent,
+                              ),
+                            ),
+                          ],
+                        ),
                         flex: 2,
                       ),
                       const Expanded(
