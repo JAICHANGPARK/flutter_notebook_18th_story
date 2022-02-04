@@ -42,7 +42,15 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                     shape: BoxShape.circle,
                   ),
                   child: CircleAvatar(
+                    foregroundColor: Colors.white,
                     backgroundColor: Colors.deepPurpleAccent,
+                    child: Text(
+                      "E",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32
+                      ),
+                    ),
                   ),
                 ),
               ),
