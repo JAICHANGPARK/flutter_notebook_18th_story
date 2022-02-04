@@ -71,16 +71,52 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                         ),
                         flex: 2,
                       ),
-                      const Expanded(
-                        child: const Placeholder(),
+                       Expanded(
+                        child:  Container(),
                         flex: 4,
                       ),
-                      const Expanded(
-                        child: Placeholder(),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Ionicons.bookmark_outline,
+                              // color: Colors.deepPurpleAccent,
+                            ),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            Text(
+                              "Saved",
+                              style: TextStyle(
+                                fontSize: 10,
+                                // color: Colors.deepPurpleAccent,
+                              ),
+                            ),
+                          ],
+                        ),
                         flex: 2,
                       ),
-                      const Expanded(
-                        child: Placeholder(),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Ionicons.bag_handle_outline,
+                              // color: Colors.deepPurpleAccent,
+                            ),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            Text(
+                              "Cart",
+                              style: TextStyle(
+                                fontSize: 10,
+                                // color: Colors.deepPurpleAccent,
+                              ),
+                            ),
+                          ],
+                        ),
                         flex: 2,
                       ),
                     ],
