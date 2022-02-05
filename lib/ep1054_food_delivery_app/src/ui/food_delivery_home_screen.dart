@@ -13,7 +13,7 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
           children: [
