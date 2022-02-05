@@ -88,9 +88,9 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                 color: Colors.grey[100],
                                 borderRadius: BorderRadius.circular(24),
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                               child: Row(
-                                children: [
+                                children: const [
                                   Expanded(
                                     child: TextField(
                                       decoration: InputDecoration(
@@ -109,8 +109,8 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                             ),
                           ),
                         ),
-                        Expanded(
-                          child: Placeholder(),
+                        const Expanded(
+                          child: const Placeholder(),
                         ),
                       ],
                     ),
