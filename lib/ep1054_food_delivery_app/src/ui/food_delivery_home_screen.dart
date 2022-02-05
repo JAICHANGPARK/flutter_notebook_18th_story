@@ -29,35 +29,57 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                       children: [
                         Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 12),
-                              child: Row(
-                          children: [
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: Row(
+                            children: [
                               Expanded(
                                   child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: CircleAvatar(
-                                backgroundColor: Colors.grey[100],
-                                child: const Icon(
+                                alignment: Alignment.centerLeft,
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.grey[100],
+                                  child: const Icon(
                                     Icons.menu,
+                                  ),
                                 ),
-                              ),
-                                  )),
+                              )),
                               Expanded(
                                   child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      const Text("LOCATION"),
-                                      const Icon(Icons.expand_more),
+                                      const Text(
+                                        "LOCATION",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                      ),
+                                      const Icon(
+                                        Icons.expand_more,
+                                        color: Colors.deepPurpleAccent,
+                                      ),
                                     ],
                                   ),
-                                  const Text("Seoul, Korea"),
+                                  const Text(
+                                    "Seoul, Korea",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                    ),
+                                  ),
                                 ],
                               )),
-                              const Expanded(child: CircleAvatar()),
-                          ],
-                        ),
-                            )),
+                              const Expanded(
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: CircleAvatar(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )),
                         const Expanded(child: const Placeholder()),
                         const Expanded(child: const Placeholder()),
                       ],
