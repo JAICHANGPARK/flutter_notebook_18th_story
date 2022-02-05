@@ -26,10 +26,40 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                   Expanded(
                     flex: 5,
                     child: Column(
-                      children: const [
-                        Expanded(child: Placeholder()),
-                        Expanded(child: Placeholder()),
-                        Expanded(child: Placeholder()),
+                      children: [
+                        Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 12),
+                              child: Row(
+                          children: [
+                              Expanded(
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: CircleAvatar(
+                                backgroundColor: Colors.grey[100],
+                                child: const Icon(
+                                    Icons.menu,
+                                ),
+                              ),
+                                  )),
+                              Expanded(
+                                  child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Text("LOCATION"),
+                                      const Icon(Icons.expand_more),
+                                    ],
+                                  ),
+                                  const Text("Seoul, Korea"),
+                                ],
+                              )),
+                              const Expanded(child: CircleAvatar()),
+                          ],
+                        ),
+                            )),
+                        const Expanded(child: const Placeholder()),
+                        const Expanded(child: const Placeholder()),
                       ],
                     ),
                   ),
