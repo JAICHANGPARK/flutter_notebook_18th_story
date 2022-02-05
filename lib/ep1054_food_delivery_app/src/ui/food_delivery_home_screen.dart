@@ -81,19 +81,34 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                           ),
                         )),
                         Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
                             child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                          ),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: TextField(),
+                              decoration: BoxDecoration(
+                                color: Colors.grey[100],
+                                borderRadius: BorderRadius.circular(24),
                               ),
-                              CircleAvatar()
-                            ],
+                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        hintText: "Search Restaurant of Food items"
+                                      ),
+                                    ),
+                                  ),
+                                  CircleAvatar(
+                                    child: Icon(Icons.tune),
+                                    backgroundColor: Colors.white,
+                                    foregroundColor: Colors.purpleAccent,
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
-                        )),
+                        ),
                         Expanded(
                           child: Placeholder(),
                         ),
