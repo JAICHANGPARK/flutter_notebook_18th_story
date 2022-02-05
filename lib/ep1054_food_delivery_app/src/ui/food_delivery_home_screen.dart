@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -37,6 +38,7 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                 alignment: Alignment.centerLeft,
                                 child: CircleAvatar(
                                   backgroundColor: Colors.grey[100],
+                                  foregroundColor: Colors.black,
                                   child: const Icon(
                                     Icons.menu,
                                   ),
@@ -94,9 +96,9 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                   Expanded(
                                     child: TextField(
                                       decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText: "Search Restaurant of Food items"
-                                      ),
+                                          icon: Icon(Icons.search),
+                                          border: InputBorder.none,
+                                          hintText: "Search Restaurant of Food items"),
                                     ),
                                   ),
                                   CircleAvatar(
@@ -109,8 +111,17 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                             ),
                           ),
                         ),
-                        const Expanded(
-                          child: const Placeholder(),
+                        Expanded(
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.deepPurple,
+                                foregroundColor: Colors.white,
+                                child: Text("All"),
+                              )
+                            ],
+                          ),
                         ),
                       ],
                     ),
