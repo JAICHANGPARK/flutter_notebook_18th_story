@@ -48,15 +48,15 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                 children: [
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const Text(
+                                    children: const [
+                                      Text(
                                         "LOCATION",
                                         style: TextStyle(
                                           fontSize: 12,
                                           color: Colors.deepPurpleAccent,
                                         ),
                                       ),
-                                      const Icon(
+                                      Icon(
                                         Icons.expand_more,
                                         color: Colors.deepPurpleAccent,
                                       ),
@@ -80,8 +80,23 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                             ],
                           ),
                         )),
-                        const Expanded(child: const Placeholder()),
-                        const Expanded(child: const Placeholder()),
+                        Expanded(
+                            child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                          ),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: TextField(),
+                              ),
+                              CircleAvatar()
+                            ],
+                          ),
+                        )),
+                        Expanded(
+                          child: Placeholder(),
+                        ),
                       ],
                     ),
                   ),
