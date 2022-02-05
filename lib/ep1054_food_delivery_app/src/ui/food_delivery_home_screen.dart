@@ -112,15 +112,35 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                           ),
                         ),
                         Expanded(
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.deepPurple,
-                                foregroundColor: Colors.white,
-                                child: Text("All"),
-                              )
-                            ],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 12, top: 8, bottom: 8),
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                CircleAvatar(
+                                  backgroundColor: Colors.deepPurple,
+                                  foregroundColor: Colors.white,
+                                  child: Text("All"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                    decoration:
+                                        BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(12)),
+                                    child: Row(
+                                      children: [
+                                        Text("🥤"),
+                                        SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text("Drink")
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ],
