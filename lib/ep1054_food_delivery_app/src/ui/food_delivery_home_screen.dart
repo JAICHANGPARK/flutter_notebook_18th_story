@@ -117,24 +117,106 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: [
-                                CircleAvatar(
+                                const CircleAvatar(
                                   backgroundColor: Colors.deepPurple,
                                   foregroundColor: Colors.white,
                                   child: Text("All"),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 12,
+                                  ),
                                   child: Container(
-                                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                    decoration:
-                                        BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(12)),
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 4,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[100],
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
                                     child: Row(
-                                      children: [
-                                        Text("🥤"),
+                                      children: const [
+                                        CircleAvatar(
+                                          child: Text("🥤"),
+                                          backgroundColor: Colors.white,
+                                        ),
                                         SizedBox(
                                           width: 8,
                                         ),
-                                        Text("Drink")
+                                        Text(
+                                          "Drink",
+                                          style: TextStyle(
+                                            color: Colors.purpleAccent,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 12,
+                                  ),
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 4,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[100],
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    child: Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          child: Text("🍔"),
+                                          backgroundColor: Colors.white,
+                                        ),
+                                        SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          "Burger",
+                                          style: TextStyle(
+                                            color: Colors.orange,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 12,
+                                  ),
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 4,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[100],
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    child: Row(
+                                      children: const [
+                                        CircleAvatar(
+                                          child: Text("🍔"),
+                                          backgroundColor: Colors.white,
+                                        ),
+                                        SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          "Burger",
+                                          style: TextStyle(
+                                            color: Colors.orange,
+                                          ),
+                                        )
                                       ],
                                     ),
                                   ),
