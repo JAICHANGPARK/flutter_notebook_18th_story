@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
@@ -255,7 +256,6 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                             SizedBox(
                               height: 200,
                               child: Container(
-                                color: Colors.blueAccent,
                                 child: ListView.builder(
                                   scrollDirection: Axis.horizontal,
                                   itemBuilder: (context, index) {
@@ -264,8 +264,15 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                       child: SizedBox(
                                         width: 240,
                                         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                          const Expanded(
-                                            child: Placeholder(),
+                                          Expanded(
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: CachedNetworkImageProvider(
+                                                        "https://cdn.pixabay.com/photo/2017/01/31/09/30/raspberries-2023404__340.jpg"),
+                                                    fit: BoxFit.cover),
+                                              ),
+                                            ),
                                           ),
                                           const SizedBox(
                                             height: 8,
