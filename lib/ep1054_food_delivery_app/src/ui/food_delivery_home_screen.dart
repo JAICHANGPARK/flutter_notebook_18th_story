@@ -261,7 +261,14 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                     Expanded(child: Placeholder()),
                                     Column(
                                       children: [
-                                        
+                                        Text("The Fat Duck"),
+                                        Text(
+                                          "Burger - Plater - Rice - Chickens",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.grey,
+                                          ),
+                                        )
                                       ],
                                     )
                                   ],
