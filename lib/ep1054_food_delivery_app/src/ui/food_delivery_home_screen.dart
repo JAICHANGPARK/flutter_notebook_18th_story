@@ -231,18 +231,26 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                   Expanded(
                     flex: 10,
                     child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Text("Restaurant Near You"),
-                              TextButton(
-                                onPressed: () {},
-                                child: Text("View All"),
-                              )
-                            ],
-                          )
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 16, top: 0),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  "Restaurant Near You",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {},
+                                  child: Text("View All"),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
