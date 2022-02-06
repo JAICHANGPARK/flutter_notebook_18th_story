@@ -228,9 +228,19 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                       ],
                     ),
                   ),
-                  const Expanded(
+                   Expanded(
                     flex: 10,
-                    child: Placeholder(),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
