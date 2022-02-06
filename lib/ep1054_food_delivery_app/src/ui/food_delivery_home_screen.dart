@@ -253,9 +253,19 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                               ],
                             ),
                             SizedBox(
-                              height: 360,
+                              height: 200,
                               child: Container(
                                 color: Colors.blueAccent,
+                                child: Column(
+                                  children: [
+                                    Expanded(child: Placeholder()),
+                                    Column(
+                                      children: [
+                                        
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             )
                           ],
