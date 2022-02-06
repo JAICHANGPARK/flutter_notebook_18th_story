@@ -260,18 +260,40 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                   scrollDirection: Axis.horizontal,
                                   itemBuilder: (context, index) {
                                     return SizedBox(
-                                      width: 200,
-                                      child: Column(children: [
-                                        const Expanded(child: Placeholder()),
+                                      width: 240,
+                                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                                        const Expanded(
+                                          child: Placeholder(),
+                                        ),
                                         Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            const Text("The Fat Duck"),
-                                            const Text(
+                                            Text("The Fat Duck"),
+                                            Text(
                                               "Burger - Plater - Rice - Chickens",
-                                              style: const TextStyle(
+                                              style: TextStyle(
                                                 fontSize: 12,
                                                 color: Colors.grey,
                                               ),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.delivery_dining,
+                                                  color: Colors.purpleAccent,
+                                                  size: 16,
+                                                ),
+                                                Text("Free Delivery"),
+                                                SizedBox(
+                                                  width: 16,
+                                                ),
+                                                Icon(
+                                                  Icons.timer,
+                                                  color: Colors.purpleAccent,
+                                                  size: 16,
+                                                ),
+                                                Text("15-20 mins"),
+                                              ],
                                             )
                                           ],
                                         )
