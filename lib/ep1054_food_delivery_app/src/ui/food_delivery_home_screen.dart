@@ -259,9 +259,38 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                               child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 itemBuilder: (context, index) {
-                                  return Padding(
-                                    padding: const EdgeInsets.only(right: 8),
-                                    child:RestaurantCardComponent(),
+                                  return const Padding(
+                                    padding: EdgeInsets.only(right: 8),
+                                    child:const RestaurantCardComponent(),
+                                  );
+                                },
+                              ),
+                            ),
+                            const SizedBox(height: 16,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text(
+                                  "Popular Restaurant",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {},
+                                  child: const Text("View All"),
+                                  style: TextButton.styleFrom(primary: Colors.deepPurpleAccent),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 200,
+                              child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  return const Padding(
+                                    padding: EdgeInsets.only(right: 8),
+                                    child:const RestaurantCardComponent(),
                                   );
                                 },
                               ),
