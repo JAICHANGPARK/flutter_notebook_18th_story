@@ -280,7 +280,12 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                           Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
-                                              const Text("The Fat Duck"),
+                                              const Text(
+                                                "The Fat Duck",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
                                               const SizedBox(
                                                 height: 8,
                                               ),
@@ -301,7 +306,10 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                                     color: Colors.purpleAccent,
                                                     size: 16,
                                                   ),
-                                                  const Text("Free Delivery"),
+                                                  const Text(
+                                                    "Free Delivery",
+                                                    style: TextStyle(fontSize: 12),
+                                                  ),
                                                   const SizedBox(
                                                     width: 16,
                                                   ),
@@ -310,7 +318,10 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                                     color: Colors.purpleAccent,
                                                     size: 16,
                                                   ),
-                                                  const Text("15-20 mins"),
+                                                  const Text(
+                                                    "15-20 mins",
+                                                    style: TextStyle(fontSize: 12),
+                                                  ),
                                                 ],
                                               )
                                             ],
