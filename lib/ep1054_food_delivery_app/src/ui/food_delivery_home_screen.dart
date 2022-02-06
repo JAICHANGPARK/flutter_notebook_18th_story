@@ -248,11 +248,15 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                 TextButton(
                                   onPressed: () {},
                                   child: const Text("View All"),
-                                  style: TextButton.styleFrom(
-                                    primary: Colors.deepPurpleAccent
-                                  ),
+                                  style: TextButton.styleFrom(primary: Colors.deepPurpleAccent),
                                 )
                               ],
+                            ),
+                            SizedBox(
+                              height: 360,
+                              child: Container(
+                                color: Colors.blueAccent,
+                              ),
                             )
                           ],
                         ),
