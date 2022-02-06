@@ -281,23 +281,25 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
                                                         Container(
+                                                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
                                                           decoration: BoxDecoration(
                                                               color: Colors.white,
-                                                              borderRadius: BorderRadius.circular(8)),
+                                                              borderRadius: BorderRadius.circular(16)),
                                                           child: Row(
                                                             children: [
-                                                              Text(
+                                                              const Text(
                                                                 "4.5",
-                                                                style: TextStyle(
+                                                                style: const TextStyle(
                                                                     fontWeight: FontWeight.bold, fontSize: 12),
                                                               ),
-                                                              Icon(
+                                                              const Icon(
                                                                 Icons.star,
                                                                 color: Colors.orangeAccent,
+                                                                size: 11,
                                                               ),
-                                                              Text(
+                                                              const Text(
                                                                 "(100+)",
-                                                                style: TextStyle(
+                                                                style: const TextStyle(
                                                                   fontSize: 10,
                                                                   color: Colors.grey,
                                                                 ),
@@ -305,7 +307,7 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                                             ],
                                                           ),
                                                         ),
-                                                        CircleAvatar(
+                                                        const CircleAvatar(
                                                           radius: 12,
                                                           backgroundColor: Colors.white,
                                                           foregroundColor: Colors.black,
@@ -316,9 +318,9 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                                         )
                                                       ],
                                                     ),
-                                                    left: 6,
-                                                    right: 6,
-                                                    top: 6,
+                                                    left: 8,
+                                                    right: 8,
+                                                    top: 8,
                                                   )
                                                 ],
                                               ),
