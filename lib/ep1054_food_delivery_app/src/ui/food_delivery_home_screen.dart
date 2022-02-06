@@ -257,22 +257,26 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                               child: Container(
                                 color: Colors.blueAccent,
                                 child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
                                   itemBuilder: (context, index) {
-                                    return Column(children: [
-                                      Expanded(child: Placeholder()),
-                                      Column(
-                                        children: [
-                                          Text("The Fat Duck"),
-                                          Text(
-                                            "Burger - Plater - Rice - Chickens",
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.grey,
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                    ]);
+                                    return SizedBox(
+                                      width: 200,
+                                      child: Column(children: [
+                                        const Expanded(child: Placeholder()),
+                                        Column(
+                                          children: [
+                                            const Text("The Fat Duck"),
+                                            const Text(
+                                              "Burger - Plater - Rice - Chickens",
+                                              style: const TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.grey,
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ]),
+                                    );
                                   },
                                 ),
                               ),
