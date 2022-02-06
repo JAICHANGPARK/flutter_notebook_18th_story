@@ -265,16 +265,25 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                         const Expanded(
                                           child: Placeholder(),
                                         ),
+                                        SizedBox(
+                                          height: 8,
+                                        ),
                                         Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text("The Fat Duck"),
+                                            SizedBox(
+                                              height: 8,
+                                            ),
                                             Text(
                                               "Burger - Plater - Rice - Chickens",
                                               style: TextStyle(
                                                 fontSize: 12,
                                                 color: Colors.grey,
                                               ),
+                                            ),
+                                            SizedBox(
+                                              height: 8,
                                             ),
                                             Row(
                                               children: [
