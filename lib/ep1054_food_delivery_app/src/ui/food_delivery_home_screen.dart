@@ -237,8 +237,9 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                         child: Column(
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   "Restaurant Near You",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -246,7 +247,10 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                 ),
                                 TextButton(
                                   onPressed: () {},
-                                  child: Text("View All"),
+                                  child: const Text("View All"),
+                                  style: TextButton.styleFrom(
+                                    primary: Colors.deepPurpleAccent
+                                  ),
                                 )
                               ],
                             )
