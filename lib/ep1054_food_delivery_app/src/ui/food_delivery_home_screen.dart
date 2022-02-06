@@ -267,15 +267,65 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                           Expanded(
                                             child: Container(
                                               decoration: BoxDecoration(
-                                                image: DecorationImage(
+                                                borderRadius: BorderRadius.circular(8),
+                                                image: const DecorationImage(
                                                     image: CachedNetworkImageProvider(
-                                                        "https://cdn.pixabay.com/photo/2017/01/31/09/30/raspberries-2023404__340.jpg"),
+                                                      "https://cdn.pixabay.com/photo/2017/01/31/09/30/raspberries-2023404__340.jpg",
+                                                    ),
                                                     fit: BoxFit.cover),
+                                              ),
+                                              child: Stack(
+                                                children: [
+                                                  Positioned(
+                                                    child: Row(
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                      children: [
+                                                        Container(
+                                                          decoration: BoxDecoration(
+                                                              color: Colors.white,
+                                                              borderRadius: BorderRadius.circular(8)),
+                                                          child: Row(
+                                                            children: [
+                                                              Text(
+                                                                "4.5",
+                                                                style: TextStyle(
+                                                                    fontWeight: FontWeight.bold, fontSize: 12),
+                                                              ),
+                                                              Icon(
+                                                                Icons.star,
+                                                                color: Colors.orangeAccent,
+                                                              ),
+                                                              Text(
+                                                                "(100+)",
+                                                                style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  color: Colors.grey,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                        CircleAvatar(
+                                                          radius: 12,
+                                                          backgroundColor: Colors.white,
+                                                          foregroundColor: Colors.black,
+                                                          child: Icon(
+                                                            Ionicons.bookmark_outline,
+                                                            size: 12,
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                    left: 6,
+                                                    right: 6,
+                                                    top: 6,
+                                                  )
+                                                ],
                                               ),
                                             ),
                                           ),
                                           const SizedBox(
-                                            height: 8,
+                                            height: 12,
                                           ),
                                           Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
