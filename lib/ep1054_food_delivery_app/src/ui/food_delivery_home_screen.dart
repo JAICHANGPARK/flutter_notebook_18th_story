@@ -259,54 +259,57 @@ class _FoodDeliveryHomeScreenState extends State<FoodDeliveryHomeScreen> {
                                 child: ListView.builder(
                                   scrollDirection: Axis.horizontal,
                                   itemBuilder: (context, index) {
-                                    return SizedBox(
-                                      width: 240,
-                                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                        const Expanded(
-                                          child: Placeholder(),
-                                        ),
-                                        SizedBox(
-                                          height: 8,
-                                        ),
-                                        Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text("The Fat Duck"),
-                                            SizedBox(
-                                              height: 8,
-                                            ),
-                                            Text(
-                                              "Burger - Plater - Rice - Chickens",
-                                              style: TextStyle(
-                                                fontSize: 12,
-                                                color: Colors.grey,
+                                    return Padding(
+                                      padding: const EdgeInsets.only(right: 8),
+                                      child: SizedBox(
+                                        width: 240,
+                                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                                          const Expanded(
+                                            child: Placeholder(),
+                                          ),
+                                          const SizedBox(
+                                            height: 8,
+                                          ),
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              const Text("The Fat Duck"),
+                                              const SizedBox(
+                                                height: 8,
                                               ),
-                                            ),
-                                            SizedBox(
-                                              height: 8,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Icon(
-                                                  Icons.delivery_dining,
-                                                  color: Colors.purpleAccent,
-                                                  size: 16,
+                                              const Text(
+                                                "Burger - Plater - Rice - Chickens",
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: Colors.grey,
                                                 ),
-                                                Text("Free Delivery"),
-                                                SizedBox(
-                                                  width: 16,
-                                                ),
-                                                Icon(
-                                                  Icons.timer,
-                                                  color: Colors.purpleAccent,
-                                                  size: 16,
-                                                ),
-                                                Text("15-20 mins"),
-                                              ],
-                                            )
-                                          ],
-                                        )
-                                      ]),
+                                              ),
+                                              const SizedBox(
+                                                height: 8,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  const Icon(
+                                                    Icons.delivery_dining,
+                                                    color: Colors.purpleAccent,
+                                                    size: 16,
+                                                  ),
+                                                  const Text("Free Delivery"),
+                                                  const SizedBox(
+                                                    width: 16,
+                                                  ),
+                                                  const Icon(
+                                                    Icons.timer,
+                                                    color: Colors.purpleAccent,
+                                                    size: 16,
+                                                  ),
+                                                  const Text("15-20 mins"),
+                                                ],
+                                              )
+                                            ],
+                                          )
+                                        ]),
+                                      ),
                                     );
                                   },
                                 ),
