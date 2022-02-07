@@ -29,6 +29,7 @@ class DatingAppMainPage extends ConsumerWidget {
             height: 72,
             color: Colors.black,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   onPressed: () {
@@ -63,6 +64,19 @@ class DatingAppMainPage extends ConsumerWidget {
                     color: Colors.grey,
                   ),
                 ),
+                IconButton(
+                  onPressed: () {
+                    ref.read(daTabProvider.notifier).state = 3;
+                  },
+                  icon: tabIndex == 2
+                      ? const Icon(Icons.perm_identity, color: Colors.white)
+                      : const Icon(
+                    Icons.perm_identity,
+                    color: Colors.grey,
+                  ),
+                ),
+
+
               ],
             ),
           )
