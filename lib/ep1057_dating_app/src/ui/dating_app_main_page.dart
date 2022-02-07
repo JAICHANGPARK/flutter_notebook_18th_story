@@ -22,12 +22,38 @@ class DatingAppMainPage extends ConsumerWidget {
             color: Colors.blue.withOpacity(0.4),
           )),
           Container(
-            height: 42,
+            height: 48,
             color: Colors.deepOrange,
           ),
           Container(
             height: 72,
             color: Colors.black,
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    ref.read(daTabProvider.notifier).state = 0;
+                  },
+                  icon: tabIndex == 0
+                      ? const Icon(Icons.home, color: Colors.white)
+                      : const Icon(
+                          Icons.home_outlined,
+                          color: Colors.grey,
+                        ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    ref.read(daTabProvider.notifier).state = 1;
+                  },
+                  icon: tabIndex == 1
+                      ? const Icon(Icons.storm, color: Colors.white)
+                      : const Icon(
+                          Icons.storm,
+                          color: Colors.grey,
+                        ),
+                ),
+              ],
+            ),
           )
         ],
       ),
