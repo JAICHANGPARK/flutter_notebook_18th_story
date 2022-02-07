@@ -12,6 +12,11 @@ class DatingAppMainPage extends ConsumerWidget {
     return Scaffold(
       body: Column(
         children: [
+          Expanded(child: Placeholder()),
+          Container(
+            height: 72,
+            color: Colors.black,
+          )
 
         ],
       ),
