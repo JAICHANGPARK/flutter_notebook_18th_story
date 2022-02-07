@@ -15,7 +15,7 @@ class DatingAppMainPage extends ConsumerWidget {
         children: [
           Container(
               height: 100,
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 8),
               color: Colors.black,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -26,10 +26,13 @@ class DatingAppMainPage extends ConsumerWidget {
                     color: Colors.white,
                   ),
                   Spacer(),
-                  Text(
-                    "English",
-                    style: TextStyle(
-                      color: Colors.white,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: Text(
+                      "English",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   IconButton(
