@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1057_dating_app/src/ui/dating_app_main_page.dart';
 
 
 class DatingApp extends StatelessWidget {
@@ -6,8 +7,8 @@ class DatingApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
+    return const MaterialApp(
+      home: DatingAppMainPage(),
     );
   }
 }
