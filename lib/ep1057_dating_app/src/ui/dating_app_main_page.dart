@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final daTabProvider = StateProvider<int>((ref)=>0);
 
 class DatingAppMainPage extends StatelessWidget {
   const DatingAppMainPage({Key? key}) : super(key: key);
@@ -8,7 +11,7 @@ class DatingAppMainPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          
+
         ],
       ),
     );
