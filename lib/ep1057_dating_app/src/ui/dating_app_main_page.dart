@@ -14,13 +14,17 @@ class DatingAppMainPage extends ConsumerWidget {
       body: Column(
         children: [
           Container(
-            height: 72,
+            height: 100,
             color: Colors.black,
           ),
           Expanded(
               child: Container(
-            color: Colors.black.withOpacity(0.4),
+            color: Colors.blue.withOpacity(0.4),
           )),
+          Container(
+            height: 42,
+            color: Colors.deepOrange,
+          ),
           Container(
             height: 72,
             color: Colors.black,
