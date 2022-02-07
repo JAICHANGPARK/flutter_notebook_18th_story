@@ -14,9 +14,31 @@ class DatingAppMainPage extends ConsumerWidget {
       body: Column(
         children: [
           Container(
-            height: 100,
-            color: Colors.black,
-          ),
+              height: 100,
+              color: Colors.black,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.settings_phone),
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "English",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.filter_alt),
+                    color: Colors.white,
+                  ),
+
+
+                ],
+              )),
           Expanded(
               child: Container(
             color: Colors.blue.withOpacity(0.4),
@@ -60,9 +82,9 @@ class DatingAppMainPage extends ConsumerWidget {
                   icon: tabIndex == 2
                       ? const Icon(Icons.chat, color: Colors.white)
                       : const Icon(
-                    Icons.chat,
-                    color: Colors.grey,
-                  ),
+                          Icons.chat,
+                          color: Colors.grey,
+                        ),
                 ),
                 IconButton(
                   onPressed: () {
@@ -71,12 +93,10 @@ class DatingAppMainPage extends ConsumerWidget {
                   icon: tabIndex == 2
                       ? const Icon(Icons.perm_identity, color: Colors.white)
                       : const Icon(
-                    Icons.perm_identity,
-                    color: Colors.grey,
-                  ),
+                          Icons.perm_identity,
+                          color: Colors.grey,
+                        ),
                 ),
-
-
               ],
             ),
           )
