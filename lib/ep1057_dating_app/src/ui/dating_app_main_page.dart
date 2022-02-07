@@ -52,6 +52,17 @@ class DatingAppMainPage extends ConsumerWidget {
                           color: Colors.grey,
                         ),
                 ),
+                IconButton(
+                  onPressed: () {
+                    ref.read(daTabProvider.notifier).state = 2;
+                  },
+                  icon: tabIndex == 2
+                      ? const Icon(Icons.chat, color: Colors.white)
+                      : const Icon(
+                    Icons.chat,
+                    color: Colors.grey,
+                  ),
+                ),
               ],
             ),
           )
