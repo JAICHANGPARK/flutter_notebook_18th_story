@@ -49,8 +49,60 @@ class DatingAppMainPage extends ConsumerWidget {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Container(
+                    padding: EdgeInsets.all(8),
                     color: Colors.white.withOpacity(0.15),
                     height: 360,
+                    child: Column(
+                      children: [
+                        Expanded(child: Placeholder()),
+                        SizedBox(height: 8,),
+                        Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text("Dream Walker", style: TextStyle(
+                                      color: Colors.white
+                                    ),),
+                                    SizedBox(width: 4,),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.pink,
+                                          
+                                        ),
+                                        borderRadius: BorderRadius.circular(8)
+                                      ),
+                                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 0),
+                                      child: Text("20", style: TextStyle(
+                                        color: Colors.pink,
+                                        fontSize: 12,
+                                      ),),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text("Seoul, Korea"),
+                                    SizedBox(width: 8,),
+                                    CircleAvatar(
+                                      backgroundColor: Colors.lightGreenAccent,
+                                      radius: 8,
+                                    ),
+                                    SizedBox(width: 4,),
+                                    Text("Online", style: TextStyle(
+                                      color: Colors.lightGreenAccent
+                                    ),)
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 );
               },
