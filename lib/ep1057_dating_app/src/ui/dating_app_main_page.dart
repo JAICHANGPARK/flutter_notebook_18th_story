@@ -97,10 +97,7 @@ class DatingAppMainPage extends ConsumerWidget {
                                   children: const [
                                     Text(
                                       "Seoul, Korea",
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 12
-                                      ),
+                                      style: TextStyle(color: Colors.grey, fontSize: 12),
                                     ),
                                     SizedBox(
                                       width: 8,
@@ -114,10 +111,7 @@ class DatingAppMainPage extends ConsumerWidget {
                                     ),
                                     Text(
                                       "Online",
-                                      style: TextStyle(
-                                        color: Colors.lightGreenAccent,
-                                          fontSize: 12
-                                      ),
+                                      style: TextStyle(color: Colors.lightGreenAccent, fontSize: 12),
                                     )
                                   ],
                                 )
@@ -125,15 +119,40 @@ class DatingAppMainPage extends ConsumerWidget {
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey,
-                                ),
-                                borderRadius: BorderRadius.circular(16)
-
-                              ),
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                  ),
+                                  borderRadius: BorderRadius.circular(16)),
                               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                              child: Icon(Ionicons.chatbubble_outline,
-                              color: Colors.white,
-                              size: 20,),
+                              child: Icon(
+                                Ionicons.chatbubble_outline,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [
+                                Colors.red,
+                                Colors.pink,
+                                Colors.orangeAccent,
+                              ])),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 4,
+                              ),
+                              child: Icon(
+                                Ionicons.videocam,
+                                color: Colors.white,
+                                size: 20,
+                              ),
                             )
                           ],
                         )
