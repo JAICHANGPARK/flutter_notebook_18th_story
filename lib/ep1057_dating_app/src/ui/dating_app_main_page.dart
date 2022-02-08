@@ -171,7 +171,78 @@ class DatingAppMainPage extends ConsumerWidget {
           ),
           Container(
             height: 48,
-            color: Colors.deepOrange,
+            decoration: const BoxDecoration(
+              color: Colors.deepOrange,
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                stops: [0.3, 0.6, 0.8, 1.0],
+                colors: [
+                  Colors.pink,
+                  Colors.white,
+                  Colors.orangeAccent,
+                  Colors.deepOrange,
+                ],
+                // tileMode: TileMode.clamp,
+              ),
+            ),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 84,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        top: 8,
+                        left: 8,
+                        bottom: 8,
+                        child: Container(
+                          width: 36,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 8,
+                        left: 26,
+                        bottom: 8,
+                        child: Container(
+                          width: 36,
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 8,
+                        left: 44,
+                        bottom: 8,
+                        child: Container(
+                          width: 36,
+                          decoration: const BoxDecoration(
+                            color: Colors.blue,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(width: 8,),
+                const Text(
+                  "Honeys are waiting for your call",
+                  style: const TextStyle(color: Colors.white, fontSize: 16),
+                ),
+                const Spacer(),
+                Icon(
+                  Ionicons.tv_outline,
+                  color: Colors.white,
+                )
+              ],
+            ),
           ),
           Container(
             height: 72,
