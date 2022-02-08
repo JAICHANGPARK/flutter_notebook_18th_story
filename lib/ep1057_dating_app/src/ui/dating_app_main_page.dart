@@ -14,40 +14,43 @@ class DatingAppMainPage extends ConsumerWidget {
       body: Column(
         children: [
           Container(
-              height: 100,
-              padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
-              color: Colors.black,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.settings_phone),
-                    color: Colors.white,
-                  ),
-                  const Spacer(),
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 16),
-                    child: const Text(
-                      "English",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+            height: 100,
+            padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
+            color: Colors.black,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.settings_phone),
+                  color: Colors.white,
+                ),
+                const Spacer(),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 16),
+                  child: Text(
+                    "English",
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.filter_alt),
-                    color: Colors.white,
-                  ),
-
-
-                ],
-              )),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.filter_alt),
+                  color: Colors.white,
+                ),
+              ],
+            ),
+          ),
           Expanded(
-              child: Container(
-            color: Colors.blue.withOpacity(0.4),
-          )),
+            child: Container(
+              color: Colors.blue.withOpacity(0.4),
+              child: ListView.builder(
+                itemBuilder: (context, index) {},
+              ),
+            ),
+          ),
           Container(
             height: 48,
             color: Colors.deepOrange,
