@@ -117,38 +117,44 @@ class DatingAppMainPage extends ConsumerWidget {
                                 )
                               ],
                             ),
+                            const Spacer(),
                             Container(
                               decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Colors.grey,
                                   ),
                                   borderRadius: BorderRadius.circular(16)),
-                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                              child: Icon(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12,
+                                vertical: 4,
+                              ),
+                              child: const Icon(
                                 Ionicons.chatbubble_outline,
                                 color: Colors.white,
                                 size: 20,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 8,
                             ),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(16),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [
-                                Colors.red,
-                                Colors.pink,
-                                Colors.orangeAccent,
-                              ])),
-                              padding: EdgeInsets.symmetric(
+                                gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Colors.red,
+                                    Colors.pink,
+                                    Colors.orangeAccent,
+                                  ],
+                                ),
+                              ),
+                              padding: const EdgeInsets.symmetric(
                                 horizontal: 12,
                                 vertical: 4,
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Ionicons.videocam,
                                 color: Colors.white,
                                 size: 20,
