@@ -49,13 +49,15 @@ class DatingAppMainPage extends ConsumerWidget {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     color: Colors.white.withOpacity(0.15),
-                    height: 360,
+                    height: 400,
                     child: Column(
                       children: [
-                        Expanded(child: Placeholder()),
-                        SizedBox(height: 8,),
+                        const Expanded(child: Placeholder()),
+                        const SizedBox(
+                          height: 8,
+                        ),
                         Row(
                           children: [
                             Column(
@@ -63,38 +65,59 @@ class DatingAppMainPage extends ConsumerWidget {
                               children: [
                                 Row(
                                   children: [
-                                    Text("Dream Walker", style: TextStyle(
-                                      color: Colors.white
-                                    ),),
-                                    SizedBox(width: 4,),
+                                    const Text(
+                                      "Dream Walker",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    const SizedBox(
+                                      width: 4,
+                                    ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        border: Border.all(
+                                          border: Border.all(
+                                            color: Colors.pink,
+                                          ),
+                                          borderRadius: BorderRadius.circular(8)),
+                                      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 0),
+                                      child: const Text(
+                                        "20",
+                                        style: TextStyle(
                                           color: Colors.pink,
-                                          
+                                          fontSize: 12,
                                         ),
-                                        borderRadius: BorderRadius.circular(8)
                                       ),
-                                      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 0),
-                                      child: Text("20", style: TextStyle(
-                                        color: Colors.pink,
-                                        fontSize: 12,
-                                      ),),
                                     )
                                   ],
                                 ),
+                                const SizedBox(
+                                  height: 4,
+                                ),
                                 Row(
-                                  children: [
-                                    Text("Seoul, Korea"),
-                                    SizedBox(width: 8,),
+                                  children: const [
+                                    Text(
+                                      "Seoul, Korea",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
                                     CircleAvatar(
                                       backgroundColor: Colors.lightGreenAccent,
-                                      radius: 8,
+                                      radius: 4,
                                     ),
-                                    SizedBox(width: 4,),
-                                    Text("Online", style: TextStyle(
-                                      color: Colors.lightGreenAccent
-                                    ),)
+                                    SizedBox(
+                                      width: 4,
+                                    ),
+                                    Text(
+                                      "Online",
+                                      style: TextStyle(
+                                        color: Colors.lightGreenAccent,
+                                          fontSize: 12
+                                      ),
+                                    )
                                   ],
                                 )
                               ],
