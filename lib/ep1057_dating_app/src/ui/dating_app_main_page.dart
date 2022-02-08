@@ -44,11 +44,13 @@ class DatingAppMainPage extends ConsumerWidget {
             ),
           ),
           Expanded(
-            child: Container(
-              color: Colors.blue.withOpacity(0.4),
-              child: ListView.builder(
-                itemBuilder: (context, index) {},
-              ),
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Container(
+                  color: Colors.blue.withOpacity(0.4),
+                  height: 200,
+                );
+              },
             ),
           ),
           Container(
