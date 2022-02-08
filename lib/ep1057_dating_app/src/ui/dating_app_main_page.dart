@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ionicons/ionicons.dart';
 
 final daTabProvider = StateProvider<int>((ref) => 0);
 
@@ -121,6 +122,18 @@ class DatingAppMainPage extends ConsumerWidget {
                                   ],
                                 )
                               ],
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey,
+                                ),
+                                borderRadius: BorderRadius.circular(16)
+
+                              ),
+                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              child: Icon(Ionicons.chatbubble_outline,
+                              color: Colors.white,
+                              size: 20,),
                             )
                           ],
                         )
