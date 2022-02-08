@@ -15,20 +15,20 @@ class DatingAppMainPage extends ConsumerWidget {
         children: [
           Container(
               height: 100,
-              padding: EdgeInsets.symmetric(horizontal: 0, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
               color: Colors.black,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.settings_phone),
+                    icon: const Icon(Icons.settings_phone),
                     color: Colors.white,
                   ),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: Text(
+                  const Spacer(),
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 16),
+                    child: const Text(
                       "English",
                       style: TextStyle(
                         color: Colors.white,
@@ -37,7 +37,7 @@ class DatingAppMainPage extends ConsumerWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.filter_alt),
+                    icon: const Icon(Icons.filter_alt),
                     color: Colors.white,
                   ),
 
