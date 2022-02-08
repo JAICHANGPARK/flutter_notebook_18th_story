@@ -46,9 +46,12 @@ class DatingAppMainPage extends ConsumerWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return Container(
-                  color: Colors.blue.withOpacity(0.4),
-                  height: 200,
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Container(
+                    color: Colors.white.withOpacity(0.15),
+                    height: 360,
+                  ),
                 );
               },
             ),
