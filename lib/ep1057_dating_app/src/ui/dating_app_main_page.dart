@@ -55,7 +55,13 @@ class DatingAppMainPage extends ConsumerWidget {
                     height: 400,
                     child: Column(
                       children: [
-                        const Expanded(child: Placeholder()),
+                         Expanded(child: Container(
+                           child: Row(
+                             children: [
+                               Expanded(child: CachedNetworkImage())
+                             ],
+                           ),
+                         )),
                         const SizedBox(
                           height: 8,
                         ),
