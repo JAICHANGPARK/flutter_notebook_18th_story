@@ -61,9 +61,15 @@ class DatingAppMainPage extends ConsumerWidget {
                           child: Row(
                             children: [
                               Expanded(
-                                child: CachedNetworkImage(
-                                  imageUrl: "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
-                                  fit: BoxFit.cover,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(8),
+                                    bottomLeft: Radius.circular(8),
+                                  ),
+                                  child: CachedNetworkImage(
+                                    imageUrl: "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               )
                             ],
