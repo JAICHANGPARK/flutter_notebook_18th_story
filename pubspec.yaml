@@ -14,7 +14,7 @@ dependencies:
   google_fonts: any
   flutter_riverpod: any
   freezed_annotation: any
-  json_annotation: any
+  json_annotation: ^4.4.0
 
   fl_chart: any
   go_router: ^3.0.1
