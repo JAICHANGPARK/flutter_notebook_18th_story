@@ -171,9 +171,10 @@ class DatingAppMainPage extends ConsumerWidget {
           ),
           Container(
             height: 48,
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             decoration: const BoxDecoration(
               color: Colors.deepOrange,
-              gradient: const LinearGradient(
+              gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 stops: [0.3, 0.6, 0.8, 1.0],
@@ -231,13 +232,13 @@ class DatingAppMainPage extends ConsumerWidget {
                     ],
                   ),
                 ),
-                SizedBox(width: 8,),
+                const SizedBox(width: 8,),
                 const Text(
                   "Honeys are waiting for your call",
-                  style: const TextStyle(color: Colors.white, fontSize: 16),
+                  style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
                 const Spacer(),
-                Icon(
+                const Icon(
                   Ionicons.tv_outline,
                   color: Colors.white,
                 )
