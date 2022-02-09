@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1057_dating_app/src/api/fake_face_api.dart';
+import 'package:flutter_notebook_18th_story/ep1057_dating_app/src/model/fake_face.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -57,24 +59,45 @@ class DatingAppMainPage extends ConsumerWidget {
                     child: Column(
                       children: [
                         Expanded(
-                            child: Container(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(8),
-                                    bottomLeft: Radius.circular(8),
-                                  ),
-                                  child: CachedNetworkImage(
-                                    imageUrl: "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
-                                    fit: BoxFit.cover,
-                                  ),
+                            child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Expanded(
+                              flex: 4,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomLeft: Radius.circular(8),
+                                ),
+                                child: CachedNetworkImage(
+                                  height: double.infinity,
+                                  imageUrl: "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                              Expanded(child: Placeholder()),
-                            ],
-                          ),
+                            ),
+                            Expanded(
+                                flex: 2,
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                        child: FutureBuilder<FakeFace?>(
+                                      future: requestFakeFaceImg(),
+                                      builder: (BuildContext context, snapshot) {
+                                        if (snapshot.hasData) {
+                                          return CachedNetworkImage(imageUrl: snapshot.data?.imageUrl ?? "",
+                                          fit: BoxFit.cover,);
+                                        }
+                                        return Center(
+                                          child: CircularProgressIndicator(),
+                                        );
+                                      },
+                                    )),
+                                    Expanded(child: Placeholder()),
+                                    Expanded(child: Placeholder()),
+                                  ],
+                                )),
+                          ],
                         )),
                         const SizedBox(
                           height: 8,
