@@ -71,7 +71,8 @@ class DatingAppMainPage extends ConsumerWidget {
                                     fit: BoxFit.cover,
                                   ),
                                 ),
-                              )
+                              ),
+                              Expanded(child: Placeholder()),
                             ],
                           ),
                         )),
