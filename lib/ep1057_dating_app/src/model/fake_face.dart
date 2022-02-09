@@ -9,13 +9,13 @@ part 'fake_face.freezed.dart';
 part 'fake_face.g.dart';
 
 @freezed
-class FakeFace extends _$FakeFace {
+class FakeFace with _$FakeFace {
   factory FakeFace({
     int? age,
     String? dateAdded,
     String? fileName,
     String? imageUrl,
   }) = _FakeFace;
-  factory FakeFace.fromJson(Map<String, dynamic> json) => _FakeFaceFromJson(json);
+  factory FakeFace.fromJson(Map<String, dynamic> json) => _$FakeFaceFromJson(json);
 
 }
