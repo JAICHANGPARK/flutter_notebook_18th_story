@@ -23,7 +23,10 @@ class _$FakeFaceTearOff {
   const _$FakeFaceTearOff();
 
   _FakeFace call(
-      {int? age, String? dateAdded, String? fileName, String? imageUrl}) {
+      {int? age,
+      String? dateAdded,
+      String? fileName,
+      @JsonKey(name: "image_url") String? imageUrl}) {
     return _FakeFace(
       age: age,
       dateAdded: dateAdded,
@@ -45,6 +48,7 @@ mixin _$FakeFace {
   int? get age => throw _privateConstructorUsedError;
   String? get dateAdded => throw _privateConstructorUsedError;
   String? get fileName => throw _privateConstructorUsedError;
+  @JsonKey(name: "image_url")
   String? get imageUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,7 +61,11 @@ mixin _$FakeFace {
 abstract class $FakeFaceCopyWith<$Res> {
   factory $FakeFaceCopyWith(FakeFace value, $Res Function(FakeFace) then) =
       _$FakeFaceCopyWithImpl<$Res>;
-  $Res call({int? age, String? dateAdded, String? fileName, String? imageUrl});
+  $Res call(
+      {int? age,
+      String? dateAdded,
+      String? fileName,
+      @JsonKey(name: "image_url") String? imageUrl});
 }
 
 /// @nodoc
@@ -101,7 +109,11 @@ abstract class _$FakeFaceCopyWith<$Res> implements $FakeFaceCopyWith<$Res> {
   factory _$FakeFaceCopyWith(_FakeFace value, $Res Function(_FakeFace) then) =
       __$FakeFaceCopyWithImpl<$Res>;
   @override
-  $Res call({int? age, String? dateAdded, String? fileName, String? imageUrl});
+  $Res call(
+      {int? age,
+      String? dateAdded,
+      String? fileName,
+      @JsonKey(name: "image_url") String? imageUrl});
 }
 
 /// @nodoc
@@ -144,7 +156,11 @@ class __$FakeFaceCopyWithImpl<$Res> extends _$FakeFaceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FakeFace implements _FakeFace {
-  _$_FakeFace({this.age, this.dateAdded, this.fileName, this.imageUrl});
+  _$_FakeFace(
+      {this.age,
+      this.dateAdded,
+      this.fileName,
+      @JsonKey(name: "image_url") this.imageUrl});
 
   factory _$_FakeFace.fromJson(Map<String, dynamic> json) =>
       _$$_FakeFaceFromJson(json);
@@ -156,6 +172,7 @@ class _$_FakeFace implements _FakeFace {
   @override
   final String? fileName;
   @override
+  @JsonKey(name: "image_url")
   final String? imageUrl;
 
   @override
@@ -198,7 +215,7 @@ abstract class _FakeFace implements FakeFace {
       {int? age,
       String? dateAdded,
       String? fileName,
-      String? imageUrl}) = _$_FakeFace;
+      @JsonKey(name: "image_url") String? imageUrl}) = _$_FakeFace;
 
   factory _FakeFace.fromJson(Map<String, dynamic> json) = _$_FakeFace.fromJson;
 
@@ -209,6 +226,7 @@ abstract class _FakeFace implements FakeFace {
   @override
   String? get fileName;
   @override
+  @JsonKey(name: "image_url")
   String? get imageUrl;
   @override
   @JsonKey(ignore: true)

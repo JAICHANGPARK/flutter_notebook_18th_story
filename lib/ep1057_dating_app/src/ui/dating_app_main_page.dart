@@ -49,6 +49,7 @@ class DatingAppMainPage extends ConsumerWidget {
           ),
           Expanded(
             child: ListView.builder(
+              itemCount: 10,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 8),
@@ -65,18 +66,28 @@ class DatingAppMainPage extends ConsumerWidget {
                             Expanded(
                               flex: 4,
                               child: ClipRRect(
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   bottomLeft: Radius.circular(8),
                                 ),
-                                child: CachedNetworkImage(
-                                  height: double.infinity,
-                                  imageUrl: "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
-                                  fit: BoxFit.cover,
+                                child: FutureBuilder<FakeFace?>(
+                                  future: requestFakeFaceImg(),
+                                  builder: (BuildContext context, snapshot) {
+                                    if (snapshot.hasData) {
+                                      return CachedNetworkImage(
+                                        height: double.infinity,
+                                        imageUrl: snapshot.data?.imageUrl ?? "",
+                                        fit: BoxFit.cover,
+                                      );
+                                    }
+                                    return const Center(
+                                      child: CircularProgressIndicator(),
+                                    );
+                                  },
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 1,
                             ),
                             Expanded(
@@ -95,13 +106,13 @@ class DatingAppMainPage extends ConsumerWidget {
                                               fit: BoxFit.cover,
                                             );
                                           }
-                                          return Center(
+                                          return const Center(
                                             child: CircularProgressIndicator(),
                                           );
                                         },
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 1,
                                     ),
                                     Expanded(
@@ -116,12 +127,12 @@ class DatingAppMainPage extends ConsumerWidget {
                                             fit: BoxFit.cover,
                                           );
                                         }
-                                        return Center(
+                                        return const Center(
                                           child: CircularProgressIndicator(),
                                         );
                                       },
                                     )),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 1,
                                     ),
                                     Expanded(
@@ -136,7 +147,7 @@ class DatingAppMainPage extends ConsumerWidget {
                                             fit: BoxFit.cover,
                                           );
                                         }
-                                        return Center(
+                                        return const Center(
                                           child: CircularProgressIndicator(),
                                         );
                                       },

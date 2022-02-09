@@ -10,7 +10,7 @@ _$_FakeFace _$$_FakeFaceFromJson(Map<String, dynamic> json) => _$_FakeFace(
       age: json['age'] as int?,
       dateAdded: json['dateAdded'] as String?,
       fileName: json['fileName'] as String?,
-      imageUrl: json['imageUrl'] as String?,
+      imageUrl: json['image_url'] as String?,
     );
 
 Map<String, dynamic> _$$_FakeFaceToJson(_$_FakeFace instance) =>
@@ -18,5 +18,5 @@ Map<String, dynamic> _$$_FakeFaceToJson(_$_FakeFace instance) =>
       'age': instance.age,
       'dateAdded': instance.dateAdded,
       'fileName': instance.fileName,
-      'imageUrl': instance.imageUrl,
+      'image_url': instance.imageUrl,
     };
