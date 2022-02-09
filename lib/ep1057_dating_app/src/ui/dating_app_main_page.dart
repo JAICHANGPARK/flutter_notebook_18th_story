@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ionicons/ionicons.dart';
@@ -55,13 +56,19 @@ class DatingAppMainPage extends ConsumerWidget {
                     height: 400,
                     child: Column(
                       children: [
-                         Expanded(child: Container(
-                           child: Row(
-                             children: [
-                               Expanded(child: CachedNetworkImage())
-                             ],
-                           ),
-                         )),
+                        Expanded(
+                            child: Container(
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: CachedNetworkImage(
+                                  imageUrl: "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
+                                  fit: BoxFit.cover,
+                                ),
+                              )
+                            ],
+                          ),
+                        )),
                         const SizedBox(
                           height: 8,
                         ),
@@ -238,7 +245,9 @@ class DatingAppMainPage extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 8,),
+                const SizedBox(
+                  width: 8,
+                ),
                 const Text(
                   "Honeys are waiting for your call",
                   style: TextStyle(color: Colors.white, fontSize: 16),
