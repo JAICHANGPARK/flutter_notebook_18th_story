@@ -76,25 +76,71 @@ class DatingAppMainPage extends ConsumerWidget {
                                 ),
                               ),
                             ),
+                            SizedBox(
+                              width: 1,
+                            ),
                             Expanded(
                                 flex: 2,
                                 child: Column(
                                   children: [
                                     Expanded(
+                                      child: FutureBuilder<FakeFace?>(
+                                        future: requestFakeFaceImg(),
+                                        builder: (BuildContext context, snapshot) {
+                                          if (snapshot.hasData) {
+                                            print(snapshot.data?.imageUrl ?? "");
+                                            return CachedNetworkImage(
+                                              height: double.infinity,
+                                              imageUrl: snapshot.data?.imageUrl ?? "",
+                                              fit: BoxFit.cover,
+                                            );
+                                          }
+                                          return Center(
+                                            child: CircularProgressIndicator(),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 1,
+                                    ),
+                                    Expanded(
                                         child: FutureBuilder<FakeFace?>(
                                       future: requestFakeFaceImg(),
                                       builder: (BuildContext context, snapshot) {
                                         if (snapshot.hasData) {
-                                          return CachedNetworkImage(imageUrl: snapshot.data?.imageUrl ?? "",
-                                          fit: BoxFit.cover,);
+                                          print(snapshot.data?.imageUrl ?? "");
+                                          return CachedNetworkImage(
+                                            height: double.infinity,
+                                            imageUrl: snapshot.data?.imageUrl ?? "",
+                                            fit: BoxFit.cover,
+                                          );
                                         }
                                         return Center(
                                           child: CircularProgressIndicator(),
                                         );
                                       },
                                     )),
-                                    Expanded(child: Placeholder()),
-                                    Expanded(child: Placeholder()),
+                                    SizedBox(
+                                      height: 1,
+                                    ),
+                                    Expanded(
+                                        child: FutureBuilder<FakeFace?>(
+                                      future: requestFakeFaceImg(),
+                                      builder: (BuildContext context, snapshot) {
+                                        if (snapshot.hasData) {
+                                          print(snapshot.data?.imageUrl ?? "");
+                                          return CachedNetworkImage(
+                                            height: double.infinity,
+                                            imageUrl: snapshot.data?.imageUrl ?? "",
+                                            fit: BoxFit.cover,
+                                          );
+                                        }
+                                        return Center(
+                                          child: CircularProgressIndicator(),
+                                        );
+                                      },
+                                    )),
                                   ],
                                 )),
                           ],
