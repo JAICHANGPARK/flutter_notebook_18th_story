@@ -25,39 +25,39 @@ class EstateSplashScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 120,
               ),
-              Text(
+              const Text(
                 "Find your dream",
                 style: TextStyle(
                   fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
-              Text(
+              const Text(
                 "apartment now",
                 style: TextStyle(
                   fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
-              Text("Find your place easly travel"),
-              Text("anywhere you want with us."),
-              Spacer(),
+              const Text("Find your place easly travel"),
+              const Text("anywhere you want with us."),
+              const Spacer(),
               Row(
                 children: [
                   Container(
                     height: 3,
                     width: 38,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 4,
                   ),
                   Container(
@@ -67,7 +67,7 @@ class EstateSplashScreen extends StatelessWidget {
                       color: Colors.white.withOpacity(0.5),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 4,
                   ),
                   Container(
@@ -77,18 +77,22 @@ class EstateSplashScreen extends StatelessWidget {
                       color: Colors.white.withOpacity(0.5),
                     ),
                   ),
-                  Spacer(),
-                  Container(
-                    height: 48,
-                    width: 48,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.5),
-                    ),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.5),
+                  const Spacer(),
+                  ClipRect(
+                    child: Container(
+                      height: 48,
+                      width: 48,
+                      child: BackdropFilter(
+
+                        filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+                        child: Container(
+                          height: 48,
+                          width: 48,
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.6),
+                            borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: const Icon(Icons.east, color: Colors.brown,),
                         ),
                       ),
                     ),
