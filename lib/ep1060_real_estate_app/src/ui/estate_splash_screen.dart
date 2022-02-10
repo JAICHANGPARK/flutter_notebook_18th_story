@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +57,9 @@ class EstateSplashScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 4,),
+                  SizedBox(
+                    width: 4,
+                  ),
                   Container(
                     height: 3,
                     width: 38,
@@ -63,7 +67,9 @@ class EstateSplashScreen extends StatelessWidget {
                       color: Colors.white.withOpacity(0.5),
                     ),
                   ),
-                  SizedBox(width: 4,),
+                  SizedBox(
+                    width: 4,
+                  ),
                   Container(
                     height: 3,
                     width: 38,
@@ -71,8 +77,24 @@ class EstateSplashScreen extends StatelessWidget {
                       color: Colors.white.withOpacity(0.5),
                     ),
                   ),
+                  Spacer(),
+                  Container(
+                    height: 48,
+                    width: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.5),
+                    ),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.5),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
-              )
+              ),
             ],
           ),
         ),
