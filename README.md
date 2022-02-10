@@ -2,7 +2,18 @@
 
 ## UI Design
 
-### EP1057-
+### EP1060
+
+- Real Estate App
+- by Dmitry Lauretsky
+- https://dribbble.com/shots/17473016/attachments/12607558?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/2564256/screenshots/17473016/media/9a58fcc941db70706bf1a850fdab83b3.png"
+width="400px" >
+</img>
+
+### EP1057-1059
 
 - Calling Me - Mobile Dating App
 - by TT
