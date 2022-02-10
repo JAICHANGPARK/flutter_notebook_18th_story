@@ -16,6 +16,23 @@ class EstateSplashScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 120,
+              ),
+              Text("Find your dream"),
+              Text("apartment now"),
+              SizedBox(
+                height: 24,
+              ),
+              Text("Find your place easly travel"),
+              Text("anywhere you want with us."),
+            ],
+          ),
+        ),
       ),
     );
   }
