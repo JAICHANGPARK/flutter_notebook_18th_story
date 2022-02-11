@@ -19,6 +19,9 @@ class RealEstateApp extends StatelessWidget {
         path: '/',
         builder: (context, state) => const EstateSplashScreen(),
       ),
+      GoRoute(path: "/home",
+
+      )
     ],
   );
 }
