@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -24,15 +25,15 @@ class _EstateHomePageState extends State<EstateHomePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
+                      children: const [
+                        Text(
                           "Good morning",
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
-                        const Text(
+                        Text(
                           "Dreamwalker",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -57,17 +58,17 @@ class _EstateHomePageState extends State<EstateHomePage> {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Recommended",
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       TextButton(
                         onPressed: () {},
-                        child: Text("See all"),
+                        child: const Text("See all"),
                         style: TextButton.styleFrom(
                           primary: Colors.brown,
                         ),
@@ -79,43 +80,174 @@ class _EstateHomePageState extends State<EstateHomePage> {
                   padding: const EdgeInsets.only(left: 16),
                   child: SizedBox(
                     height: 320,
-                    child: Container(
-                      color: Colors.brown,
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return SizedBox(
-                            width: 200,
-                            child: Card(
-                              elevation: 4,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Placeholder(),
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          width: 200,
+                          child: Card(
+                            elevation: 4,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(4),
+                                      topRight: Radius.circular(4)
+                                    ),
+                                    child: CachedNetworkImage(
+                                      imageUrl:
+                                          "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                  Column(
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       Text("Sunny Apartment"),
-                                      Text("Paris, France"),
-                                      Text.rich(TextSpan(children: [
-                                        TextSpan(
-                                          text: "\$900",
+                                      Padding(
+                                        padding: EdgeInsets.symmetric(vertical: 4),
+                                        child: Text(
+                                          "Paris, France",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
                                         ),
+                                      ),
+                                      Text.rich(
                                         TextSpan(
-                                          text: "/month",
-                                        )
-                                      ]))
+                                          children: [
+                                            TextSpan(
+                                              text: "\$900",
+                                              style: TextStyle(
+                                                color: Colors.brown,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: " /month",
+                                              style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 12,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
                                     ],
-                                  )
-
-                                ],
-                              ),
+                                  ),
+                                )
+                              ],
                             ),
-                          );
-                        },
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(height: 16,),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    children: [
+                      const Text(
+                        "New apartment",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      const Spacer(),
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text("See all"),
+                        style: TextButton.styleFrom(
+                          primary: Colors.brown,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: SizedBox(
+                    height: 100,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          width: 280,
+                          child: Card(
+                            elevation: 4,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(4),
+                                        topRight: Radius.circular(4)
+                                    ),
+                                    child: CachedNetworkImage(
+                                      imageUrl:
+                                      "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: const [
+                                      Text("Sunny Apartment"),
+                                      Padding(
+                                        padding: EdgeInsets.symmetric(vertical: 4),
+                                        child: Text(
+                                          "Paris, France",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                          ),
+                                        ),
+                                      ),
+                                      Text.rich(
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: "\$900",
+                                              style: TextStyle(
+                                                color: Colors.brown,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: " /month",
+                                              style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 12,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 )
