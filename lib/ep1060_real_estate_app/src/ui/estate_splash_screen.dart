@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class EstateSplashScreen extends StatelessWidget {
   const EstateSplashScreen({Key? key}) : super(key: key);
@@ -79,20 +80,27 @@ class EstateSplashScreen extends StatelessWidget {
                   ),
                   const Spacer(),
                   ClipRect(
-                    child: Container(
-                      height: 48,
-                      width: 48,
-                      child: BackdropFilter(
-
-                        filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
-                        child: Container(
-                          height: 48,
-                          width: 48,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.6),
-                            borderRadius: BorderRadius.circular(8)
+                    child: GestureDetector(
+                      onTap: () {
+                        GoRouter.of(context).go("/home");
+                      },
+                      child: SizedBox(
+                        height: 48,
+                        width: 48,
+                        child: BackdropFilter(
+                          filter: ImageFilter.blur(sigmaY: 10, sigmaX: 10),
+                          child: Container(
+                            height: 48,
+                            width: 48,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.6),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Icon(
+                              Icons.east,
+                              color: Colors.brown,
+                            ),
                           ),
-                          child: const Icon(Icons.east, color: Colors.brown,),
                         ),
                       ),
                     ),
