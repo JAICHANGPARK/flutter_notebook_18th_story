@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1060_real_estate_app/src/ui/estate_splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
+import 'src/ui/estate_home_page.dart';
+
 class RealEstateApp extends StatelessWidget {
   RealEstateApp({Key? key}) : super(key: key);
 
@@ -19,8 +21,9 @@ class RealEstateApp extends StatelessWidget {
         path: '/',
         builder: (context, state) => const EstateSplashScreen(),
       ),
-      GoRoute(path: "/home",
-
+      GoRoute(
+        path: "/home",
+        builder: (context, state) => const EstateHomePage(),
       )
     ],
   );
