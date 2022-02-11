@@ -74,6 +74,33 @@ class _EstateHomePageState extends State<EstateHomePage> {
                       )
                     ],
                   ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: SizedBox(
+                    height: 320,
+                    child: Container(
+                      color: Colors.brown,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return SizedBox(
+                            width: 200,
+                            child: Card(
+                              elevation: 4,
+                              child: Column(
+                                children: [
+
+
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+
+                      ),
+                    ),
+                  ),
                 )
               ],
             )
