@@ -89,15 +89,32 @@ class _EstateHomePageState extends State<EstateHomePage> {
                             child: Card(
                               elevation: 4,
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-
+                                  Expanded(
+                                    child: Placeholder(),
+                                  ),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("Sunny Apartment"),
+                                      Text("Paris, France"),
+                                      Text.rich(TextSpan(children: [
+                                        TextSpan(
+                                          text: "\$900",
+                                        ),
+                                        TextSpan(
+                                          text: "/month",
+                                        )
+                                      ]))
+                                    ],
+                                  )
 
                                 ],
                               ),
                             ),
                           );
                         },
-
                       ),
                     ),
                   ),
