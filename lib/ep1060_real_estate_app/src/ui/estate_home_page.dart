@@ -19,24 +19,52 @@ class _EstateHomePageState extends State<EstateHomePage> {
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [
-                  CircleAvatar(),
+                  const CircleAvatar(),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Good morning"),
-                        Text("Dreamwalker"),
+                        const Text(
+                          "Good morning",
+                          style: const TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12,
+                          ),
+                        ),
+                        const Text(
+                          "Dreamwalker",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Ionicons.notifications_outline),
+                    icon: const Icon(
+                      Ionicons.notifications_outline,
+                    ),
                   )
                 ],
               ),
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      "Recommended",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                )
+              ],
             )
           ],
         ),
