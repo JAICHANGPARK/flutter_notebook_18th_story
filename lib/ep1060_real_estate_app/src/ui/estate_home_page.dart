@@ -53,16 +53,27 @@ class _EstateHomePageState extends State<EstateHomePage> {
             ),
             Column(
               children: [
-                Row(
-                  children: [
-                    Text(
-                      "Recommended",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Recommended",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    )
-                  ],
+                      Spacer(),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("See all"),
+                        style: TextButton.styleFrom(
+                          primary: Colors.brown,
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
             )
