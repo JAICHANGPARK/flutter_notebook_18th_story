@@ -152,7 +152,7 @@ class _EstateHomePageState extends State<EstateHomePage> {
                 )
               ],
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 32,),
             Column(
               children: [
                 Padding(
