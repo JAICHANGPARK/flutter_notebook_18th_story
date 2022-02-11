@@ -250,6 +250,30 @@ class _EstateHomePageState extends State<EstateHomePage> {
                       },
                     ),
                   ),
+                ),
+                SizedBox(height: 16,),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: Container(
+                    height: 64,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+
+                      boxShadow: [
+                        BoxShadow(
+                                color: Colors.grey[100]!,
+                          blurRadius: 3,
+                          spreadRadius: 6
+                        )
+                      ]
+                    ),
+                    child: Row(
+                      children: [
+
+                      ],
+                    ),
+                  ),
                 )
               ],
             )
