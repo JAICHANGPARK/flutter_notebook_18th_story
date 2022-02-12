@@ -188,60 +188,56 @@ class _EstateHomePageState extends State<EstateHomePage> {
                           width: 280,
                           child: Card(
                             elevation: 4,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  child: ClipRRect(
-                                    borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4), topRight: Radius.circular(4)),
-                                    child: CachedNetworkImage(
-                                      imageUrl:
-                                          "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
-                                      fit: BoxFit.cover,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    width: 84,
+                                    height: 84,
+                                    child: ClipRRect(
+                                      borderRadius:  BorderRadius.circular(9),
+                                      child: CachedNetworkImage(
+                                        imageUrl:
+                                            "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: const [
-                                      Text("Sunny Apartment"),
-                                      Padding(
-                                        padding: EdgeInsets.symmetric(vertical: 4),
-                                        child: Text(
-                                          "Paris, France",
-                                          style: TextStyle(
-                                            color: Colors.grey,
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children:  [
+                                        Text("Light space"),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(vertical: 4),
+                                          child: Text(
+                                            "London, England",
+                                            style: TextStyle(
+                                              color: Colors.grey,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Text.rich(
-                                        TextSpan(
+                                        Row(
                                           children: [
-                                            TextSpan(
-                                              text: "\$900",
-                                              style: TextStyle(
-                                                color: Colors.brown,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 16,
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.brown[100],
+                                                
                                               ),
-                                            ),
-                                            TextSpan(
-                                              text: " /month",
-                                              style: TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 12,
-                                              ),
+                                              padding: EdgeInsets.all(4),
+                                              child: Icon(Ionicons.bed_outline, size: 12,
+                                              color: Colors.brown,),
                                             )
                                           ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         );
@@ -257,10 +253,14 @@ class _EstateHomePageState extends State<EstateHomePage> {
                   child: Container(
                     height: 64,
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: [BoxShadow(color: Colors.grey[100]!, blurRadius: 3, spreadRadius: 6)]),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        BoxShadow(color: Colors.grey[100]!, blurRadius: 3, spreadRadius: 6),
+                      ],
+                    ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         IconButton(
                           onPressed: () {},
