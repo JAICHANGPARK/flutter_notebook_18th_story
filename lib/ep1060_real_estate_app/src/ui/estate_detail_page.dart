@@ -6,8 +6,8 @@ class EstateDetailPage extends StatefulWidget {
 
   EstateDetailPage({
     Key? key,
-    this.img,
-    this.price,
+    required this.img,
+    required this.price,
   }) : super(key: key);
 
   @override
