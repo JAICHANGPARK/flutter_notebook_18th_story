@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1060_real_estate_app/src/ui/estate_detail_page.dart';
 import 'package:ionicons/ionicons.dart';
 
 class EstateHomePage extends StatefulWidget {
@@ -184,65 +185,80 @@ class _EstateHomePageState extends State<EstateHomePage> {
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return SizedBox(
-                          width: 280,
-                          child: Card(
-                            elevation: 4,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    width: 84,
-                                    height: 84,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(9),
-                                      child: CachedNetworkImage(
-                                        imageUrl:
-                                            "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text("Light space"),
-                                        Padding(
-                                          padding: EdgeInsets.symmetric(vertical: 4),
-                                          child: Text(
-                                            "London, England",
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => EstateDetailPage(
+                                    img:
+                                        "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
+                                    price: "\$900"),
+                              ),
+                            );
+                          },
+                          child: SizedBox(
+                            width: 280,
+                            child: Card(
+                              elevation: 4,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Hero(
+                                      tag: "img_$index",
+                                      child: SizedBox(
+                                        width: 84,
+                                        height: 84,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(9),
+                                          child: CachedNetworkImage(
+                                            imageUrl:
+                                                "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
+                                            fit: BoxFit.cover,
                                           ),
                                         ),
-                                        Row(
-                                          children: [
-                                            Container(
-                                              decoration: BoxDecoration(
-                                                color: Colors.brown[100],
-                                              ),
-                                              padding: EdgeInsets.all(4),
-                                              child: Icon(
-                                                Ionicons.bed_outline,
-                                                size: 12,
-                                                color: Colors.brown,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 4,
-                                            ),
-                                            Text("4 rooms"),
-                                          ],
-                                        )
-                                      ],
+                                      ),
                                     ),
-                                  )
-                                ],
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text("Light space"),
+                                          Padding(
+                                            padding: EdgeInsets.symmetric(vertical: 4),
+                                            child: Text(
+                                              "London, England",
+                                              style: TextStyle(
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          ),
+                                          Row(
+                                            children: [
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  color: Colors.brown[100],
+                                                ),
+                                                padding: EdgeInsets.all(4),
+                                                child: Icon(
+                                                  Ionicons.bed_outline,
+                                                  size: 12,
+                                                  color: Colors.brown,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 4,
+                                              ),
+                                              Text("4 rooms"),
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
