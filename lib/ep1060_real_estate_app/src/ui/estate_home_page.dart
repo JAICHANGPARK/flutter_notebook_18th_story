@@ -190,6 +190,8 @@ class _EstateHomePageState extends State<EstateHomePage> {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => EstateDetailPage(
+                                    title: "Light space",
+                                    imgTag: "img_$index",
                                     img:
                                         "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
                                     price: "\$900"),
