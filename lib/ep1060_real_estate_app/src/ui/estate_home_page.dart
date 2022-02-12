@@ -93,9 +93,7 @@ class _EstateHomePageState extends State<EstateHomePage> {
                                 Expanded(
                                   child: ClipRRect(
                                     borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(4),
-                                      topRight: Radius.circular(4)
-                                    ),
+                                        topLeft: Radius.circular(4), topRight: Radius.circular(4)),
                                     child: CachedNetworkImage(
                                       imageUrl:
                                           "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
@@ -152,7 +150,9 @@ class _EstateHomePageState extends State<EstateHomePage> {
                 )
               ],
             ),
-            SizedBox(height: 32,),
+            SizedBox(
+              height: 32,
+            ),
             Column(
               children: [
                 Padding(
@@ -194,12 +194,10 @@ class _EstateHomePageState extends State<EstateHomePage> {
                                 Expanded(
                                   child: ClipRRect(
                                     borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(4),
-                                        topRight: Radius.circular(4)
-                                    ),
+                                        topLeft: Radius.circular(4), topRight: Radius.circular(4)),
                                     child: CachedNetworkImage(
                                       imageUrl:
-                                      "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
+                                          "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -251,26 +249,43 @@ class _EstateHomePageState extends State<EstateHomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 16,),
+                SizedBox(
+                  height: 16,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: Container(
                     height: 64,
                     decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-
-                      boxShadow: [
-                        BoxShadow(
-                                color: Colors.grey[100]!,
-                          blurRadius: 3,
-                          spreadRadius: 6
-                        )
-                      ]
-                    ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [BoxShadow(color: Colors.grey[100]!, blurRadius: 3, spreadRadius: 6)]),
                     child: Row(
                       children: [
-
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Ionicons.home_outline,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Ionicons.search,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Ionicons.heart_outline,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Ionicons.chatbubble_outline,
+                          ),
+                        )
                       ],
                     ),
                   ),
