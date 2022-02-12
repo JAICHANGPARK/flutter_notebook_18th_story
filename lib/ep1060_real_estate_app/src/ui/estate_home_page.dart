@@ -197,7 +197,7 @@ class _EstateHomePageState extends State<EstateHomePage> {
                                     width: 84,
                                     height: 84,
                                     child: ClipRRect(
-                                      borderRadius:  BorderRadius.circular(9),
+                                      borderRadius: BorderRadius.circular(9),
                                       child: CachedNetworkImage(
                                         imageUrl:
                                             "https://cdn.pixabay.com/photo/2014/12/27/14/37/living-room-581073_960_720.jpg",
@@ -209,7 +209,7 @@ class _EstateHomePageState extends State<EstateHomePage> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children:  [
+                                      children: [
                                         Text("Light space"),
                                         Padding(
                                           padding: EdgeInsets.symmetric(vertical: 4),
@@ -225,12 +225,18 @@ class _EstateHomePageState extends State<EstateHomePage> {
                                             Container(
                                               decoration: BoxDecoration(
                                                 color: Colors.brown[100],
-                                                
                                               ),
                                               padding: EdgeInsets.all(4),
-                                              child: Icon(Ionicons.bed_outline, size: 12,
-                                              color: Colors.brown,),
-                                            )
+                                              child: Icon(
+                                                Ionicons.bed_outline,
+                                                size: 12,
+                                                color: Colors.brown,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Text("4 rooms"),
                                           ],
                                         )
                                       ],
