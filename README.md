@@ -10,6 +10,7 @@
 
 #### Packages
 1. https://pub.dev/packages/go_router
+2. https://pub.dev/packages/flutter_lorem
 
 <img
 src="https://cdn.dribbble.com/users/2564256/screenshots/17473016/media/9a58fcc941db70706bf1a850fdab83b3.png"
