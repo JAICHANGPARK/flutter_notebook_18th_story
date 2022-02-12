@@ -33,14 +33,17 @@ class _EstateDetailPageState extends State<EstateDetailPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    image: DecorationImage(
-                      image: CachedNetworkImageProvider(
-                        widget.img,
+                child: Hero(
+                  tag: widget.imgTag,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      image: DecorationImage(
+                        image: CachedNetworkImageProvider(
+                          widget.img,
+                        ),
+                        fit: BoxFit.cover,
                       ),
-                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -110,11 +113,13 @@ class _EstateDetailPageState extends State<EstateDetailPage> {
                       ],
                     ),
                   ),
+                  SizedBox(width: 24,),
                   Expanded(
                     child: Container(
-                      height: 64,
+                      height: 48,
                       decoration: BoxDecoration(
                         color: Colors.brown,
+                        borderRadius: BorderRadius.circular(8)
                       ),
                       child: Center(
                         child: Text(
