@@ -17,6 +17,12 @@ class EstateDetailPage extends StatefulWidget {
 class _EstateDetailPageState extends State<EstateDetailPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+
+        ],
+      ),
+    );
   }
 }
