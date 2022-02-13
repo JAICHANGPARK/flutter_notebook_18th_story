@@ -25,8 +25,11 @@ class TutorLoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(child: SvgPicture.asset("assets/ep1063/learning_bro.svg",),
-                left: 0,
+                Positioned(
+                  child: SvgPicture.asset(
+                    "assets/ep1063/learning_bro.svg",
+                  ),
+                  left: 0,
                   right: 0,
                   bottom: 0,
                   top: 64,
@@ -39,10 +42,22 @@ class TutorLoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text("Find Your Best"),
-              Text.rich(TextSpan(children:
-              [
-                TextSpan()
-
+              Text.rich(TextSpan(children: [
+                TextSpan(
+                  text: "Tuition/Tutor",
+                  style: TextStyle(
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+                TextSpan(
+                  text: "on Online",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                )
               ]))
             ],
           ))
