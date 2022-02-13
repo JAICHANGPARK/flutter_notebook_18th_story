@@ -24,6 +24,7 @@ dependencies:
   http: any
 
   flutter_lorem: any
+  flutter_svg: any
 
 dev_dependencies:
   flutter_test:
@@ -38,7 +39,8 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-
+  assets:
+    - assets/ep1063/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
