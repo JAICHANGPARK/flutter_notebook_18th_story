@@ -9,7 +9,10 @@
 - https://dribbble.com/shots/17495096-Tuition-Tutor-App
 
 #### Packages
--
+- [flutter_svg](https://pub.dev/packages/flutter_svg) : Draw SVG (and some Android VectorDrawable (XML)) files on a Flutter Widget.
+
+#### resources
+- https://storyset.com/
 
 <img
 src="https://cdn.dribbble.com/users/7224992/screenshots/17495096/media/ff0bf5eb2c1f6955ffcaab541d2083fe.png"
