@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'ep1060_real_estate_app/real_estate_app.dart';
+import 'ep1063_tutor_app/tutor_app.dart';
 
 main() {
   runApp(
      ProviderScope(
-      child: RealEstateApp(),
+      child: TutorApp(),
     ),
   );
 }
