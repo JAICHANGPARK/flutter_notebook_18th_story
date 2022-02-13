@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lorem/flutter_lorem.dart';
 import 'package:flutter_svg/svg.dart';
 
 class TutorLoginPage extends StatelessWidget {
@@ -37,29 +38,62 @@ class TutorLoginPage extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 26,
+          ),
           Expanded(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Find Your Best"),
-              Text.rich(TextSpan(children: [
-                TextSpan(
-                  text: "Tuition/Tutor",
-                  style: TextStyle(
-                    color: Colors.green,
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  "Find Your Best",
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 20,
                   ),
                 ),
-                TextSpan(
-                  text: "on Online",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                SizedBox(
+                  height: 8,
+                ),
+                const Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Tuition/Tutor",
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      TextSpan(
+                        text: " on Online",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    "${lorem(paragraphs: 1, words: 16)}",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey,
+                    ),
                   ),
                 )
-              ]))
-            ],
+              ],
+            ),
           ))
         ],
       ),
