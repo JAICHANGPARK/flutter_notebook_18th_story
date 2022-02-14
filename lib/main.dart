@@ -4,7 +4,7 @@ import 'ep1063_tutor_app/tutor_app.dart';
 
 main() {
   runApp(
-     ProviderScope(
+     const ProviderScope(
       child: TutorApp(),
     ),
   );
