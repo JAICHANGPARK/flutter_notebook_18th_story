@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1063_tutor_app/src/ui/tutor_card_component.dart';
 import 'package:ionicons/ionicons.dart';
 
 class TutorMainPage extends StatefulWidget {
@@ -102,10 +103,12 @@ class _TutorMainPageState extends State<TutorMainPage> {
                 ),
               ),
               Expanded(
-                child: ListView(
-                  children: [
-                    
-                  ],
+                child: ListView.builder(
+                  itemCount: 4,
+                  itemBuilder: (context, index){
+                    return TutorCardComponent();
+                  },
+
                 ),
               ),
             ],
