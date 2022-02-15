@@ -12,7 +12,9 @@ class TutorCardComponent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text("Dreamwalker"),
+            SizedBox(height: 8,),
             Text("Flutter Development"),
+            SizedBox(height: 12,),
             Row(
               children: [
                 Expanded(
@@ -33,6 +35,7 @@ class TutorCardComponent extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 8,),
             Row(
               children: [
                 Expanded(
@@ -53,6 +56,7 @@ class TutorCardComponent extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 8,),
             Row(
               children: [
                 Expanded(
@@ -73,10 +77,11 @@ class TutorCardComponent extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 16,),
             Row(
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                   child: Text("Message"),
                   decoration: BoxDecoration(
                     color: Colors.green,
