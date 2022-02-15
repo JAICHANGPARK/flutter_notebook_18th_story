@@ -171,7 +171,7 @@ class TutorCardComponent extends StatelessWidget {
                     ),
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Color.fromRGBO(146, 227, 169, 1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
@@ -183,7 +183,7 @@ class TutorCardComponent extends StatelessWidget {
                   child: const Text("Call"),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.green,
+                      color: Color.fromRGBO(146, 227, 169, 1),
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
