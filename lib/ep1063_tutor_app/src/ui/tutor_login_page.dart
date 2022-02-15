@@ -22,8 +22,8 @@ class TutorLoginPage extends StatelessWidget {
                   right: -64,
                   bottom: 0,
                   child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.green[200],
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(146, 227, 169, 1),
                       shape: BoxShape.circle,
                     ),
                   ),
@@ -51,7 +51,7 @@ class TutorLoginPage extends StatelessWidget {
                 children: [
                   const Text(
                     "Find Your Best",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -65,7 +65,7 @@ class TutorLoginPage extends StatelessWidget {
                         TextSpan(
                           text: "Tuition/Tutor",
                           style: TextStyle(
-                            color: Colors.green,
+                            color: Color.fromRGBO(146, 227, 169, 1),
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
@@ -99,7 +99,7 @@ class TutorLoginPage extends StatelessWidget {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.greenAccent,
+                      color: const Color.fromRGBO(146, 227, 169, 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 18),
