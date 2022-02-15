@@ -11,22 +11,22 @@ class TutorCardComponent extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Dreamwalker"),
-            SizedBox(
+            const Text("Dreamwalker"),
+            const SizedBox(
               height: 8,
             ),
-            Text(
+            const Text(
               "Flutter Development",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Row(
               children: [
                 Expanded(
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         "Category: ",
                         style: TextStyle(
@@ -43,12 +43,12 @@ class TutorCardComponent extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Expanded(
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         "Days/Week: ",
                         style: TextStyle(
@@ -67,17 +67,20 @@ class TutorCardComponent extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
               children: [
                 Expanded(
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         "Class: ",
-                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                        ),
                       ),
                       Text(
                         "One",
@@ -88,12 +91,18 @@ class TutorCardComponent extends StatelessWidget {
                     ],
                   ),
                 ),
+                const SizedBox(
+                  width: 16,
+                ),
                 Expanded(
                   child: Row(
-                    children: [
+                    children: const [
                       Text(
                         "Subject: ",
-                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                        ),
                       ),
                       Text(
                         "Flutter/Android/iOS",
@@ -104,48 +113,74 @@ class TutorCardComponent extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Row(
               children: [
                 Expanded(
                   child: Row(
-                    children: [
-                      Text("Category: "),
-                      Text("Cross-Platform"),
+                    children: const [
+                      Text(
+                        "Fee: ",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                        ),
+                      ),
+                      Text(
+                        "Free",
+                        style: TextStyle(fontSize: 12),
+                      ),
                     ],
                   ),
                 ),
+                const SizedBox(
+                  width: 16,
+                ),
                 Expanded(
                   child: Row(
-                    children: [
-                      Text("Days/Week: "),
-                      Text("4 Weeks"),
+                    children: const [
+                      Text(
+                        "Location: ",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 12,
+                        ),
+                      ),
+                      Text(
+                        "Seoul, Korea",
+                        style: TextStyle(fontSize: 12),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: 16,
+            const SizedBox(
+              height: 24,
             ),
             Row(
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                  child: Text("Message"),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  child: const Text(
+                    "Message",
+                    style: TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Text("Call"),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  child: const Text("Call"),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.green,
@@ -153,7 +188,13 @@ class TutorCardComponent extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
+                Text(
+                  "13 Hours ago",
+                  style: TextStyle(
+                    fontSize: 12,
+                  ),
+                )
               ],
             ),
           ],
