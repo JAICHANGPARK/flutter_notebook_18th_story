@@ -123,7 +123,9 @@ class TutorLoginPage extends StatelessWidget {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.greenAccent),
+                        border: Border.all(
+                          color: const Color.fromRGBO(146, 227, 169, 1),
+                        ),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       padding: const EdgeInsets.symmetric(vertical: 18),
