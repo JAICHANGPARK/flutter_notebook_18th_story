@@ -55,8 +55,8 @@ class _TutorMainPageState extends State<TutorMainPage> {
                               ),
                               Expanded(
                                 child: DropdownButton<String>(
-                                  items: [
-                                    const DropdownMenuItem(
+                                  items: const [
+                                    DropdownMenuItem(
                                       child: Text("Sylhet"),
                                     )
                                   ],
@@ -102,6 +102,9 @@ class _TutorMainPageState extends State<TutorMainPage> {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 16,
+              ),
               Expanded(
                 child: ListView.builder(
                   itemCount: 4,
@@ -119,7 +122,7 @@ class _TutorMainPageState extends State<TutorMainPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromRGBO(146, 227, 169, 1),
         onPressed: () {  },
         child: const Icon(Icons.add),
 
