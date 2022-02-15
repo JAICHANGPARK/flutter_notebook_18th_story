@@ -75,22 +75,18 @@ class TutorCardComponent extends StatelessWidget {
             ),
             Row(
               children: [
-                Expanded(
-                  child: Row(
-                    children: [
-                      Text("Category: "),
-                      Text("Cross-Platform"),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Row(
-                    children: [
-                      Text("Days/Week: "),
-                      Text("4 Weeks"),
-                    ],
-                  ),
-                ),
+                Container(child: Text("Message"),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(8)
+                ),),
+                Container(child: Text("Message"),
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(8)
+                  ),),
+                Spacer(),
+
               ],
             ),
           ],
