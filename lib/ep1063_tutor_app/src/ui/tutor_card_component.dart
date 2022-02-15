@@ -88,8 +88,9 @@ class TutorCardComponent extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                SizedBox(width: 12,),
+                SizedBox(width: 16,),
                 Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: Text("Call"),
                   decoration: BoxDecoration(
                     border: Border.all(
