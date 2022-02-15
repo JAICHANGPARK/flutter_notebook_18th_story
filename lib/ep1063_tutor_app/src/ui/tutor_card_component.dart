@@ -11,7 +11,15 @@ class TutorCardComponent extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            Text("Dreamwalker"),
+            Text("Flutter Development"),
 
+            Row(
+              children: [
+                Text("Category: "),
+                Text("Cross-Platform")
+              ],
+            )
           ],
         ),
       ),
