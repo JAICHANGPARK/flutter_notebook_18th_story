@@ -34,7 +34,7 @@ class _TutorMainPageState extends State<TutorMainPage> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               SizedBox(
@@ -47,16 +47,16 @@ class _TutorMainPageState extends State<TutorMainPage> {
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                           child: Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Ionicons.location_outline,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 8,
                               ),
                               Expanded(
                                 child: DropdownButton<String>(
                                   items: [
-                                    DropdownMenuItem(
+                                    const DropdownMenuItem(
                                       child: Text("Sylhet"),
                                     )
                                   ],
@@ -65,7 +65,7 @@ class _TutorMainPageState extends State<TutorMainPage> {
                                   underline: Container(),
                                 ),
                               ),
-                              VerticalDivider(
+                              const VerticalDivider(
                                 thickness: 2,
                                 color: Colors.grey,
                                 indent: 2,
@@ -76,7 +76,7 @@ class _TutorMainPageState extends State<TutorMainPage> {
                                 style: TextButton.styleFrom(
                                   primary: Colors.grey,
                                 ),
-                                child: Text(
+                                child: const Text(
                                   "Search",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -88,12 +88,12 @@ class _TutorMainPageState extends State<TutorMainPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
-                    Card(
+                    const Card(
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Center(
                           child: Icon(Icons.tune),
                         ),
@@ -106,7 +106,10 @@ class _TutorMainPageState extends State<TutorMainPage> {
                 child: ListView.builder(
                   itemCount: 4,
                   itemBuilder: (context, index){
-                    return TutorCardComponent();
+                    return const Padding(
+                      padding: EdgeInsets.only(bottom: 12),
+                      child: TutorCardComponent(),
+                    );
                   },
 
                 ),
@@ -118,7 +121,7 @@ class _TutorMainPageState extends State<TutorMainPage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green,
         onPressed: () {  },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
 
       ),
       bottomNavigationBar: BottomAppBar(
