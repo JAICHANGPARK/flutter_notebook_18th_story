@@ -101,6 +101,20 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                       height: 64,
                       color: Colors.red,
                     ),
+                    ListView.builder(
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          height: 200,
+                          child: Card(
+                            child: Container(
+                              color: Colors.red,
+                            ),
+                          ),
+                        );
+                      },
+                      shrinkWrap: true,
+                    ),
                   ],
                 ),
               ),
