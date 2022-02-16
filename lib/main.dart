@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'ep1063_tutor_app/tutor_app.dart';
+import 'ep1066_task_mng_app/task_management_app.dart';
 
 main() {
   runApp(
      const ProviderScope(
-      child: TutorApp(),
+      child: TaskManagementApp(),
     ),
   );
 }
