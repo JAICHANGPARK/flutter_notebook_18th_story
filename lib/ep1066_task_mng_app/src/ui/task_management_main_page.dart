@@ -60,9 +60,18 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Project"),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 8, 0),
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      "Project",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 0, 8),
                     child: Container(
                       height: 300,
                       decoration: BoxDecoration(
