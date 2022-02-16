@@ -56,50 +56,55 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
               height: 8,
             ),
             Expanded(
-                child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      "Project",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 0, 8),
-                    child: Container(
-                      height: 300,
-                      decoration: const BoxDecoration(
-                        color: Colors.green,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Text(
+                        "Project",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          "My Task",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 0, 0, 8),
+                      child: Container(
+                        height: 300,
+                        decoration: const BoxDecoration(
+                          color: Colors.green,
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text("See all"),
-                        ),
-                      ],
+                      ),
                     ),
-                  )
-                ],
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            "My Task",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text("See all"),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 64,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
               ),
-            ))
+            )
           ],
         ),
       ),
