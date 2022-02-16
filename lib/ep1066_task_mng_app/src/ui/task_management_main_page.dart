@@ -53,7 +53,7 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             Expanded(
                 child: SingleChildScrollView(
