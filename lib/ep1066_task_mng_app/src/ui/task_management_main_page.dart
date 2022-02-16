@@ -12,6 +12,7 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       body: SafeArea(
         child: Column(
           children: [
@@ -21,22 +22,26 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                 children: [
                   CircleAvatar(),
                   Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 9),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Dreamwalker"),
-                        Text("Hello, Dreamwalker 👋"),
+                        SizedBox(height: 4,),
+                        Text(
+                          "Hello, Dreamwalker 👋",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey,
+                          ),
+                        ),
                       ],
                     ),
                   ),
                   Spacer(),
                   Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8)
-                    ),
-                    padding: EdgeInsets.all(4),
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+                    padding: EdgeInsets.all(6),
                     child: Icon(Icons.menu),
                   )
                 ],
