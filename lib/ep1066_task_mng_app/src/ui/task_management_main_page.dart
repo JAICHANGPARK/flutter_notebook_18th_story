@@ -20,14 +20,16 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 children: [
-                  CircleAvatar(),
+                  const CircleAvatar(),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 9),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text("Dreamwalker"),
-                        SizedBox(height: 4,),
+                        SizedBox(
+                          height: 4,
+                        ),
                         Text(
                           "Hello, Dreamwalker 👋",
                           style: TextStyle(
@@ -38,15 +40,34 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                       ],
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
-                    padding: EdgeInsets.all(6),
-                    child: Icon(Icons.menu),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: const EdgeInsets.all(6),
+                    child: const Icon(Icons.menu),
                   )
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Expanded(
+                child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Project"),
+                  Container(
+                    height: 300,
+                    decoration: BoxDecoration(color: Colors.green),
+                  ),
+                ],
+              ),
+            ))
           ],
         ),
       ),
