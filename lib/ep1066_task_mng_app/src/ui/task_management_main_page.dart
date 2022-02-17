@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class TaskManagementMainPage extends StatefulWidget {
   const TaskManagementMainPage({Key? key}) : super(key: key);
@@ -92,7 +93,22 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                               color: Colors.grey,
                                               borderRadius: BorderRadius.circular(8),
                                             ),
-                                          ),),
+                                          ),
+                                        ),
+                                        Text("NFT Landing Page 💰"),
+                                        Row(
+                                          children: [
+                                            Text("4"),
+                                            Text("/12 task"),
+                                            Spacer(),
+                                            Text("30%"),
+                                          ],
+                                        ),
+                                        LinearPercentIndicator(
+                                          fillColor: Colors.blueAccent,
+                                          percent: 0.3,
+                                          backgroundColor: Colors.grey[300],
+                                        ),
                                       ],
                                     ),
                                   ),
