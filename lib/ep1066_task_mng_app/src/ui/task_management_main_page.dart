@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -70,8 +70,8 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16, 0, 0, 8),
-                      child: Container(
-                        height: 280,
+                      child: SizedBox(
+                        height: 270,
                         // decoration: const BoxDecoration(
                         //   color: Colors.green,
                         // ),
@@ -86,28 +86,69 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Expanded(
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: Colors.grey,
                                               borderRadius: BorderRadius.circular(8),
+                                              image: const DecorationImage(
+                                                image: CachedNetworkImageProvider(
+                                                  "https://cdn.pixabay.com/photo/2021/12/15/12/21/leaves-6872404_960_720.jpg",
+                                                ),
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                        Text("NFT Landing Page 💰"),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        const Text(
+                                          "NFT Landing Page 💰",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 16,
+                                        ),
                                         Row(
-                                          children: [
-                                            Text("4"),
-                                            Text("/12 task"),
+                                          children: const [
+                                            Text(
+                                              "4",
+                                              style: TextStyle(fontSize: 12),
+                                            ),
+                                            Text(
+                                              "/12 task",
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
                                             Spacer(),
-                                            Text("30%"),
+                                            Text(
+                                              "30%",
+                                              style: TextStyle(
+                                                color: Colors.blue,
+                                              ),
+                                            ),
                                           ],
                                         ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
                                         LinearPercentIndicator(
-                                          fillColor: Colors.blueAccent,
+                                          // width: 160,
+                                          // fillColor: Colors.blueAccent,
+                                          // linearStrokeCap: LinearStrokeCap.roundAll,
+                                          lineHeight: 8,
+                                          barRadius: const Radius.circular(8),
+                                          padding: EdgeInsets.zero,
                                           percent: 0.3,
                                           backgroundColor: Colors.grey[300],
+                                          progressColor: Colors.blueAccent,
                                         ),
                                       ],
                                     ),
