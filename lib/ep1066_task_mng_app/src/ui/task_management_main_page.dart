@@ -76,23 +76,32 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                         // ),
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index){
+                          itemBuilder: (context, index) {
                             return Padding(
                               padding: const EdgeInsets.only(right: 8),
                               child: SizedBox(
                                 width: 180,
                                 child: Card(
-                                  child: Column(
-                                    children: [
-
-                                    ],
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.grey,
+                                              borderRadius: BorderRadius.circular(8),
+                                            ),
+                                          ),),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
                             );
                           },
-
-                        itemCount: 10,),
+                          itemCount: 10,
+                        ),
                       ),
                     ),
                     const SizedBox(
