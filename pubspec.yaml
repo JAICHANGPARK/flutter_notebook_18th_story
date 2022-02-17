@@ -25,6 +25,7 @@ dependencies:
 
   flutter_lorem: any
   flutter_svg: any
+  percent_indicator: ^4.0.0
 
 dev_dependencies:
   flutter_test:
