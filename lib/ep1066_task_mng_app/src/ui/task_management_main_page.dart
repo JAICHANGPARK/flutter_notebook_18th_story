@@ -70,10 +70,29 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16, 0, 0, 8),
                       child: Container(
-                        height: 300,
-                        decoration: const BoxDecoration(
-                          color: Colors.green,
-                        ),
+                        height: 280,
+                        // decoration: const BoxDecoration(
+                        //   color: Colors.green,
+                        // ),
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index){
+                            return Padding(
+                              padding: const EdgeInsets.only(right: 8),
+                              child: SizedBox(
+                                width: 180,
+                                child: Card(
+                                  child: Column(
+                                    children: [
+
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+
+                        itemCount: 10,),
                       ),
                     ),
                     const SizedBox(
