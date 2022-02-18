@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
+import '../model/task_tab.dart';
+
 class TaskManagementMainPage extends StatefulWidget {
   const TaskManagementMainPage({Key? key}) : super(key: key);
 
@@ -191,7 +193,7 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                           itemBuilder: (context, index) {
                             return Container(
                               child: Center(child: Text(
-                                "B"
+                                  taskTabItems[index]
                               )),
                             );
                           },
