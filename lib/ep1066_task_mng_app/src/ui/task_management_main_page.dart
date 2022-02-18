@@ -191,18 +191,33 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                       child: Consumer(
                         builder: (BuildContext context, WidgetRef ref, Widget? child) {
                           final idx = ref.watch(taskTabProvider);
-                          return  Container(
-                            height: 64,
-                            color: Colors.red,
+                          return Container(
+                            height: 48,
                             child: ListView.builder(
                               itemBuilder: (context, index) {
-                                return Container(
-                                  decoration: BoxDecoration(
-
+                                return Padding(
+                                  padding: const EdgeInsets.only(
+                                    right: 8,
+                                    top: 4,
+                                    bottom: 4,
                                   ),
-                                  child: Center(
-                                    child: Text(
-                                      taskTabItems[index].title,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      ref.read(taskTabProvider.notifier).state = index;
+                                    },
+                                    child: Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 16,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: idx == index ? Colors.blueAccent : Colors.blueGrey[100],
+                                        borderRadius: BorderRadius.circular(4)
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          taskTabItems[index].title,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 );
@@ -212,7 +227,6 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                             ),
                           );
                         },
-
                       ),
                     ),
                     Padding(
