@@ -206,16 +206,19 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                       ref.read(taskTabProvider.notifier).state = index;
                                     },
                                     child: Container(
-                                      padding: EdgeInsets.symmetric(
+                                      padding: const EdgeInsets.symmetric(
                                         horizontal: 16,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: idx == index ? Colors.blueAccent : Colors.blueGrey[100],
-                                        borderRadius: BorderRadius.circular(4)
+                                        color: idx == index ? Colors.blueAccent : Colors.blueGrey[50],
+                                        borderRadius: BorderRadius.circular(4),
                                       ),
                                       child: Center(
                                         child: Text(
                                           taskTabItems[index].title,
+                                          style: TextStyle(
+                                            color: idx == index ? Colors.white : Colors.grey,
+                                          ),
                                         ),
                                       ),
                                     ),
