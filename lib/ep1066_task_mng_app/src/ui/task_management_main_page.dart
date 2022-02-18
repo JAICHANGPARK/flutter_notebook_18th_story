@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1066_task_mng_app/src/riverpod/task_tap_controller.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../model/task_tab.dart';
@@ -186,19 +188,31 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 16),
-                      child: Container(
-                        height: 64,
-                        color: Colors.red,
-                        child: ListView.builder(
-                          itemBuilder: (context, index) {
-                            return Container(
-                              child: Center(child: Text(
-                                  taskTabItems[index]
-                              )),
-                            );
-                          },
-                          scrollDirection: Axis.horizontal,
-                        ),
+                      child: Consumer(
+                        builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                          final idx = ref.watch(taskTabProvider);
+                          return  Container(
+                            height: 64,
+                            color: Colors.red,
+                            child: ListView.builder(
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  decoration: BoxDecoration(
+
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      taskTabItems[index].title,
+                                    ),
+                                  ),
+                                );
+                              },
+                              itemCount: taskTabItems.length,
+                              scrollDirection: Axis.horizontal,
+                            ),
+                          );
+                        },
+
                       ),
                     ),
                     Padding(
