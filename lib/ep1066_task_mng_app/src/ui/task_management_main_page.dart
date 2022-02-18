@@ -187,6 +187,16 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                       child: Container(
                         height: 64,
                         color: Colors.red,
+                        child: ListView.builder(
+                          itemBuilder: (context, index) {
+                            return Container(
+                              child: Center(child: Text(
+                                "B"
+                              )),
+                            );
+                          },
+                          scrollDirection: Axis.horizontal,
+                        ),
                       ),
                     ),
                     Padding(
