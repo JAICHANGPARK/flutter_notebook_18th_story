@@ -6,7 +6,7 @@ class TaskTab{
   TaskTab(this.title);
 }
 
-List<TaskTab> tabItems = [
+List<TaskTab> taskTabItems = [
   TaskTab("Backlog"),
   TaskTab("To Do"),
   TaskTab("In Progress"),
