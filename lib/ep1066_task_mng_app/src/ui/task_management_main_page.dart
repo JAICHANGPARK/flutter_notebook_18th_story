@@ -236,6 +236,7 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                       padding: const EdgeInsets.all(8.0),
                       child: ListView.builder(
                         itemCount: 10,
+                        shrinkWrap: true,
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 8),
@@ -243,13 +244,20 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                               height: 200,
                               child: Card(
                                 child: Container(
-                                  color: Colors.red,
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+
+                                        ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
                           );
                         },
-                        shrinkWrap: true,
                       ),
                     ),
                   ],
