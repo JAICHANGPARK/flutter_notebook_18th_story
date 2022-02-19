@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1066_task_mng_app/src/model/my_task.dart';
 import 'package:flutter_notebook_18th_story/ep1066_task_mng_app/src/riverpod/task_tap_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -235,9 +236,10 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListView.builder(
-                        itemCount: 10,
+                        itemCount: backlogTaskItems.length,
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
+                          var item = backlogTaskItems[index];
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 8),
                             child: SizedBox(
@@ -247,9 +249,13 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                   child: Column(
                                     children: [
                                       Row(
-                                        children: [
-
-                                        ],
+                                        children: item.tags?.map((e) => Container(
+                                          decoration: BoxDecoration(
+                                            color: e.color ?? Colors.black,
+                                            borderRadius: BorderRadius.circular(4)
+                                          ),
+                                          
+                                        )).toList() ?? []
                                       )
                                     ],
                                   ),
