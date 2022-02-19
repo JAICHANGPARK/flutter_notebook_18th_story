@@ -248,13 +248,14 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(16.0),
                                   child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                           children: item.tags
                                                   ?.map((e) => Padding(
-                                                    padding: const EdgeInsets.only(right: 8),
-                                                    child: Container(
-                                                          padding: EdgeInsets.symmetric(
+                                                        padding: const EdgeInsets.only(right: 8),
+                                                        child: Container(
+                                                          padding: const EdgeInsets.symmetric(
                                                             horizontal: 12,
                                                             vertical: 6,
                                                           ),
@@ -265,16 +266,47 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                                           child: Center(
                                                             child: Text(
                                                               "${e.tag}",
-                                                              style: const TextStyle(
-                                                                color: Colors.white,
-                                                                fontSize: 12
-                                                              ),
+                                                              style: const TextStyle(color: Colors.white, fontSize: 12),
                                                             ),
                                                           ),
                                                         ),
-                                                  ))
+                                                      ))
                                                   .toList() ??
-                                              [])
+                                              []),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(vertical: 16),
+                                        child: Text(item.title ?? "untitle"),
+                                      ),
+                                      Text(item.subtitle ?? "??"),
+                                      const SizedBox(
+                                        height: 16,
+                                      ),
+                                      Row(
+                                        children: [
+                                          const CircleAvatar(
+                                            radius: 16,
+                                          ),
+                                          const CircleAvatar(
+                                            radius: 16,
+                                          ),
+                                          const Spacer(),
+                                          const Icon(
+                                            Icons.access_time_filled,
+                                            color: Colors.grey,
+                                            size: 18,
+                                          ),
+                                          const SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text(
+                                            "${item.timeLeft} left",
+                                            style: const TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 12,
+                                            ),
+                                          )
+                                        ],
+                                      )
                                     ],
                                   ),
                                 ),
