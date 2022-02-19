@@ -245,25 +245,34 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                             child: SizedBox(
                               height: 200,
                               child: Card(
-                                child: Container(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(16.0),
                                   child: Column(
                                     children: [
                                       Row(
                                           children: item.tags
-                                                  ?.map((e) => Container(
-                                                        decoration: BoxDecoration(
-                                                          color: e.color ?? Colors.black,
-                                                          borderRadius: BorderRadius.circular(4),
-                                                        ),
-                                                        child: Center(
-                                                          child: Text(
-                                                            "${e.tag}",
-                                                            style: const TextStyle(
-                                                              color: Colors.white,
+                                                  ?.map((e) => Padding(
+                                                    padding: const EdgeInsets.only(right: 8),
+                                                    child: Container(
+                                                          padding: EdgeInsets.symmetric(
+                                                            horizontal: 12,
+                                                            vertical: 6,
+                                                          ),
+                                                          decoration: BoxDecoration(
+                                                            color: e.color ?? Colors.black,
+                                                            borderRadius: BorderRadius.circular(4),
+                                                          ),
+                                                          child: Center(
+                                                            child: Text(
+                                                              "${e.tag}",
+                                                              style: const TextStyle(
+                                                                color: Colors.white,
+                                                                fontSize: 12
+                                                              ),
                                                             ),
                                                           ),
                                                         ),
-                                                      ))
+                                                  ))
                                                   .toList() ??
                                               [])
                                     ],
