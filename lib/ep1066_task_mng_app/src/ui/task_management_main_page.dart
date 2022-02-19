@@ -249,14 +249,23 @@ class _TaskManagementMainPageState extends State<TaskManagementMainPage> {
                                   child: Column(
                                     children: [
                                       Row(
-                                        children: item.tags?.map((e) => Container(
-                                          decoration: BoxDecoration(
-                                            color: e.color ?? Colors.black,
-                                            borderRadius: BorderRadius.circular(4)
-                                          ),
-                                          
-                                        )).toList() ?? []
-                                      )
+                                          children: item.tags
+                                                  ?.map((e) => Container(
+                                                        decoration: BoxDecoration(
+                                                          color: e.color ?? Colors.black,
+                                                          borderRadius: BorderRadius.circular(4),
+                                                        ),
+                                                        child: Center(
+                                                          child: Text(
+                                                            "${e.tag}",
+                                                            style: const TextStyle(
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ))
+                                                  .toList() ??
+                                              [])
                                     ],
                                   ),
                                 ),
