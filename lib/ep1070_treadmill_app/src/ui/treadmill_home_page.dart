@@ -39,7 +39,10 @@ class TreadmillHomePage extends StatelessWidget {
                     ),
                     Text(
                       "SLEEP",
-                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 10,
+                      ),
                     )
                   ],
                 ),
@@ -50,25 +53,31 @@ class TreadmillHomePage extends StatelessWidget {
                       radius: 36,
                       backgroundColor: Colors.white,
                     ),
-                    SizedBox(height: 24,)
+                    SizedBox(
+                      height: 24,
+                    )
                   ],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
-                    radius: 24,
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.black,
-                    child: Text("A")
-                  ),
+                      radius: 24,
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      child: Text("A"),
+                    ),
                     SizedBox(
                       height: 8,
                     ),
                     Text(
                       "AUTO",
-                      style: TextStyle(color: Colors.grey, fontSize: 12),
-                    )],
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 10,
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),
