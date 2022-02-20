@@ -29,7 +29,7 @@ class TreadmillHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
-                      radius: 27,
+                      radius: 24,
                       backgroundColor: Colors.white,
                       foregroundColor: Colors.black,
                       child: Icon(Icons.power_settings_new),
@@ -44,6 +44,7 @@ class TreadmillHomePage extends StatelessWidget {
                   ],
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
                       radius: 36,
@@ -52,7 +53,20 @@ class TreadmillHomePage extends StatelessWidget {
                   ],
                 ),
                 Column(
-                  children: [CircleAvatar()],
+                  children: [
+                    CircleAvatar(
+                    radius: 24,
+                    backgroundColor: Colors.white,
+                    foregroundColor: Colors.black,
+                    child: Text("A")
+                  ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "AUTO",
+                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                    )],
                 ),
               ],
             ),
