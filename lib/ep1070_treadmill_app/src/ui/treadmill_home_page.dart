@@ -50,9 +50,11 @@ class TreadmillHomePage extends StatelessWidget {
                       radius: 36,
                       backgroundColor: Colors.white,
                     ),
+                    SizedBox(height: 24,)
                   ],
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
                     radius: 24,
