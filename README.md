@@ -2,7 +2,18 @@
 
 ## UI Design
 
-### EP1066
+### EP1070
+
+- Treadmill App Concept
+- by Nicola Badenhorst
+- https://dribbble.com/shots/17312323/attachments/12427023?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/2340587/screenshots/17312323/media/4404dc63d1302d22bc9d4fe256c44e68.png"
+width="400px" >
+</img>
+
+### EP1066-1069
 
 - Taskbit - Task Management App
 - by Robbi Darwis
