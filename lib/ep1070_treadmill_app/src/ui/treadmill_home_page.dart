@@ -27,7 +27,7 @@ class TreadmillHomePage extends StatelessWidget {
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     CircleAvatar(
                       radius: 24,
                       backgroundColor: Colors.white,
@@ -48,7 +48,7 @@ class TreadmillHomePage extends StatelessWidget {
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     CircleAvatar(
                       radius: 36,
                       backgroundColor: Colors.white,
@@ -67,7 +67,7 @@ class TreadmillHomePage extends StatelessWidget {
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     CircleAvatar(
                       radius: 24,
                       backgroundColor: Colors.white,
