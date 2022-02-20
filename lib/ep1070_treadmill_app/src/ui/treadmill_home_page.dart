@@ -12,33 +12,48 @@ class TreadmillHomePage extends StatelessWidget {
             child: Placeholder(),
           ),
           Container(
-            height: 200,
+            height: 180,
             decoration: const BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(36),
                 topLeft: Radius.circular(36),
               ),
-
             ),
+            padding: EdgeInsets.symmetric(horizontal: 36, vertical: 36),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Expanded(child:  Column(
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircleAvatar()
+                    CircleAvatar(
+                      radius: 27,
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      child: Icon(Icons.power_settings_new),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "SLEEP",
+                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                    )
                   ],
-                ),),
-                Expanded(child: Center(
-                  child: CircleAvatar(
-                    radius: 48,
-                  ),
-                )),
-                Expanded(child:  Column(
+                ),
+                Column(
                   children: [
-                    CircleAvatar()
+                    CircleAvatar(
+                      radius: 36,
+                      backgroundColor: Colors.white,
+                    ),
                   ],
-                ),),
-
+                ),
+                Column(
+                  children: [CircleAvatar()],
+                ),
               ],
             ),
           )
