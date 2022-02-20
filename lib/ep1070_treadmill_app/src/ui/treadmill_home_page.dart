@@ -8,14 +8,38 @@ class TreadmillHomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Expanded(child: Placeholder()),
+          const Expanded(
+            child: Placeholder(),
+          ),
           Container(
             height: 200,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.only(
-                topRight: Radius.circular(24)
-              )
+                topRight: Radius.circular(36),
+                topLeft: Radius.circular(36),
+              ),
+
+            ),
+            child: Row(
+              children: [
+                Expanded(child:  Column(
+                  children: [
+                    CircleAvatar()
+                  ],
+                ),),
+                Expanded(child: Center(
+                  child: CircleAvatar(
+                    radius: 48,
+                  ),
+                )),
+                Expanded(child:  Column(
+                  children: [
+                    CircleAvatar()
+                  ],
+                ),),
+
+              ],
             ),
           )
         ],
