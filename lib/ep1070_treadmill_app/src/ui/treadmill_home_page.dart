@@ -52,6 +52,13 @@ class TreadmillHomePage extends StatelessWidget {
                     CircleAvatar(
                       radius: 36,
                       backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                      child: Text(
+                        "START",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                     SizedBox(
                       height: 24,
