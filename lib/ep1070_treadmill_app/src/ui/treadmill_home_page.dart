@@ -30,10 +30,11 @@ class TreadmillHomePage extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
+                            height: 240,
                             decoration: BoxDecoration(
                               color: Colors.grey[100],
                             ),
-                            height: 200,
+
                           )
                         ],
                       ),
