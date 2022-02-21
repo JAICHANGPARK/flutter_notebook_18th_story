@@ -42,10 +42,26 @@ class TreadmillHomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(16),
                             ),
                             child: Column(
-                              children: [
+                              children: const [
                                 Text.rich(
                                   TextSpan(
-                                    children: [],
+                                    children: const [
+                                      TextSpan(
+                                        text: "12",
+                                        style: TextStyle(
+                                          fontSize: 94,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: " km",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey,
+                                        ),
+                                      )
+                                    ],
                                   ),
                                 )
                               ],
