@@ -12,17 +12,23 @@ class TreadmillHomePage extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(24.0),
                 child: Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Hi Dreamwalker"),
+                      children: const [
+                        Text(
+                          "Hi Dreamwalker",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         CircleAvatar(),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     ),
                     Expanded(
@@ -33,8 +39,17 @@ class TreadmillHomePage extends StatelessWidget {
                             height: 240,
                             decoration: BoxDecoration(
                               color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(16),
                             ),
-
+                            child: Column(
+                              children: [
+                                Text.rich(
+                                  TextSpan(
+                                    children: [],
+                                  ),
+                                )
+                              ],
+                            ),
                           )
                         ],
                       ),
