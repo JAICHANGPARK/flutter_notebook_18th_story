@@ -32,55 +32,95 @@ class TreadmillHomePage extends StatelessWidget {
                       height: 24,
                     ),
                     Expanded(
-                        child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 240,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            child: Column(
-                              children: [
-                                const Text.rich(
-                                  TextSpan(
-                                    children: [
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.grey[200],
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              padding: const EdgeInsets.only(top: 16, bottom: 16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 16,
+                                      right: 16,
+                                    ),
+                                    child: Text.rich(
                                       TextSpan(
-                                        text: "12",
-                                        style: TextStyle(
-                                          fontSize: 94,
-                                          fontWeight: FontWeight.w900,
-                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: "12",
+                                            style: TextStyle(
+                                              fontSize: 94,
+                                              fontWeight: FontWeight.w900,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: " km",
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.grey,
+                                            ),
+                                          )
+                                        ],
                                       ),
-                                      TextSpan(
-                                        text: " km",
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.grey,
-                                        ),
-                                      )
-                                    ],
+                                    ),
                                   ),
-                                ),
-                                const Text("TOTAL DISTANCE TODAY"),
-                                const Divider(),
-                                Row(
-                                  children: [
-                                    const Text("ALL DATA"),
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: Icon(Icons.keyboard_arrow_right),
-                                    )
-                                  ],
-                                )
-                              ],
+                                  SizedBox(
+                                    height: 0,
+                                  ),
+                                  const Padding(
+                                    padding: EdgeInsets.all(16.0),
+                                    child: Text(
+                                      "TOTAL DISTANCE TODAY",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  const Divider(),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        const Text("ALL DATA"),
+                                        IconButton(
+                                          onPressed: () {},
+                                          icon: const Icon(
+                                            Icons.keyboard_arrow_right,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
-                          )
-                        ],
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(24),
+                                color: Colors.grey[200],
+                              ),
+                              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                              child: Row(
+                                children: [
+                                  Text("CALORIES BURNED TODAY")
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                    ))
+                    )
                   ],
                 ),
               ),
