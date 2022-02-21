@@ -42,10 +42,10 @@ class TreadmillHomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(16),
                             ),
                             child: Column(
-                              children: const [
-                                Text.rich(
+                              children: [
+                                const Text.rich(
                                   TextSpan(
-                                    children: const [
+                                    children: [
                                       TextSpan(
                                         text: "12",
                                         style: TextStyle(
@@ -63,6 +63,17 @@ class TreadmillHomePage extends StatelessWidget {
                                       )
                                     ],
                                   ),
+                                ),
+                                const Text("TOTAL DISTANCE TODAY"),
+                                const Divider(),
+                                Row(
+                                  children: [
+                                    const Text("ALL DATA"),
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(Icons.keyboard_arrow_right),
+                                    )
+                                  ],
                                 )
                               ],
                             ),
