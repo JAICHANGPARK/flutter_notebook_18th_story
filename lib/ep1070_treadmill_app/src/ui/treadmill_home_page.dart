@@ -71,7 +71,7 @@ class TreadmillHomePage extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 0,
                                   ),
                                   const Padding(
@@ -102,18 +102,91 @@ class TreadmillHomePage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(
-                              height: 8,
+                            const SizedBox(
+                              height: 24,
                             ),
                             Container(
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(24),
+                                borderRadius: BorderRadius.circular(36),
                                 color: Colors.grey[200],
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 24,
+                                vertical: 28,
+                              ),
                               child: Row(
-                                children: [
-                                  Text("CALORIES BURNED TODAY")
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text(
+                                    "CALORIES BURNED TODAY",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  Text.rich(
+                                    TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: "510",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: " kcal",
+                                          style: TextStyle(
+                                            color: Colors.grey,
+                                            fontSize: 13
+                                          )
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 24,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(36),
+                                color: Colors.grey[200],
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 24,
+                                vertical: 28,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text(
+                                    "WEIGHT LOSS",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  Text.rich(
+                                    TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: "510",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: " kg",
+                                            style: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 13
+                                            )
+                                        )
+                                      ],
+                                    ),
+                                  )
                                 ],
                               ),
                             )
