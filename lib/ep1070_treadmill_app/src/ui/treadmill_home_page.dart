@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1070_treadmill_app/src/ui/treadmill_running_page.dart';
 
 class TreadmillHomePage extends StatelessWidget {
   const TreadmillHomePage({Key? key}) : super(key: key);
@@ -133,13 +134,7 @@ class TreadmillHomePage extends StatelessWidget {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        TextSpan(
-                                          text: " kcal",
-                                          style: TextStyle(
-                                            color: Colors.grey,
-                                            fontSize: 13
-                                          )
-                                        )
+                                        TextSpan(text: " kcal", style: TextStyle(color: Colors.grey, fontSize: 13))
                                       ],
                                     ),
                                   )
@@ -177,13 +172,7 @@ class TreadmillHomePage extends StatelessWidget {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        TextSpan(
-                                          text: " kg",
-                                            style: TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 13
-                                            )
-                                        )
+                                        TextSpan(text: " kg", style: TextStyle(color: Colors.grey, fontSize: 13))
                                       ],
                                     ),
                                   )
@@ -241,15 +230,22 @@ class TreadmillHomePage extends StatelessWidget {
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      CircleAvatar(
-                        radius: 36,
-                        backgroundColor: Colors.white,
-                        foregroundColor: Colors.black,
-                        child: Text(
-                          "START",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => TreadmillRunningPage()),
+                          );
+                        },
+                        child: CircleAvatar(
+                          radius: 36,
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                          child: Text(
+                            "START",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
