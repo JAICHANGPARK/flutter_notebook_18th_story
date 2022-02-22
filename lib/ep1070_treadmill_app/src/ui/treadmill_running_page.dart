@@ -35,7 +35,28 @@ class _TreadmillRunningPageState extends State<TreadmillRunningPage> {
                     )
                   ],
                 )),
-            Expanded(flex: 5, child: Placeholder()),
+            Expanded(flex: 5, child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Column()),
+                      Expanded(child: Column()),
+                      Expanded(child: Column()),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Column()),
+                      Expanded(child: Column()),
+                      Expanded(child: Column()),
+                    ],
+                  ),
+                )
+              ],
+            )),
             Expanded(flex: 3, child: Placeholder()),
           ],
         ),
