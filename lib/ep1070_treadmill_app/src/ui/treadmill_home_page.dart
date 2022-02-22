@@ -234,10 +234,12 @@ class TreadmillHomePage extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => TreadmillRunningPage()),
+                            MaterialPageRoute(
+                              builder: (context) => const TreadmillRunningPage(),
+                            ),
                           );
                         },
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           radius: 36,
                           backgroundColor: Colors.white,
                           foregroundColor: Colors.black,
@@ -249,7 +251,7 @@ class TreadmillHomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 24,
                       )
                     ],
