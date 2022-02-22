@@ -40,9 +40,45 @@ class _TreadmillRunningPageState extends State<TreadmillRunningPage> {
                 Expanded(
                   child: Row(
                     children: [
-                      Expanded(child: Column()),
-                      Expanded(child: Column()),
-                      Expanded(child: Column()),
+                      Expanded(child: Column(
+                        children: [
+                          Text("6.13",style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          SizedBox(height: 8,),
+                          Text("Distance", style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12
+                          ),)
+                        ],
+                      )),
+                      Expanded(child: Column(
+                        children: [
+                          Text("381.2",style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          SizedBox(height: 8,),
+                          Text("Calories", style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12
+                          ),)
+                        ],
+                      )),
+                      Expanded(child: Column(
+                        children: [
+                          Text("8838",style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          SizedBox(height: 8,),
+                          Text("Steps", style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12
+                          ),)
+                        ],
+                      )),
                     ],
                   ),
                 ),
