@@ -38,7 +38,7 @@ class _TreadmillRunningPageState extends State<TreadmillRunningPage> {
             Expanded(
                 flex: 5,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 24),
+                  padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24),
                   child: Column(
                     children: [
                       Expanded(
