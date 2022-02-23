@@ -80,8 +80,14 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
         unselectedItemColor: Colors.black,
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "fact_check"),
-          BottomNavigationBarItem(icon: Icon(Icons.sms_outlined), label: "sms"),
+          BottomNavigationBarItem(
+            icon: _tabIndex == 0 ? Icon(Icons.fact_check) : Icon(Icons.fact_check_outlined),
+            label: "fact_check",
+          ),
+          BottomNavigationBarItem(
+            icon: _tabIndex == 1 ? Icon(Icons.sms) : Icon(Icons.sms_outlined),
+            label: "sms",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.motion_photos_on_outlined), label: "motion_photos_on"),
           BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "account_circle"),
         ],
