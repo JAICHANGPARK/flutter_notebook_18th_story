@@ -12,7 +12,11 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: Column(
+        children: [
+          
+        ],
+      ),
     );
   }
 }
