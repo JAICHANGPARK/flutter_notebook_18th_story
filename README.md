@@ -2,7 +2,18 @@
 
 ## UI Design
 
-### EP1070
+### EP1073
+
+- Cargo Transportation
+- by Tam Zarna
+- https://dribbble.com/shots/17568751-Cargo-Transportation/attachments/12715243?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/381474/screenshots/17568751/media/eee55a30dcb5d47dd13cf10a00d08de3.png"
+width="400px" >
+</img>
+
+### EP1070-1072
 
 - Treadmill App Concept
 - by Nicola Badenhorst
