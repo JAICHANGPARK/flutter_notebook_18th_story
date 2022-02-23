@@ -88,8 +88,14 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
             icon: _tabIndex == 1 ? Icon(Icons.sms) : Icon(Icons.sms_outlined),
             label: "sms",
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.motion_photos_on_outlined), label: "motion_photos_on"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "account_circle"),
+          BottomNavigationBarItem(
+            icon: _tabIndex == 2 ? Icon(Icons.motion_photos_on) : Icon(Icons.motion_photos_on_outlined),
+            label: "motion_photos_on",
+          ),
+          BottomNavigationBarItem(
+            icon: _tabIndex == 3 ? Icon(Icons.account_circle) : Icon(Icons.account_circle_outlined),
+            label: "account_circle",
+          ),
         ],
       ),
     );
