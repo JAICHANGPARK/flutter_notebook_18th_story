@@ -10,6 +10,8 @@ class CargoTransportationHomePage extends StatefulWidget {
 }
 
 class _CargoTransportationHomePageState extends State<CargoTransportationHomePage> {
+  int _tabIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,6 +68,12 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (idx) {
+          setState(() {
+            _tabIndex = idx;
+          });
+        },
+        currentIndex: _tabIndex,
         showUnselectedLabels: false,
         showSelectedLabels: false,
         selectedItemColor: Colors.black,
