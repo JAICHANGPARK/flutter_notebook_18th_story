@@ -17,6 +17,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Expanded(child: Placeholder()),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -31,20 +32,20 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 8,),
-                      Text("Barcelona",style: TextStyle(
-                        fontWeight: FontWeight.w200
-                      ),),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text(
+                        "Barcelona",
+                        style: TextStyle(fontWeight: FontWeight.w200),
+                      ),
                     ],
                   ),
                   Container(
-                    height: 32,
-                    width: 32,
+                    height: 36,
+                    width: 36,
                     padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(4)
-                    ),
+                    decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(4)),
                     child: Icon(
                       Ionicons.apps_outline,
                       size: 18,
@@ -52,9 +53,22 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                   )
                 ],
               ),
+            ),
+            Divider(
+              color: Colors.black,
             )
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: false,
+        showSelectedLabels: false,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
+        ],
       ),
     );
   }
