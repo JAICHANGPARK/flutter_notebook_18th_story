@@ -17,7 +17,6 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: Placeholder()),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Row(
@@ -56,6 +55,12 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
             ),
             Divider(
               color: Colors.black,
+            ),
+            Expanded(
+              child: Placeholder(),
+            ),
+            Expanded(
+              child: Placeholder(),
             )
           ],
         ),
@@ -63,11 +68,14 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: false,
         showSelectedLabels: false,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.fact_check), label: "fact_check"),
+          BottomNavigationBarItem(icon: Icon(Icons.sms_outlined), label: "sms"),
+          BottomNavigationBarItem(icon: Icon(Icons.motion_photos_on_outlined), label: "motion_photos_on"),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "account_circle"),
         ],
       ),
     );
