@@ -17,34 +17,41 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Monday, July 1",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Monday, July 1",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      SizedBox(height: 8,),
+                      Text("Barcelona",style: TextStyle(
+                        fontWeight: FontWeight.w200
+                      ),),
+                    ],
+                  ),
+                  Container(
+                    height: 32,
+                    width: 32,
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[100],
+                      borderRadius: BorderRadius.circular(4)
                     ),
-                    Text("Barcelona"),
-                  ],
-                ),
-                Container(
-                  height: 32,
-                  width: 32,
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                  ),
-                  child: Icon(
-                    Ionicons.apps_outline,
-                    size: 18,
-                  ),
-                )
-              ],
+                    child: Icon(
+                      Ionicons.apps_outline,
+                      size: 18,
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
