@@ -20,57 +20,63 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              "Monday, July 1",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+              flex: 4,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.purple[50],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Monday, July 1",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 6,
-                            ),
-                            const Text(
-                              "Barcelona",
-                              style: TextStyle(fontWeight: FontWeight.w200),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          height: 36,
-                          width: 36,
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(4)),
-                          child: const Icon(
-                            Ionicons.apps_outline,
-                            size: 18,
+                              const SizedBox(
+                                height: 6,
+                              ),
+                              const Text(
+                                "Barcelona",
+                                style: TextStyle(fontWeight: FontWeight.w200),
+                              ),
+                            ],
                           ),
-                        )
-                      ],
+                          Container(
+                            height: 36,
+                            width: 36,
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(4)),
+                            child: const Icon(
+                              Ionicons.apps_outline,
+                              size: 18,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  const Divider(
-                    color: Colors.black,
-                  ),
-                  const Expanded(
-                    child: Placeholder(),
-                  ),
-                ],
+                    const Divider(
+                      color: Colors.black,
+                    ),
+                    const Expanded(
+                      child: Placeholder(),
+                    ),
+                  ],
+                ),
               ),
             ),
 
             const Expanded(
+              flex: 3,
               child: const Placeholder(),
             )
           ],
