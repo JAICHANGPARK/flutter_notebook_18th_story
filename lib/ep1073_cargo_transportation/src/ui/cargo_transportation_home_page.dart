@@ -24,7 +24,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 5,
+              flex: 6,
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.purple[50],
@@ -142,6 +142,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
+                                      SizedBox(height: 16,),
                                       Container(
                                         decoration: BoxDecoration(
                                           color: Colors.white,
