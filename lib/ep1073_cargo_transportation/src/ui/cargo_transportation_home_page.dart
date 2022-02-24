@@ -27,16 +27,16 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "Monday, July 1",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
-                      Text(
+                      const Text(
                         "Barcelona",
                         style: TextStyle(fontWeight: FontWeight.w200),
                       ),
@@ -45,9 +45,9 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                   Container(
                     height: 36,
                     width: 36,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(4)),
-                    child: Icon(
+                    child: const Icon(
                       Ionicons.apps_outline,
                       size: 18,
                     ),
@@ -55,14 +55,14 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               color: Colors.black,
             ),
-            Expanded(
+            const Expanded(
               child: Placeholder(),
             ),
-            Expanded(
-              child: Placeholder(),
+            const Expanded(
+              child: const Placeholder(),
             )
           ],
         ),
@@ -81,19 +81,19 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: _tabIndex == 0 ? Icon(Icons.fact_check) : Icon(Icons.fact_check_outlined),
+            icon: _tabIndex == 0 ? const Icon(Icons.fact_check) : const Icon(Icons.fact_check_outlined),
             label: "fact_check",
           ),
           BottomNavigationBarItem(
-            icon: _tabIndex == 1 ? Icon(Icons.sms) : Icon(Icons.sms_outlined),
+            icon: _tabIndex == 1 ? const Icon(Icons.sms) : const Icon(Icons.sms_outlined),
             label: "sms",
           ),
           BottomNavigationBarItem(
-            icon: _tabIndex == 2 ? Icon(Icons.motion_photos_on) : Icon(Icons.motion_photos_on_outlined),
+            icon: _tabIndex == 2 ? const Icon(Icons.motion_photos_on) : const Icon(Icons.motion_photos_on_outlined),
             label: "motion_photos_on",
           ),
           BottomNavigationBarItem(
-            icon: _tabIndex == 3 ? Icon(Icons.account_circle) : Icon(Icons.account_circle_outlined),
+            icon: _tabIndex == 3 ? const Icon(Icons.account_circle) : const Icon(Icons.account_circle_outlined),
             label: "account_circle",
           ),
         ],
