@@ -116,7 +116,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                   backgroundWidth: 2,
                                   percent: 0.45,
                                   progressColor: Colors.black,
-                                  center: Text.rich(
+                                  center: const Text.rich(
                                     TextSpan(
                                       children: [
                                         TextSpan(
@@ -159,25 +159,25 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 16,
                                       ),
                                       Container(
-                                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                                         decoration:
                                             BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24)),
                                         child: Row(
                                           children: [
                                             Transform.rotate(
                                               angle: -(47 / pi),
-                                              child: Icon(
+                                              child: const Icon(
                                                 Icons.arrow_back,
                                               ),
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 8,
                                             ),
-                                            Icon(
+                                            const Icon(
                                               Ionicons.bed_outline,
                                             )
                                           ],
@@ -198,7 +198,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
             ),
             const Expanded(
               flex: 5,
-              child: const Placeholder(),
+              child: Placeholder(),
             )
           ],
         ),
