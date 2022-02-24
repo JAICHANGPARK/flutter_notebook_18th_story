@@ -115,6 +115,22 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                   lineWidth: 4,
                                   backgroundWidth: 2,
                                   percent: 0.45,
+                                  center: Text.rich(
+                                    TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: "45",
+                                          style: TextStyle(
+                                            fontSize: 34,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: "%",
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -142,13 +158,13 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      SizedBox(height: 16,),
+                                      SizedBox(
+                                        height: 16,
+                                      ),
                                       Container(
                                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius: BorderRadius.circular(24)
-                                        ),
+                                        decoration:
+                                            BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24)),
                                         child: Row(
                                           children: [
                                             Transform.rotate(
