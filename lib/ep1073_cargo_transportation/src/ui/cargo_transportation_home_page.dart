@@ -144,8 +144,10 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                       ),
                                       SizedBox(height: 16,),
                                       Container(
+                                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                                         decoration: BoxDecoration(
                                           color: Colors.white,
+                                          borderRadius: BorderRadius.circular(24)
                                         ),
                                         child: Row(
                                           children: [
@@ -156,7 +158,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                               ),
                                             ),
                                             SizedBox(
-                                              width: 4,
+                                              width: 8,
                                             ),
                                             Icon(
                                               Ionicons.bed_outline,
