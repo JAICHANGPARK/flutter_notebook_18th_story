@@ -115,6 +115,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                   lineWidth: 4,
                                   backgroundWidth: 2,
                                   percent: 0.45,
+                                  progressColor: Colors.black,
                                   center: Text.rich(
                                     TextSpan(
                                       children: [
