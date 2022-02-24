@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +24,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 4,
+              flex: 5,
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.purple[50],
@@ -141,8 +143,24 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                         ),
                                       ),
                                       Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                        ),
                                         child: Row(
-                                          children: [],
+                                          children: [
+                                            Transform.rotate(
+                                              angle: -(47 / pi),
+                                              child: Icon(
+                                                Icons.arrow_back,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 4,
+                                            ),
+                                            Icon(
+                                              Ionicons.bed_outline,
+                                            )
+                                          ],
                                         ),
                                       )
                                     ],
@@ -159,7 +177,7 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
               ),
             ),
             const Expanded(
-              flex: 3,
+              flex: 5,
               child: const Placeholder(),
             )
           ],
