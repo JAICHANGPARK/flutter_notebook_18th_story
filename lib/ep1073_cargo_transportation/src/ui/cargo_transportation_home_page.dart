@@ -113,7 +113,18 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                                 ),
                                 Column(
                                   children: [
-                                    
+                                    Text("2h nex task"),
+                                    Text("Stay Hotal - Mandarin"),
+                                    Text("Oriental, Barcelona"),
+
+                                    Container(
+                                      child: Row(
+                                        children: [
+                                          
+                                        ],
+                                      ),
+                                    )
+
                                   ],
                                 )
                               ],
