@@ -109,23 +109,44 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                             child: Row(
                               children: [
                                 CircularPercentIndicator(
-                                  radius: 42,
+                                  radius: 48,
+                                  lineWidth: 4,
+                                  backgroundWidth: 2,
+                                  percent: 0.45,
                                 ),
-                                Column(
-                                  children: [
-                                    Text("2h nex task"),
-                                    Text("Stay Hotal - Mandarin"),
-                                    Text("Oriental, Barcelona"),
-
-                                    Container(
-                                      child: Row(
-                                        children: [
-                                          
-                                        ],
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "2h nex task",
+                                        style: GoogleFonts.montserrat(
+                                          fontWeight: FontWeight.w200,
+                                        ),
                                       ),
-                                    )
-
-                                  ],
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(vertical: 4),
+                                        child: Text(
+                                          "Stay Hotal - Mandarin",
+                                          style: GoogleFonts.montserrat(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Text(
+                                        "Oriental, Barcelona",
+                                        style: GoogleFonts.montserrat(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          children: [],
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
