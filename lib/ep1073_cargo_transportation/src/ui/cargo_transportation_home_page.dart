@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class CargoTransportationHomePage extends StatefulWidget {
   const CargoTransportationHomePage({Key? key}) : super(key: key);
@@ -35,17 +37,17 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
+                            children: const [
+                              Text(
                                 "Monday, July 1",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 6,
                               ),
-                              const Text(
+                              Text(
                                 "Barcelona",
                                 style: TextStyle(fontWeight: FontWeight.w200),
                               ),
@@ -67,14 +69,63 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                     const Divider(
                       color: Colors.black,
                     ),
-                    const Expanded(
-                      child: Placeholder(),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Groupage\nCargo",
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 42,
+                                    fontWeight: FontWeight.w200,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.circular(24),
+                                    ),
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
+                                      vertical: 4,
+                                    ),
+                                    child: const Text(
+                                      "Pick up",
+                                      style: TextStyle(color: Colors.white, fontSize: 12),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Row(
+                              children: [
+                                CircularPercentIndicator(
+                                  radius: 42,
+                                ),
+                                Column(
+                                  children: [
+                                    
+                                  ],
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
             ),
-
             const Expanded(
               flex: 3,
               child: const Placeholder(),
