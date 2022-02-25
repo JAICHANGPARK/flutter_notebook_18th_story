@@ -214,22 +214,31 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                               border: Border.all(color: Colors.grey),
                               borderRadius: BorderRadius.circular(24),
                             ),
+                            height: 64,
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Transform.rotate(
-                                  angle: -(47 / pi),
-                                  child: const Icon(
-                                    Icons.arrow_back,
-                                    size: 16,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 8,
-                                ),
-                                const Icon(
-                                  Ionicons.bed_outline,
-                                  size: 16,
-                                )
+                                (cargoItems[index].isOut ?? false)
+                                    ? Transform.rotate(
+                                        angle: (2 / pi),
+                                        child: const Icon(
+                                          Icons.arrow_back,
+                                          size: 24,
+                                        ),
+                                      )
+                                    : Transform.rotate(
+                                        angle: -(47 / pi),
+                                        child: const Icon(
+                                          Icons.arrow_back,
+                                          size: 20,
+                                        ),
+                                      ),
+                                (cargoItems[index].withBed ?? false)
+                                    ? const Icon(
+                                        Ionicons.bed_outline,
+                                        size: 16,
+                                      )
+                                    : Container()
                               ],
                             ),
                           ),
@@ -265,10 +274,12 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                               SizedBox(
                                 height: 4,
                               ),
-                              Text("${cargoItems[index].location}",
+                              Text(
+                                "${cargoItems[index].location}",
                                 style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.w200,
-                                ),),
+                                ),
+                              ),
                             ],
                           )
                         ],
