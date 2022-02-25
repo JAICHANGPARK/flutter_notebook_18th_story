@@ -206,10 +206,43 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                   itemBuilder: (context, index) {
                     return Container(
                       color: Colors.grey,
-                      child: Row(
-                        children: [
-
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey),
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              child: Column(
+                                children: [
+                                  Transform.rotate(
+                                    angle: -(47 / pi),
+                                    child: const Icon(
+                                      Icons.arrow_back,
+                                      size: 16,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  const Icon(
+                                    Ionicons.bed_outline,
+                                    size: 16,
+                                  )
+                                ],
+                              ),
+                            ),
+                            Column(
+                              
+                              children: [
+                                Text("")
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     );
                   }),
