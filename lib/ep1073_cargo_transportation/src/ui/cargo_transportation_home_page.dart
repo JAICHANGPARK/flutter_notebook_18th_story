@@ -204,45 +204,74 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                   itemCount: cargoItems.length,
                   separatorBuilder: (context, index) => const Divider(),
                   itemBuilder: (context, index) {
-                    return Container(
-                      color: Colors.grey,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.grey),
-                                borderRadius: BorderRadius.circular(24),
+                    return Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey),
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                            child: Column(
+                              children: [
+                                Transform.rotate(
+                                  angle: -(47 / pi),
+                                  child: const Icon(
+                                    Icons.arrow_back,
+                                    size: 16,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 8,
+                                ),
+                                const Icon(
+                                  Ionicons.bed_outline,
+                                  size: 16,
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "${cargoItems[index].time}",
+                                style: GoogleFonts.montserrat(fontWeight: FontWeight.w200),
                               ),
-                              child: Column(
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Row(
                                 children: [
-                                  Transform.rotate(
-                                    angle: -(47 / pi),
-                                    child: const Icon(
-                                      Icons.arrow_back,
-                                      size: 16,
+                                  Text(
+                                    "# ${index}",
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 8,
+                                  Text(
+                                    " - ${cargoItems[index].title}",
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w200,
+                                    ),
                                   ),
-                                  const Icon(
-                                    Ionicons.bed_outline,
-                                    size: 16,
-                                  )
                                 ],
                               ),
-                            ),
-                            Column(
-                              
-                              children: [
-                                Text("")
-                              ],
-                            )
-                          ],
-                        ),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Text("${cargoItems[index].location}",
+                                style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w200,
+                                ),),
+                            ],
+                          )
+                        ],
                       ),
                     );
                   }),
