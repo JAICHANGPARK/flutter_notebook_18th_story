@@ -196,9 +196,11 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                 ),
               ),
             ),
-            const Expanded(
+             Expanded(
               flex: 5,
-              child: Placeholder(),
+              child: ListView.builder(itemBuilder: (context, index){
+                return Container();
+              }),
             )
           ],
         ),
