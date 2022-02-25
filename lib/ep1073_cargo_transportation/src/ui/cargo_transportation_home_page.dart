@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
+import '../model/cargo_item.dart';
+
 class CargoTransportationHomePage extends StatefulWidget {
   const CargoTransportationHomePage({Key? key}) : super(key: key);
 
@@ -196,11 +198,21 @@ class _CargoTransportationHomePageState extends State<CargoTransportationHomePag
                 ),
               ),
             ),
-             Expanded(
+            Expanded(
               flex: 5,
-              child: ListView.builder(itemBuilder: (context, index){
-                return Container();
-              }),
+              child: ListView.separated(
+                  itemCount: cargoItems.length,
+                  separatorBuilder: (context, index) => const Divider(),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      color: Colors.grey,
+                      child: Row(
+                        children: [
+
+                        ],
+                      ),
+                    );
+                  }),
             )
           ],
         ),
