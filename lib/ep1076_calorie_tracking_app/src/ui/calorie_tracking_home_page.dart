@@ -19,9 +19,10 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
       bottomNavigationBar: BottomAppBar(
           child: Container(
         height: 64,
-        color: Colors.grey,
+        color: Colors.white,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
