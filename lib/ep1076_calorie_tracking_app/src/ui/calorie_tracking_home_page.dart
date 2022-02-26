@@ -31,7 +31,9 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(Icons.home_outlined),
-                    Text("Home"),
+                    Text("Home", style: TextStyle(
+                        fontSize: 12
+                    ),),
                   ],
                 ),
               ),
@@ -40,7 +42,9 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(Icons.bookmark_border),
-                    Text("Dairy"),
+                    Text("Dairy", style: TextStyle(
+                        fontSize: 12
+                    ),),
                   ],
                 ),
               ),
@@ -55,7 +59,9 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(Icons.assessment),
-                    Text("Progress"),
+                    Text("Progress", style: TextStyle(
+                        fontSize: 12
+                    ),),
                   ],
                 ),
               ),
@@ -64,7 +70,9 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Icon(Icons.settings_outlined),
-                    Text("Settings"),
+                    Text("Settings", style: TextStyle(
+                      fontSize: 12
+                    ),),
                   ],
                 ),
               ),
