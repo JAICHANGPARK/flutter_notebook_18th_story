@@ -15,10 +15,30 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
     return Scaffold(
       appBar: AppBar(),
       bottomNavigationBar: BottomAppBar(
-        child: Row(
-          children: [
+        child: Container(
+          height: 64,
+          color: Colors.grey,
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Icon(Icons.home_outlined),
+                  Text("Home")
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(Icons.bookmark_border),
+                  Text("Dairy")
+                ],
+              ),
+              CircleAvatar(
+                child: Icon(Icons.add),
+                foregroundColor: Colors.white,
+              ),
 
-          ],
+            ],
+          ),
         )
       ),
     );
