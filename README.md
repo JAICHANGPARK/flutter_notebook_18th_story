@@ -2,7 +2,19 @@
 
 ## UI Design
 
-### EP1073
+### EP1076
+
+- Calorie Tracking App
+- by YesYou | Isaac Sanchez
+- https://dribbble.com/shots/17581401-Calorie-Tracking-App/attachments/12729424?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/381474/screenshots/17568751/media/eee55a30dcb5d47dd13cf10a00d08de3.png"
+width="400px" >
+</img>
+
+
+### EP1073-1075
 
 - Cargo Transportation
 - by Tam Zarna
@@ -31,7 +43,7 @@ width="400px" >
 - https://dribbble.com/shots/17511811/attachments/12651359?mode=media
 
 <img
-src="https://cdn.dribbble.com/users/10611617/screenshots/17511811/media/d5d41354491e37859d96daf0396c7000.jpg"
+src="https://cdn.dribbble.com/users/118309/screenshots/17581401/media/33f77eaa90a0013fd1e992d33685e10c.png"
 width="400px" >
 </img>
 
