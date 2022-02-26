@@ -30,11 +30,17 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Icon(Icons.home_outlined),
-                    SizedBox(height: 4,),
-                    Text("Home", style: TextStyle(
-                        fontSize: 12
-                    ),),
+                    Icon(
+                      Icons.home_outlined,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Home",
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ],
                 ),
               ),
@@ -42,11 +48,17 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Icon(Icons.bookmark_border),
-                    SizedBox(height: 4,),
-                    Text("Dairy", style: TextStyle(
-                        fontSize: 12
-                    ),),
+                    Icon(
+                      Icons.bookmark_border,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Dairy",
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ],
                 ),
               ),
@@ -60,11 +72,17 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Icon(Icons.assessment, size: 20,),
-                    SizedBox(height: 4,),
-                    Text("Progress", style: TextStyle(
-                        fontSize: 10
-                    ),),
+                    Icon(
+                      Icons.assessment,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Progress",
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ],
                 ),
               ),
@@ -72,11 +90,17 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Icon(Icons.settings_outlined),
-                    SizedBox(height: 4,),
-                    Text("Settings", style: TextStyle(
-                      fontSize: 12
-                    ),),
+                    Icon(
+                      Icons.settings_outlined,
+                      size: 20,
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "Settings",
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ],
                 ),
               ),
