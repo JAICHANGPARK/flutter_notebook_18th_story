@@ -19,14 +19,17 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
           height: 64,
           color: Colors.grey,
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.home_outlined),
                   Text("Home")
                 ],
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.bookmark_border),
                   Text("Dairy")
