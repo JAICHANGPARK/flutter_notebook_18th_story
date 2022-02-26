@@ -13,7 +13,14 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          children: [
 
+          ],
+        )
+      ),
     );
   }
 }
