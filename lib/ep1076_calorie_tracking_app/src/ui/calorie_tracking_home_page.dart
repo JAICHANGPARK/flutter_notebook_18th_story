@@ -13,50 +13,63 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text("Hello Dream!"),
-        actions: [],
+        title: const Text("Hello Dream!"),
+        actions: const [],
       ),
       bottomNavigationBar: BottomAppBar(
           child: Container(
         height: 64,
         color: Colors.white,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.home_outlined),
-                Text("Home"),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.bookmark_border),
-                Text("Dairy"),
-              ],
-            ),
-            CircleAvatar(
-              child: Icon(Icons.add),
-              foregroundColor: Colors.white,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.assessment),
-                Text("Progress"),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.settings_outlined),
-                Text("Settings"),
-              ],
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.home_outlined),
+                    Text("Home"),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.bookmark_border),
+                    Text("Dairy"),
+                  ],
+                ),
+              ),
+              const Expanded(
+                child: CircleAvatar(
+                  child: Icon(Icons.add),
+                  foregroundColor: Colors.white,
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.assessment),
+                    Text("Progress"),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.settings_outlined),
+                    Text("Settings"),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       )),
     );
