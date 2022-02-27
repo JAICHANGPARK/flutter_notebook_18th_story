@@ -84,6 +84,46 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   "Every pound starts with a ounce, don't forget to keep us updated on your progress.",
                   style: TextStyle(color: Colors.white, height: 1.3),
                 ),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Container(
+                height: 82,
+                color: Colors.white,
+                child: Center(
+                  child: Text("Summary"),
+                ),
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              Container(
+                height: 100,
+                color: Colors.white,
+                child: Center(
+                  child: Text("Protein"),
+                ),
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              Container(
+                height: 100,
+                color: Colors.white,
+                child: Center(
+                  child: Text("Carbs"),
+                ),
+              ),
+              SizedBox(
+                height: 24,
+              ),
+              Container(
+                height: 100,
+                color: Colors.white,
+                child: Center(
+                  child: Text("Fat"),
+                ),
               )
             ],
           ),
@@ -156,10 +196,11 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   ),
                 ),
               ),
-              const Expanded(
+               Expanded(
                 child: CircleAvatar(
                   child: Icon(Icons.add),
                   foregroundColor: Colors.white,
+                  backgroundColor: primaryColor,
                 ),
               ),
               Expanded(
