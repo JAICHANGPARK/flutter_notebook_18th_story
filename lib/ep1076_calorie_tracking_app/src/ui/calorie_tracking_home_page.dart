@@ -14,6 +14,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
       appBar: AppBar(
         elevation: 0,
         title: const Text("Hello Dream!"),
+        backgroundColor: appBarColor,
         actions: [
           IconButton(
             onPressed: () {},
