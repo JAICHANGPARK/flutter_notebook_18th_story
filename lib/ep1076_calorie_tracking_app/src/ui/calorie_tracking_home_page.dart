@@ -9,13 +9,11 @@ class CalorieTrackingHomePage extends StatefulWidget {
 }
 
 class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
-
   int _tabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         elevation: 0,
         title: const Text("Hello Dream!"),
@@ -28,6 +26,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
             icon: const Icon(
               Icons.content_paste,
             ),
+            iconSize: 20,
           ),
           IconButton(
             onPressed: () {},
@@ -35,11 +34,62 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
             icon: const Icon(
               Icons.notifications_outlined,
             ),
+            iconSize: 20,
           )
         ],
       ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Goal Weight",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      "154.3",
+                      style: TextStyle(
+                        fontSize: 32,
+                        color: primaryColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 4,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: Text(
+                        "lbs",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 64),
+                child: Text(
+                  "Every pound starts with a ounce, don't forget to keep us updated on your progress.",
+                  style: TextStyle(color: Colors.white, height: 1.3),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       bottomNavigationBar: BottomAppBar(
-
           child: Container(
         height: 64,
         child: Padding(
@@ -50,14 +100,14 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
             children: [
               Expanded(
                 child: GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     setState(() {
                       _tabIndex = 0;
                     });
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
+                    children: [
                       Icon(
                         Icons.home_outlined,
                         size: 20,
@@ -68,8 +118,10 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                       ),
                       Text(
                         "Home",
-                        style: TextStyle(fontSize: 10,
-                          color: _tabIndex == 0 ? primaryColor : Colors.grey,),
+                        style: TextStyle(
+                          fontSize: 10,
+                          color: _tabIndex == 0 ? primaryColor : Colors.grey,
+                        ),
                       ),
                     ],
                   ),
@@ -77,14 +129,14 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     setState(() {
                       _tabIndex = 1;
                     });
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
+                    children: [
                       Icon(
                         Icons.bookmark_border,
                         size: 20,
@@ -95,8 +147,10 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                       ),
                       Text(
                         "Dairy",
-                        style: TextStyle(fontSize: 10,
-                          color: _tabIndex == 1 ? primaryColor : Colors.grey,),
+                        style: TextStyle(
+                          fontSize: 10,
+                          color: _tabIndex == 1 ? primaryColor : Colors.grey,
+                        ),
                       ),
                     ],
                   ),
@@ -104,21 +158,20 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               ),
               const Expanded(
                 child: CircleAvatar(
-
                   child: Icon(Icons.add),
                   foregroundColor: Colors.white,
                 ),
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     setState(() {
                       _tabIndex = 2;
                     });
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
+                    children: [
                       Icon(
                         Icons.assessment,
                         size: 20,
@@ -129,7 +182,8 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                       ),
                       Text(
                         "Progress",
-                        style: TextStyle(fontSize: 10,
+                        style: TextStyle(
+                          fontSize: 10,
                           color: _tabIndex == 2 ? primaryColor : Colors.grey,
                         ),
                       ),
@@ -139,14 +193,14 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     setState(() {
                       _tabIndex = 3;
                     });
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
+                    children: [
                       Icon(
                         Icons.settings_outlined,
                         size: 20,
@@ -157,7 +211,8 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                       ),
                       Text(
                         "Settings",
-                        style: TextStyle(fontSize: 10,
+                        style: TextStyle(
+                          fontSize: 10,
                           color: _tabIndex == 3 ? primaryColor : Colors.grey,
                         ),
                       ),
