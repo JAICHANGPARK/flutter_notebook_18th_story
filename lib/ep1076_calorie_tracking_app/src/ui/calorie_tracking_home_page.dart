@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1076_calorie_tracking_app/src/utils/calorie_app_theme.dart';
 
 class CalorieTrackingHomePage extends StatefulWidget {
   const CalorieTrackingHomePage({Key? key}) : super(key: key);
@@ -11,18 +12,26 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         elevation: 0,
         title: const Text("Hello Dream!"),
         backgroundColor: appBarColor,
+        foregroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.content_paste),
+            color: Colors.grey,
+            icon: const Icon(
+              Icons.content_paste,
+            ),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.notifications_outlined),
+            color: Colors.grey,
+            icon: const Icon(
+              Icons.notifications_outlined,
+            ),
           )
         ],
       ),
