@@ -11,7 +11,8 @@ class CalorieTrackingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: backGroundColor
+        scaffoldBackgroundColor: backGroundColor,
+        primaryColor: primaryColor,
       ),
       home: CalorieTrackingHomePage(),
     );
