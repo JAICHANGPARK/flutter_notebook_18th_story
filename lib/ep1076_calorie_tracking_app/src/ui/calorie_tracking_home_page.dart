@@ -9,6 +9,9 @@ class CalorieTrackingHomePage extends StatefulWidget {
 }
 
 class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
+
+  int _tabIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,9 +39,9 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
+
           child: Container(
         height: 64,
-        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
@@ -46,81 +49,120 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.home_outlined,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      "Home",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _tabIndex = 0;
+                    });
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      Icon(
+                        Icons.home_outlined,
+                        size: 20,
+                        color: _tabIndex == 0 ? primaryColor : Colors.grey,
+                      ),
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        "Home",
+                        style: TextStyle(fontSize: 10,
+                          color: _tabIndex == 0 ? primaryColor : Colors.grey,),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.bookmark_border,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      "Dairy",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _tabIndex = 1;
+                    });
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      Icon(
+                        Icons.bookmark_border,
+                        size: 20,
+                        color: _tabIndex == 1 ? primaryColor : Colors.grey,
+                      ),
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        "Dairy",
+                        style: TextStyle(fontSize: 10,
+                          color: _tabIndex == 1 ? primaryColor : Colors.grey,),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const Expanded(
                 child: CircleAvatar(
+
                   child: Icon(Icons.add),
                   foregroundColor: Colors.white,
                 ),
               ),
               Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.assessment,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      "Progress",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _tabIndex = 2;
+                    });
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      Icon(
+                        Icons.assessment,
+                        size: 20,
+                        color: _tabIndex == 2 ? primaryColor : Colors.grey,
+                      ),
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        "Progress",
+                        style: TextStyle(fontSize: 10,
+                          color: _tabIndex == 2 ? primaryColor : Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.settings_outlined,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      "Settings",
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _tabIndex = 3;
+                    });
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      Icon(
+                        Icons.settings_outlined,
+                        size: 20,
+                        color: _tabIndex == 3 ? primaryColor : Colors.grey,
+                      ),
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        "Settings",
+                        style: TextStyle(fontSize: 10,
+                          color: _tabIndex == 3 ? primaryColor : Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
