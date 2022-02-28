@@ -295,9 +295,59 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               ),
               Container(
                 height: 100,
-                color: Colors.white,
-                child: const Center(
-                  child: Text("Carbs"),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Protein",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      "You need 30g more to complete the day",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Row(
+                          children: [
+                            Flexible(
+                              flex: 8,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.deepPurpleAccent,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(4),
+                                      bottomLeft: Radius.circular(4),
+                                    )),
+                              ),
+                            ),
+                            VerticalDivider(
+                              color: Colors.black,
+                              thickness: 1.2,
+                              width: 2,
+                            ),
+                            Flexible(flex: 2, child: Container()),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(
@@ -305,11 +355,61 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               ),
               Container(
                 height: 100,
-                color: Colors.white,
-                child: const Center(
-                  child: Text("Fat"),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Fat",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      "You need 30g more to complete the day",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Row(
+                          children: [
+                            Flexible(
+                              flex: 4,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(4),
+                                      bottomLeft: Radius.circular(4),
+                                    )),
+                              ),
+                            ),
+                            VerticalDivider(
+                              color: Colors.black,
+                              thickness: 1.2,
+                              width: 2,
+                            ),
+                            Flexible(flex: 6, child: Container()),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              )
+              ),
             ],
           ),
         ),
