@@ -107,7 +107,6 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                               color: Colors.white,
                               fontWeight: FontWeight.w200,
                             )),
-
                         TextSpan(
                             text: "2,000 ",
                             style: TextStyle(
@@ -122,12 +121,54 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                             )),
                       ]),
                     ),
-                     Expanded(child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 4),
+                    Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.6),
-
+                          color: Colors.white.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Row(
+                          children: [
+                            Flexible(
+                              flex: 4,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.purple,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(4),
+                                      bottomLeft: Radius.circular(4),
+                                    )),
+                              ),
+                            ),
+                            VerticalDivider(
+                              color: Colors.black,
+                              thickness: 1.2,
+                              width: 2,
+                            ),
+                            Flexible(
+                                flex: 6,
+                                child: Container(
+                                  color: Colors.green,
+                                )),
+                            VerticalDivider(
+                              color: Colors.black,
+                              thickness: 1.2,
+                              width: 2,
+                            ),
+                            Flexible(
+                                flex: 2,
+                                child: Container(
+                                  color: Colors.yellow,
+                                )),
+                            VerticalDivider(
+                              color: Colors.black,
+                              thickness: 1.2,
+                              width: 2,
+                            ),
+                            Flexible(flex: 10, child: Container()),
+                          ],
                         ),
                       ),
                     )),
@@ -193,12 +234,42 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 height: 24,
               ),
               Container(
-                height: 100,
-                color: Colors.white,
-                child: const Center(
-                  child: Text("Protein"),
-                ),
-              ),
+                  height: 100,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Protein",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        "You need 30g more to complete the day",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Expanded(
+                          child: Row(
+                        children: [
+                          Flexible(
+                              flex: 8,
+                              child: Container(
+                                decoration: BoxDecoration(color: Colors.deepPurpleAccent),
+                              ))
+                        ],
+                      )),
+                    ],
+                  )),
               const SizedBox(
                 height: 24,
               ),
