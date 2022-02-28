@@ -85,44 +85,61 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   style: TextStyle(color: Colors.white, height: 1.3),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Container(
                 height: 82,
                 color: Colors.white,
-                child: Center(
-                  child: Text("Summary"),
-                ),
+                child: Column(
+                  children: [
+                    Text.rich(TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "1,200"
+                        ),
+                        TextSpan(
+                            text: "Calories of"
+                        ),
+                        TextSpan(
+                            text: "2,000"
+                        ),
+                        TextSpan(
+                            text: "Daily Consumed"
+                        )
+                      ]
+                    ))
+                  ],
+                )
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Container(
                 height: 100,
                 color: Colors.white,
-                child: Center(
-                  child: Text("Protein"),
+                child: const Center(
+                  child: const Text("Protein"),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Container(
                 height: 100,
                 color: Colors.white,
-                child: Center(
-                  child: Text("Carbs"),
+                child: const Center(
+                  child: const Text("Carbs"),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Container(
                 height: 100,
                 color: Colors.white,
-                child: Center(
-                  child: Text("Fat"),
+                child: const Center(
+                  child: const Text("Fat"),
                 ),
               )
             ],
@@ -198,7 +215,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               ),
                Expanded(
                 child: CircleAvatar(
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                   foregroundColor: Colors.white,
                   backgroundColor: primaryColor,
                 ),
