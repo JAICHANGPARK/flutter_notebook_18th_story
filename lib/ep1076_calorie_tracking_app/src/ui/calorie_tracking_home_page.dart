@@ -234,42 +234,62 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 height: 24,
               ),
               Container(
-                  height: 100,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Protein",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 24,
+                height: 100,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Protein",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      "You need 30g more to complete the day",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(4),
                         ),
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Text(
-                        "You need 30g more to complete the day",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 4,
-                      ),
-                      Expanded(
-                          child: Row(
-                        children: [
-                          Flexible(
+                        child: Row(
+                          children: [
+                            Flexible(
                               flex: 8,
                               child: Container(
-                                decoration: BoxDecoration(color: Colors.deepPurpleAccent),
-                              ))
-                        ],
-                      )),
-                    ],
-                  )),
+                                decoration: BoxDecoration(
+                                    color: Colors.deepPurpleAccent,
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(4),
+                                      bottomLeft: Radius.circular(4),
+                                    )),
+                              ),
+                            ),
+                            VerticalDivider(
+                              color: Colors.black,
+                              thickness: 1.2,
+                              width: 2,
+                            ),
+                            Flexible(flex: 2, child: Container()),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(
                 height: 24,
               ),
