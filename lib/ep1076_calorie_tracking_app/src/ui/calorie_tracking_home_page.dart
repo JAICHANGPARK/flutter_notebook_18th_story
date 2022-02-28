@@ -88,38 +88,105 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
               const SizedBox(
                 height: 16,
               ),
-              Container(
+              SizedBox(
                 height: 82,
-                color: Colors.white,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text.rich(TextSpan(
+                    const Text.rich(
+                      TextSpan(children: [
+                        TextSpan(
+                            text: "1,200 ",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )),
+                        TextSpan(
+                            text: "Calories of ",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w200,
+                            )),
+
+                        TextSpan(
+                            text: "2,000 ",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )),
+                        TextSpan(
+                            text: "Daily Consumed",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w200,
+                            )),
+                      ]),
+                    ),
+                     Expanded(child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 4),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.6),
+
+                        ),
+                      ),
+                    )),
+                    Row(
                       children: [
-                        TextSpan(
-                          text: "1,200"
+                        const CircleAvatar(
+                          radius: 6,
                         ),
-                        TextSpan(
-                            text: "Calories of"
+                        const SizedBox(
+                          width: 4,
                         ),
-                        TextSpan(
-                            text: "2,000"
+                        Text(
+                          "Carbs",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(
+                                0.4,
+                              ),
+                              fontSize: 12),
                         ),
-                        TextSpan(
-                            text: "Daily Consumed"
-                        )
-                      ]
-                    ))
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        const CircleAvatar(
+                          radius: 6,
+                        ),
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          "Fat",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(
+                                0.4,
+                              ),
+                              fontSize: 12),
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        const CircleAvatar(
+                          radius: 6,
+                        ),
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text(
+                          "Protein",
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(
+                                0.4,
+                              ),
+                              fontSize: 12),
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                      ],
+                    )
                   ],
-                )
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              Container(
-                height: 100,
-                color: Colors.white,
-                child: const Center(
-                  child: const Text("Protein"),
                 ),
               ),
               const SizedBox(
@@ -129,7 +196,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 height: 100,
                 color: Colors.white,
                 child: const Center(
-                  child: const Text("Carbs"),
+                  child: Text("Protein"),
                 ),
               ),
               const SizedBox(
@@ -139,7 +206,17 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 height: 100,
                 color: Colors.white,
                 child: const Center(
-                  child: const Text("Fat"),
+                  child: Text("Carbs"),
+                ),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              Container(
+                height: 100,
+                color: Colors.white,
+                child: const Center(
+                  child: Text("Fat"),
                 ),
               )
             ],
@@ -213,7 +290,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   ),
                 ),
               ),
-               Expanded(
+              Expanded(
                 child: CircleAvatar(
                   child: const Icon(Icons.add),
                   foregroundColor: Colors.white,
