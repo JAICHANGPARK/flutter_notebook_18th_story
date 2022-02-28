@@ -299,7 +299,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Protein",
+                      "Carbs",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -310,7 +310,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                       height: 12,
                     ),
                     Text(
-                      "You need 30g more to complete the day",
+                      "You need 23g more to complete the day",
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -327,10 +327,10 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                         child: Row(
                           children: [
                             Flexible(
-                              flex: 8,
+                              flex: 10,
                               child: Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.deepPurpleAccent,
+                                    color: Colors.yellow,
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(4),
                                       bottomLeft: Radius.circular(4),
