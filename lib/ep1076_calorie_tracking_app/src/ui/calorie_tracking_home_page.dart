@@ -134,7 +134,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                             Flexible(
                               flex: 4,
                               child: Container(
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.purple,
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(4),
@@ -142,7 +142,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                                     )),
                               ),
                             ),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.black,
                               thickness: 1.2,
                               width: 2,
@@ -152,7 +152,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                                 child: Container(
                                   color: Colors.green,
                                 )),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.black,
                               thickness: 1.2,
                               width: 2,
@@ -162,7 +162,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                                 child: Container(
                                   color: Colors.yellow,
                                 )),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.black,
                               thickness: 1.2,
                               width: 2,
@@ -238,7 +238,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Protein",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -246,16 +246,16 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                         fontSize: 24,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 12,
                     ),
-                    Text(
+                    const Text(
                       "You need 30g more to complete the day",
                       style: TextStyle(
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Expanded(
@@ -269,7 +269,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                             Flexible(
                               flex: 8,
                               child: Container(
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.deepPurpleAccent,
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(4),
@@ -277,7 +277,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                                     )),
                               ),
                             ),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.black,
                               thickness: 1.2,
                               width: 2,
@@ -298,7 +298,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Carbs",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -306,16 +306,16 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                         fontSize: 24,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 12,
                     ),
-                    Text(
+                    const Text(
                       "You need 23g more to complete the day",
                       style: TextStyle(
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Expanded(
@@ -329,7 +329,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                             Flexible(
                               flex: 10,
                               child: Container(
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.yellow,
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(4),
@@ -337,7 +337,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                                     )),
                               ),
                             ),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.black,
                               thickness: 1.2,
                               width: 2,
@@ -358,7 +358,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Fat",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -366,16 +366,16 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                         fontSize: 24,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 12,
                     ),
-                    Text(
+                    const Text(
                       "You need 30g more to complete the day",
                       style: TextStyle(
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Expanded(
@@ -389,7 +389,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                             Flexible(
                               flex: 4,
                               child: Container(
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.green,
                                     borderRadius: BorderRadius.only(
                                       topLeft: Radius.circular(4),
@@ -397,7 +397,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                                     )),
                               ),
                             ),
-                            VerticalDivider(
+                            const VerticalDivider(
                               color: Colors.black,
                               thickness: 1.2,
                               width: 2,
