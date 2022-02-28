@@ -327,7 +327,7 @@ class _CalorieTrackingHomePageState extends State<CalorieTrackingHomePage> {
                         child: Row(
                           children: [
                             Flexible(
-                              flex: 10,
+                              flex: 12,
                               child: Container(
                                 decoration: const BoxDecoration(
                                     color: Colors.yellow,
