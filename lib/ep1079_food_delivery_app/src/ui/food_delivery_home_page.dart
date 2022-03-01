@@ -27,7 +27,7 @@ class FoodDeliveryHomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      height: 58,
+                      height: 52,
                       decoration: BoxDecoration(
                         color: Colors.grey[100],
                         borderRadius: BorderRadius.circular(8),
@@ -35,7 +35,15 @@ class FoodDeliveryHomePage extends StatelessWidget {
                       padding: const EdgeInsets.all(6),
                       child: Row(
                         children: [
-                          const Expanded(child: Placeholder()),
+                          const Expanded(
+                              child: Center(
+                                child: Text(
+                                  "My Basket",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              )),
                           const SizedBox(
                             width: 8,
                           ),
@@ -46,10 +54,11 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: const Center(
-                                child: const Text(
+                                child: Text(
                                   "History",
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: Colors.red,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -61,7 +70,7 @@ class FoodDeliveryHomePage extends StatelessWidget {
                     const SizedBox(
                       height: 16,
                     ),
-                    Expanded(child: Placeholder()),
+                    const Expanded(child: Placeholder()),
                   ],
                 ),
               ),
