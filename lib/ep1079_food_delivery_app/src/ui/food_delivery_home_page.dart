@@ -36,18 +36,32 @@ class FoodDeliveryHomePage extends StatelessWidget {
                       child: Row(
                         children: [
                           const Expanded(child: Placeholder()),
-                          const SizedBox(width: 8,),
-                          Expanded(child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(4)
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: const Center(
+                                child: const Text(
+                                  "History",
+                                  style: const TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ),
                             ),
-                          )),
+                          ),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 16,),
-                    Expanded(child: ListView()),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Expanded(child: Placeholder()),
                   ],
                 ),
               ),
