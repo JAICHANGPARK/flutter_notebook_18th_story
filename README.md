@@ -2,7 +2,18 @@
 
 ## UI Design
 
-### EP1076
+### EP1079
+
+- Food Delivery App 
+- by Johnny Kyorov
+- https://dribbble.com/shots/17550142-Food-Delivery-App-UI-Kit-02/attachments/12694325?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/1332195/screenshots/17550142/media/f6fbf1d0afa1999f949919fce4b9f563.jpg"
+width="400px" >
+</img>
+
+### EP1076-1078
 
 - Calorie Tracking App
 - by YesYou | Isaac Sanchez
