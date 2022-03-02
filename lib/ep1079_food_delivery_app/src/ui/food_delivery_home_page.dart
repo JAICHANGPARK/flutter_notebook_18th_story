@@ -150,12 +150,11 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                                                 children: [
                                                                   const TextSpan(
                                                                     text: "\$",
-                                                                    style: TextStyle(
-                                                                      color: Colors.red,
-                                                                    ),
+                                                                    style: TextStyle(color: Colors.red, fontSize: 16),
                                                                   ),
                                                                   TextSpan(
                                                                     text: "${foodHistoryItems[index].price}",
+                                                                    style: TextStyle(fontSize: 16),
                                                                   )
                                                                 ],
                                                               ),
@@ -175,7 +174,23 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                           height: 32,
                                           child: Row(
                                             children: [
-                                              const Expanded(child: const Placeholder()),
+                                              Expanded(
+                                                  child: Container(
+                                                decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Colors.grey,
+                                                  ),
+                                                  borderRadius: BorderRadius.circular(24),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    "Rate",
+                                                    style: TextStyle(
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ),
+                                              )),
                                               const Expanded(child: const Placeholder()),
                                             ],
                                           ),
