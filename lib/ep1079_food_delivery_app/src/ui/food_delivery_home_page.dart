@@ -122,6 +122,7 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                                       ),
                                                       fit: BoxFit.cover,
                                                     ),
+                                                    borderRadius: BorderRadius.circular(8),
                                                   ),
                                                 ),
                                                 Flexible(
@@ -154,7 +155,7 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                                                   ),
                                                                   TextSpan(
                                                                     text: "${foodHistoryItems[index].price}",
-                                                                    style: TextStyle(fontSize: 16),
+                                                                    style: const TextStyle(fontSize: 16),
                                                                   )
                                                                 ],
                                                               ),
@@ -175,23 +176,43 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                           child: Row(
                                             children: [
                                               Expanded(
-                                                  child: Container(
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                    color: Colors.grey,
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                      color: Colors.grey,
+                                                    ),
+                                                    borderRadius: BorderRadius.circular(24),
                                                   ),
-                                                  borderRadius: BorderRadius.circular(24),
-                                                ),
-                                                child: Center(
-                                                  child: Text(
-                                                    "Rate",
-                                                    style: TextStyle(
-                                                      fontWeight: FontWeight.bold,
+                                                  child: const Center(
+                                                    child: Text(
+                                                      "Rate",
+                                                      style: TextStyle(
+                                                        fontWeight: FontWeight.bold,
+                                                      ),
                                                     ),
                                                   ),
                                                 ),
-                                              )),
-                                              const Expanded(child: const Placeholder()),
+                                              ),
+                                              const SizedBox(
+                                                width: 8,
+                                              ),
+                                              Expanded(
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.black,
+                                                    borderRadius: BorderRadius.circular(24),
+                                                  ),
+                                                  child: const Center(
+                                                    child: Text(
+                                                      "Re-Order",
+                                                      style: TextStyle(
+                                                        fontWeight: FontWeight.bold,
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         )
