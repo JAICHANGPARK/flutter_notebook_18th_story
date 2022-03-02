@@ -108,51 +108,66 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Column(
                                       children: [
-                                         SizedBox(
-                                          height: 84,
-                                          child: Row(
-                                            children: [
-                                              Container(
-                                                height: 64,
-                                                width: 64,
-                                                decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                    image: CachedNetworkImageProvider(
-                                                      foodHistoryItems[index].img ?? "",
-                                                    ),
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                child: Padding(
-                                                  padding: const EdgeInsets.all(16.0),
-                                                  child: Column(
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                                    children: [
-                                                      Padding(
-                                                        padding: const EdgeInsets.only(right: 16),
-                                                        child: Text(  foodHistoryItems[index].title ?? "",
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.bold,
-                                                              fontSize: 16
-                                                          ),),
+                                        SizedBox(
+                                            height: 84,
+                                            child: Row(
+                                              children: [
+                                                Container(
+                                                  height: 64,
+                                                  width: 64,
+                                                  decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                      image: CachedNetworkImageProvider(
+                                                        foodHistoryItems[index].img ?? "",
                                                       ),
-                                                      Row(
-                                                        children: [
-                                                          Text("${foodHistoryItems[index].itemCount} items"),
-                                                          Text.rich(TextSpan(
-                                                            children: []
-                                                          )),
-                                                        ],
-                                                      )
-                                                    ],
+                                                      fit: BoxFit.cover,
+                                                    ),
                                                   ),
                                                 ),
-                                              )
-                                            ],
-                                          )
-                                        ),
+                                                Flexible(
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.all(16.0),
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(right: 16),
+                                                          child: Text(
+                                                            foodHistoryItems[index].title ?? "",
+                                                            style: const TextStyle(
+                                                                fontWeight: FontWeight.bold, fontSize: 16),
+                                                          ),
+                                                        ),
+                                                        const SizedBox(
+                                                          height: 8,
+                                                        ),
+                                                        Row(
+                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                          children: [
+                                                            Text("${foodHistoryItems[index].itemCount} items"),
+                                                            Text.rich(
+                                                              TextSpan(
+                                                                children: [
+                                                                  const TextSpan(
+                                                                    text: "\$",
+                                                                    style: TextStyle(
+                                                                      color: Colors.red,
+                                                                    ),
+                                                                  ),
+                                                                  TextSpan(
+                                                                    text: "${foodHistoryItems[index].price}",
+                                                                  )
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            )),
                                         const SizedBox(
                                           height: 8,
                                         ),
@@ -160,10 +175,8 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                           height: 32,
                                           child: Row(
                                             children: [
-                                              Expanded(
-                                                child: Placeholder()
-                                              ),
-                                              Expanded(child: Placeholder()),
+                                              const Expanded(child: const Placeholder()),
+                                              const Expanded(child: const Placeholder()),
                                             ],
                                           ),
                                         )
