@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FoodDeliveryHomePage extends StatelessWidget {
-  const FoodDeliveryHomePage({Key? key}) : super(key: key);
+   FoodDeliveryHomePage({Key? key}) : super(key: key);
 
   ValueNotifier<int> tabIndex = ValueNotifier(0);
 
@@ -17,22 +17,21 @@ class FoodDeliveryHomePage extends StatelessWidget {
               top: 0,
               right: 0,
               bottom: 72,
-              child: ValueListenableBuilder<int>(
-                valueListenable: tabIndex,
-                builder: (context, value, _){
-
-                  return Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(24),
-                        bottomRight: Radius.circular(24),
-                      ),
-                    ),
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      children: [
-                        Container(
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(24),
+                    bottomRight: Radius.circular(24),
+                  ),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    ValueListenableBuilder<int>(
+                      valueListenable: tabIndex,
+                      builder: (context, value, _) {
+                        return Container(
                           height: 52,
                           decoration: BoxDecoration(
                             color: Colors.grey[100],
@@ -44,6 +43,7 @@ class FoodDeliveryHomePage extends StatelessWidget {
                               Expanded(
                                 child: GestureDetector(
                                   onTap: (){
+                                    print("basket");
                                     tabIndex.value = 0;
                                   },
                                   child: Container(
@@ -90,17 +90,18 @@ class FoodDeliveryHomePage extends StatelessWidget {
                               ),
                             ],
                           ),
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        const Expanded(child: Placeholder()),
-                      ],
+                        );
+                      }
                     ),
-                  );
-                },
-
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const Expanded(child: Placeholder()),
+                  ],
+                ),
               ),
+
+
             ),
             Positioned(
                 left: 16,
