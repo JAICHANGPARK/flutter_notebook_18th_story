@@ -41,15 +41,28 @@ class FoodDeliveryHomePage extends StatelessWidget {
                           padding: const EdgeInsets.all(6),
                           child: Row(
                             children: [
-                              const Expanded(
-                                  child: Center(
-                                    child: Text(
-                                      "My Basket",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: (){
+                                    tabIndex.value = 0;
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: value == 0 ? Colors.white : Colors.transparent,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child:  Center(
+                                      child: Text(
+                                        "My Basket",
+                                        style: TextStyle(
+                                          color: value == 0 ? Colors.red : Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
-                                  )),
+                                  ),
+                                ),
+                              ),
                               const SizedBox(
                                 width: 8,
                               ),
@@ -60,14 +73,14 @@ class FoodDeliveryHomePage extends StatelessWidget {
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      color: value == 1 ? Colors.white : Colors.transparent,
                                       borderRadius: BorderRadius.circular(4),
                                     ),
-                                    child: const Center(
+                                    child:  Center(
                                       child: Text(
                                         "History",
                                         style: TextStyle(
-                                          color: Colors.red,
+                                          color: value == 1 ? Colors.red : Colors.black,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
