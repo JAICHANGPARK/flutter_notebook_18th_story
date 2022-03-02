@@ -102,8 +102,11 @@ class FoodDeliveryHomePage extends StatelessWidget {
                             itemCount: foodHistoryItems.length,
                             itemBuilder: (context, index) {
                               return Padding(
-                                padding: const EdgeInsets.only(bottom: 8),
+                                padding: const EdgeInsets.only(bottom: 16),
+
                                 child: Card(
+                                  elevation: 4,
+                                  shadowColor: Colors.black.withOpacity(0.4),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Column(
