@@ -17,70 +17,76 @@ class FoodDeliveryHomePage extends StatelessWidget {
               top: 0,
               right: 0,
               bottom: 72,
-              child: ValueListenableBuilder(
+              child: ValueListenableBuilder<int>(
                 valueListenable: tabIndex,
                 builder: (context, value, _){
-                  
-                },
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(24),
-                      bottomRight: Radius.circular(24),
+
+                  return Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(24),
+                        bottomRight: Radius.circular(24),
+                      ),
                     ),
-                  ),
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 52,
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        padding: const EdgeInsets.all(6),
-                        child: Row(
-                          children: [
-                            const Expanded(
-                                child: Center(
-                                  child: Text(
-                                    "My Basket",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 52,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          padding: const EdgeInsets.all(6),
+                          child: Row(
+                            children: [
+                              const Expanded(
+                                  child: Center(
+                                    child: Text(
+                                      "My Basket",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                )),
-                            const SizedBox(
-                              width: 8,
-                            ),
-                            Expanded(
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: const Center(
-                                  child: Text(
-                                    "History",
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
+                                  )),
+                              const SizedBox(
+                                width: 8,
+                              ),
+                              Expanded(
+                                child: GestureDetector(
+                                  onTap: (){
+                                    tabIndex.value = 1;
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        "History",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      const Expanded(child: Placeholder()),
-                    ],
-                  ),
-                ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        const Expanded(child: Placeholder()),
+                      ],
+                    ),
+                  );
+                },
+
               ),
             ),
             Positioned(
