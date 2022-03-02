@@ -1,7 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1079_food_delivery_app/src/model/food_history.dart';
 
 class FoodDeliveryHomePage extends StatelessWidget {
-   FoodDeliveryHomePage({Key? key}) : super(key: key);
+  FoodDeliveryHomePage({Key? key}) : super(key: key);
 
   ValueNotifier<int> tabIndex = ValueNotifier(0);
 
@@ -29,103 +31,151 @@ class FoodDeliveryHomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     ValueListenableBuilder<int>(
-                      valueListenable: tabIndex,
-                      builder: (context, value, _) {
-                        return Container(
-                          height: 52,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          padding: const EdgeInsets.all(6),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: GestureDetector(
-                                  onTap: (){
-                                    print("basket");
-                                    tabIndex.value = 0;
-                                  },
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: value == 0 ? Colors.white : Colors.transparent,
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child:  Center(
-                                      child: Text(
-                                        "My Basket",
-                                        style: TextStyle(
-                                          color: value == 0 ? Colors.red : Colors.black,
-                                          fontWeight: FontWeight.bold,
+                        valueListenable: tabIndex,
+                        builder: (context, value, _) {
+                          return Container(
+                            height: 52,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.all(6),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      print("basket");
+                                      tabIndex.value = 0;
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: value == 0 ? Colors.white : Colors.transparent,
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          "My Basket",
+                                          style: TextStyle(
+                                            color: value == 0 ? Colors.red : Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 8,
-                              ),
-                              Expanded(
-                                child: GestureDetector(
-                                  onTap: (){
-                                    tabIndex.value = 1;
-                                  },
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: value == 1 ? Colors.white : Colors.transparent,
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child:  Center(
-                                      child: Text(
-                                        "History",
-                                        style: TextStyle(
-                                          color: value == 1 ? Colors.red : Colors.black,
-                                          fontWeight: FontWeight.bold,
+                                const SizedBox(
+                                  width: 8,
+                                ),
+                                Expanded(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      tabIndex.value = 1;
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: value == 1 ? Colors.white : Colors.transparent,
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          "History",
+                                          style: TextStyle(
+                                            color: value == 1 ? Colors.red : Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        );
-                      }
-                    ),
+                              ],
+                            ),
+                          );
+                        }),
                     const SizedBox(
                       height: 16,
                     ),
-                     Expanded(child: ListView.builder(itemBuilder: (context, index){
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 8),
-                        child: Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                SizedBox(height: 48,),
-                                SizedBox(height: 8,),
-                                SizedBox(
-                                  height: 32,
-                                  child: Row(
-                                    children: [
-                                      Expanded(child: Placeholder()),
-                                      Expanded(child: Placeholder()),
-                                    ],
+                    Expanded(
+                        child: ListView.builder(
+                            itemCount: foodHistoryItems.length,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: 8),
+                                child: Card(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      children: [
+                                         SizedBox(
+                                          height: 84,
+                                          child: Row(
+                                            children: [
+                                              Container(
+                                                height: 64,
+                                                width: 64,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: CachedNetworkImageProvider(
+                                                      foodHistoryItems[index].img ?? "",
+                                                    ),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              ),
+                                              Flexible(
+                                                child: Padding(
+                                                  padding: const EdgeInsets.all(16.0),
+                                                  child: Column(
+                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    children: [
+                                                      Padding(
+                                                        padding: const EdgeInsets.only(right: 16),
+                                                        child: Text(  foodHistoryItems[index].title ?? "",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.bold,
+                                                              fontSize: 16
+                                                          ),),
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Text("${foodHistoryItems[index].itemCount} items"),
+                                                          Text.rich(TextSpan(
+                                                            children: []
+                                                          )),
+                                                        ],
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        SizedBox(
+                                          height: 32,
+                                          child: Row(
+                                            children: [
+                                              Expanded(
+                                                child: Placeholder()
+                                              ),
+                                              Expanded(child: Placeholder()),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      );
-                    })),
+                                ),
+                              );
+                            })),
                   ],
                 ),
               ),
-
-
             ),
             Positioned(
                 left: 16,
