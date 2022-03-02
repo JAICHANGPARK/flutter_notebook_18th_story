@@ -96,7 +96,31 @@ class FoodDeliveryHomePage extends StatelessWidget {
                     const SizedBox(
                       height: 16,
                     ),
-                    const Expanded(child: Placeholder()),
+                     Expanded(child: ListView.builder(itemBuilder: (context, index){
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 8),
+                        child: Card(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: [
+                                SizedBox(height: 48,),
+                                SizedBox(height: 8,),
+                                SizedBox(
+                                  height: 32,
+                                  child: Row(
+                                    children: [
+                                      Expanded(child: Placeholder()),
+                                      Expanded(child: Placeholder()),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    })),
                   ],
                 ),
               ),
