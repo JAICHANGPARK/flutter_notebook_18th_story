@@ -15,6 +15,7 @@ class PaxWardrobeMainPage extends StatelessWidget {
                 color: Colors.blue,
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -47,10 +48,13 @@ class PaxWardrobeMainPage extends StatelessWidget {
                           border: Border.all(),
                           shape: BoxShape.circle,
                         ),
+                        child: Center(
+                          child: Text("2"),
+                        ),
                       ),
                       SizedBox(height: 4,),
                       Text(
-                        "Basic",
+                        "Doors",
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
