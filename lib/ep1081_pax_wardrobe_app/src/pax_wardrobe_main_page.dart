@@ -36,6 +36,48 @@ class PaxWardrobeMainPage extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 32,
+                        width: 32,
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      SizedBox(height: 4,),
+                      Text(
+                        "Basic",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 32,
+                        width: 32,
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      SizedBox(height: 4,),
+                      Text(
+                        "Basic",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   )
                 ],
               ),
