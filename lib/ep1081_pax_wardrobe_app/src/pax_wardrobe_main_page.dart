@@ -12,20 +12,20 @@ class PaxWardrobeMainPage extends StatelessWidget {
           children: [
             Container(
               height: 120,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
               ),
             ),
-            Expanded(
+            const Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Placeholder(),
               ),
             ),
             Divider(height: 0, color: Colors.grey[500],),
             Container(
               height: 72,
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               child: Row(
                 children: [
                   Container(
