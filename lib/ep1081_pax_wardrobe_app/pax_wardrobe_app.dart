@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notebook_18th_story/ep1081_pax_wardrobe_app/src/pax_wardrobe_basic_page.dart';
+import 'package:flutter_notebook_18th_story/ep1081_pax_wardrobe_app/src/pax_wardrobe_main_page.dart';
 
 
 class PaxWardrobeApp extends StatelessWidget {
@@ -7,8 +7,8 @@ class PaxWardrobeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: PaxWardrobeBasicPage(),
+    return const MaterialApp(
+      home: PaxWardrobeMainPage(),
     );
   }
 }
