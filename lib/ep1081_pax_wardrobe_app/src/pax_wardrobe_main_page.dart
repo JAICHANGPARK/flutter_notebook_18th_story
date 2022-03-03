@@ -10,9 +10,34 @@ class PaxWardrobeMainPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 120,
+              height: 100,
               decoration: const BoxDecoration(
                 color: Colors.blue,
+              ),
+              child: Row(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 32,
+                        width: 32,
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      SizedBox(height: 4,),
+                      Text(
+                        "Basic",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
             const Expanded(
@@ -39,20 +64,17 @@ class PaxWardrobeMainPage extends StatelessWidget {
                     ),
                     child: Center(
                       child: IconButton(
-                        icon: Icon(Icons.arrow_back),
+                        icon: const Icon(Icons.arrow_back),
                         onPressed: () {},
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(32)
-                    ),
-                    padding: EdgeInsets.symmetric(horizontal: 64),
-                    child: Center(
-                      child: Text(
+                    decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(32)),
+                    padding: const EdgeInsets.symmetric(horizontal: 64),
+                    child: const Center(
+                      child: const Text(
                         "Next",
                         style: TextStyle(
                           color: Colors.white,
