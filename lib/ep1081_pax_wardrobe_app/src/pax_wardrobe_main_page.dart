@@ -43,6 +43,22 @@ class PaxWardrobeMainPage extends StatelessWidget {
                         onPressed: () {},
                       ),
                     ),
+                  ),
+                  Spacer(),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(32)
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 64),
+                    child: Center(
+                      child: Text(
+                        "Next",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
