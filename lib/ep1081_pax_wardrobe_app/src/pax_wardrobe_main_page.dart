@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class PaxWardrobeMainPage extends StatelessWidget {
   const PaxWardrobeMainPage({Key? key}) : super(key: key);
 
@@ -22,7 +21,10 @@ class PaxWardrobeMainPage extends StatelessWidget {
                 child: Placeholder(),
               ),
             ),
-            Divider(height: 0, color: Colors.grey[500],),
+            Divider(
+              height: 0,
+              color: Colors.grey[500],
+            ),
             Container(
               height: 72,
               padding: const EdgeInsets.all(12),
@@ -33,19 +35,21 @@ class PaxWardrobeMainPage extends StatelessWidget {
                     width: 58,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.grey
-                      )
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: Center(
+                      child: IconButton(
+                        icon: Icon(Icons.arrow_back),
+                        onPressed: () {},
+                      ),
                     ),
                   )
                 ],
               ),
             )
-
           ],
         ),
       ),
-
     );
   }
 }
