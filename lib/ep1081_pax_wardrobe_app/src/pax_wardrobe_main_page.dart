@@ -17,11 +17,29 @@ class PaxWardrobeMainPage extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Placeholder(),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Placeholder(),
+              ),
             ),
-            Divider(height: 0, color: Colors.grey[200],),
+            Divider(height: 0, color: Colors.grey[500],),
             Container(
               height: 72,
+              padding: EdgeInsets.all(12),
+              child: Row(
+                children: [
+                  Container(
+                    height: 58,
+                    width: 58,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.grey
+                      )
+                    ),
+                  )
+                ],
+              ),
             )
 
           ],
