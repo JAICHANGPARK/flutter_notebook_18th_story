@@ -11,7 +11,7 @@ class PaxWardrobeMainPage extends StatelessWidget {
           children: [
             Container(
               height: 100,
-              
+
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -25,12 +25,12 @@ class PaxWardrobeMainPage extends StatelessWidget {
                           border: Border.all(),
                           shape: BoxShape.circle,
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text("1"),
                         ),
                       ),
-                      SizedBox(height: 4,),
-                      Text(
+                      const SizedBox(height: 4,),
+                      const Text(
                         "Basic",
                         style: TextStyle(
                           fontSize: 12,
@@ -49,12 +49,12 @@ class PaxWardrobeMainPage extends StatelessWidget {
                           border: Border.all(),
                           shape: BoxShape.circle,
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text("2"),
                         ),
                       ),
-                      SizedBox(height: 4,),
-                      Text(
+                      const SizedBox(height: 4,),
+                      const Text(
                         "Doors",
                         style: TextStyle(
                           fontSize: 12,
@@ -73,12 +73,12 @@ class PaxWardrobeMainPage extends StatelessWidget {
                           border: Border.all(),
                           shape: BoxShape.circle,
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text("3"),
                         ),
                       ),
-                      SizedBox(height: 4,),
-                      Text(
+                      const SizedBox(height: 4,),
+                      const Text(
                         "Storage",
                         style: TextStyle(
                           fontSize: 12,
@@ -124,7 +124,7 @@ class PaxWardrobeMainPage extends StatelessWidget {
                     decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(32)),
                     padding: const EdgeInsets.symmetric(horizontal: 64),
                     child: const Center(
-                      child: const Text(
+                      child: Text(
                         "Next",
                         style: TextStyle(
                           color: Colors.white,
