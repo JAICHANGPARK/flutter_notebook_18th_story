@@ -159,22 +159,37 @@ class PaxWardrobeMainPage extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(32),
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 64,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Next",
-                        style: TextStyle(
-                          color: Colors.white,
+                  Consumer(
+                    builder: (context, ref, _) {
+                      final idx = ref.watch(paxTopTabIndex);
+                      return GestureDetector(
+                        onTap: (){
+                          var i = idx;
+                          i++;
+                          if( i > 1){
+                            i = 2;
+                          }
+                          ref.watch(paxTopTabIndex.notifier).state = i;
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 64,
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Next",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
+                      );
+                    }
                   )
                 ],
               ),
