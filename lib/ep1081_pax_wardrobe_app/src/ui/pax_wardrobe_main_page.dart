@@ -29,9 +29,10 @@ class PaxWardrobeMainPage extends StatelessWidget {
                             height: 32,
                             width: 32,
                             decoration: BoxDecoration(
-                                border: Border.all(),
-                                shape: BoxShape.circle,
-                                color: idx == 0 ? Colors.black : Colors.white),
+                              border: Border.all(),
+                              shape: BoxShape.circle,
+                              color: idx == 0 ? Colors.black : Colors.white,
+                            ),
                             child: Center(
                               child: Text(
                                 "1",
@@ -65,9 +66,15 @@ class PaxWardrobeMainPage extends StatelessWidget {
                             decoration: BoxDecoration(
                               border: Border.all(),
                               shape: BoxShape.circle,
+                              color: idx == 1 ? Colors.black : Colors.white,
                             ),
-                            child: const Center(
-                              child: Text("2"),
+                            child: Center(
+                              child: Text(
+                                "2",
+                                style: TextStyle(
+                                  color: idx == 1 ? Colors.white : Colors.black,
+                                ),
+                              ),
                             ),
                           ),
                           const SizedBox(
