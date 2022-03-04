@@ -129,10 +129,22 @@ class PaxWardrobeMainPage extends StatelessWidget {
                 ),
               );
             }),
-            const Expanded(
+            Expanded(
               child: Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Placeholder(),
+                child: Consumer(builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                  final idx = ref.watch(paxTopTabIndex);
+                  return IndexedStack(
+                    index: idx,
+                    children: [
+                      PaxWardrobeBasicPage(),
+                      PaxWardrobeDoorsPage(),
+                    ],
+                  );
+
+                },
+
+                ),
               ),
             ),
             Divider(
