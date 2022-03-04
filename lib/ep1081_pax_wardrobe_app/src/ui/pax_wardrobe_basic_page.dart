@@ -11,7 +11,8 @@ class PaxWardrobeBasicPage extends StatefulWidget {
 class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Center(
+      child: Text("Basic UI "),
 
     );
   }
