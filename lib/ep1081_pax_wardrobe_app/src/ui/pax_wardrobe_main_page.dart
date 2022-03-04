@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1081_pax_wardrobe_app/src/provider/pax_top_tab_index.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PaxWardrobeMainPage extends StatelessWidget {
@@ -10,14 +11,18 @@ class PaxWardrobeMainPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Consumer(
-              builder: (context, ref, _) {
-                return SizedBox(
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
+            Consumer(builder: (context, ref, _) {
+              final idx = ref.watch(paxTopTabIndex);
+              return SizedBox(
+                height: 100,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    GestureDetector(
+                      onTap: (){
+                        ref.read(paxTopTabIndex.notifier).state = 0;
+                      },
+                      child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
@@ -26,74 +31,82 @@ class PaxWardrobeMainPage extends StatelessWidget {
                             decoration: BoxDecoration(
                               border: Border.all(),
                               shape: BoxShape.circle,
+                              color: idx == 0 ? Colors.black : Colors.white
                             ),
                             child: const Center(
                               child: Text("1"),
                             ),
                           ),
-                          const SizedBox(height: 4,),
-                          const Text(
+                          const SizedBox(
+                            height: 4,
+                          ),
+                           Text(
                             "Basic",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
+                                color: idx == 0 ? Colors.white : Colors.black
                             ),
                           ),
                         ],
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 32,
-                            width: 32,
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Center(
-                              child: Text("2"),
-                            ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 32,
+                          width: 32,
+                          decoration: BoxDecoration(
+                            border: Border.all(),
+                            shape: BoxShape.circle,
                           ),
-                          const SizedBox(height: 4,),
-                          const Text(
-                            "Doors",
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          child: const Center(
+                            child: Text("2"),
                           ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 32,
-                            width: 32,
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Center(
-                              child: Text("3"),
-                            ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text(
+                          "Doors",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
                           ),
-                          const SizedBox(height: 4,),
-                          const Text(
-                            "Storage",
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 32,
+                          width: 32,
+                          decoration: BoxDecoration(
+                            border: Border.all(),
+                            shape: BoxShape.circle,
                           ),
-                        ],
-                      )
-                    ],
-                  ),
-                );
-              }
-            ),
+                          child: const Center(
+                            child: Text("3"),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        const Text(
+                          "Storage",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              );
+            }),
             const Expanded(
               child: Padding(
                 padding: EdgeInsets.all(8.0),
