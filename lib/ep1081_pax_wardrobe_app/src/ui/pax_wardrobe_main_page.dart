@@ -101,9 +101,11 @@ class PaxWardrobeMainPage extends StatelessWidget {
                             decoration: BoxDecoration(
                               border: Border.all(),
                               shape: BoxShape.circle,
+                              color: idx == 2 ? Colors.black : Colors.white,
                             ),
-                            child:  Center(
-                              child: Text("3",
+                            child: Center(
+                              child: Text(
+                                "3",
                                 style: TextStyle(
                                   color: idx == 2 ? Colors.white : Colors.black,
                                 ),
@@ -158,8 +160,13 @@ class PaxWardrobeMainPage extends StatelessWidget {
                   ),
                   const Spacer(),
                   Container(
-                    decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(32)),
-                    padding: const EdgeInsets.symmetric(horizontal: 64),
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 64,
+                    ),
                     child: const Center(
                       child: Text(
                         "Next",
