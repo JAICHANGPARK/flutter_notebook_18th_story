@@ -33,19 +33,22 @@ class PaxWardrobeMainPage extends StatelessWidget {
                               shape: BoxShape.circle,
                               color: idx == 0 ? Colors.black : Colors.white
                             ),
-                            child: const Center(
-                              child: Text("1"),
+                            child:  Center(
+                              child: Text("1",
+                              style: TextStyle(
+                                  color: idx == 0 ? Colors.white : Colors.black
+                              ),),
                             ),
                           ),
                           const SizedBox(
                             height: 4,
                           ),
-                           Text(
+                           const Text(
                             "Basic",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
-                                color: idx == 0 ? Colors.white : Colors.black
+
                             ),
                           ),
                         ],
