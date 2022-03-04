@@ -19,7 +19,7 @@ class PaxWardrobeMainPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         ref.read(paxTopTabIndex.notifier).state = 0;
                       },
                       child: Column(
@@ -29,56 +29,59 @@ class PaxWardrobeMainPage extends StatelessWidget {
                             height: 32,
                             width: 32,
                             decoration: BoxDecoration(
-                              border: Border.all(),
-                              shape: BoxShape.circle,
-                              color: idx == 0 ? Colors.black : Colors.white
-                            ),
-                            child:  Center(
-                              child: Text("1",
-                              style: TextStyle(
-                                  color: idx == 0 ? Colors.white : Colors.black
-                              ),),
+                                border: Border.all(),
+                                shape: BoxShape.circle,
+                                color: idx == 0 ? Colors.black : Colors.white),
+                            child: Center(
+                              child: Text(
+                                "1",
+                                style: TextStyle(
+                                  color: idx == 0 ? Colors.white : Colors.black,
+                                ),
+                              ),
                             ),
                           ),
                           const SizedBox(
                             height: 4,
                           ),
-                           const Text(
+                          const Text(
                             "Basic",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
-
                             ),
                           ),
                         ],
                       ),
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 32,
-                          width: 32,
-                          decoration: BoxDecoration(
-                            border: Border.all(),
-                            shape: BoxShape.circle,
+                    GestureDetector(
+                      onTap: () => ref.read(paxTopTabIndex.notifier).state = 1,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 32,
+                            width: 32,
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Center(
+                              child: Text("2"),
+                            ),
                           ),
-                          child: const Center(
-                            child: Text("2"),
+                          const SizedBox(
+                            height: 4,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        const Text(
-                          "Doors",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
+                          const Text(
+                            "Doors",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
