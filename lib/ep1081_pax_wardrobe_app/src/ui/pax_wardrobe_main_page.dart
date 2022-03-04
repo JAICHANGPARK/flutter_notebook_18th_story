@@ -148,6 +148,14 @@ class PaxWardrobeMainPage extends StatelessWidget {
                     builder: (context, ref, _) {
                       final idx = ref.watch(paxTopTabIndex);
                       return GestureDetector(
+                        onTap: (){
+                          var i = idx;
+                          i--;
+                          if(i < 0){
+                            i = 0;
+                          }
+                          ref.watch(paxTopTabIndex.notifier).state = i;
+                        },
                         child: Container(
                           height: 58,
                           width: 58,
