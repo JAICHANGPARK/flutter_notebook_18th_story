@@ -90,31 +90,38 @@ class PaxWardrobeMainPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 32,
-                          width: 32,
-                          decoration: BoxDecoration(
-                            border: Border.all(),
-                            shape: BoxShape.circle,
+                    GestureDetector(
+                      onTap: () => ref.read(paxTopTabIndex.notifier).state = 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 32,
+                            width: 32,
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              shape: BoxShape.circle,
+                            ),
+                            child:  Center(
+                              child: Text("3",
+                                style: TextStyle(
+                                  color: idx == 2 ? Colors.white : Colors.black,
+                                ),
+                              ),
+                            ),
                           ),
-                          child: const Center(
-                            child: Text("3"),
+                          const SizedBox(
+                            height: 4,
                           ),
-                        ),
-                        const SizedBox(
-                          height: 4,
-                        ),
-                        const Text(
-                          "Storage",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
+                          const Text(
+                            "Storage",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     )
                   ],
                 ),
