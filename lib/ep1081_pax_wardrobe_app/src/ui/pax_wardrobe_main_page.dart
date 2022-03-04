@@ -144,19 +144,26 @@ class PaxWardrobeMainPage extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               child: Row(
                 children: [
-                  Container(
-                    height: 58,
-                    width: 58,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.grey),
-                    ),
-                    child: Center(
-                      child: IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        onPressed: () {},
-                      ),
-                    ),
+                  Consumer(
+                    builder: (context, ref, _) {
+                      final idx = ref.watch(paxTopTabIndex);
+                      return GestureDetector(
+                        child: Container(
+                          height: 58,
+                          width: 58,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.grey),
+                          ),
+                          child: Center(
+                            child: IconButton(
+                              icon: const Icon(Icons.arrow_back),
+                              onPressed: () {},
+                            ),
+                          ),
+                        ),
+                      );
+                    }
                   ),
                   const Spacer(),
                   Consumer(
