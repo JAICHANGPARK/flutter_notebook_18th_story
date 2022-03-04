@@ -147,27 +147,24 @@ class PaxWardrobeMainPage extends StatelessWidget {
                   Consumer(
                     builder: (context, ref, _) {
                       final idx = ref.watch(paxTopTabIndex);
-                      return GestureDetector(
-                        onTap: (){
-                          var i = idx;
-                          i--;
-                          if(i < 0){
-                            i = 0;
-                          }
-                          ref.watch(paxTopTabIndex.notifier).state = i;
-                        },
-                        child: Container(
-                          height: 58,
-                          width: 58,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.grey),
-                          ),
-                          child: Center(
-                            child: IconButton(
-                              icon: const Icon(Icons.arrow_back),
-                              onPressed: () {},
-                            ),
+                      return Container(
+                        height: 58,
+                        width: 58,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.grey),
+                        ),
+                        child: Center(
+                          child: IconButton(
+                            icon: const Icon(Icons.arrow_back),
+                            onPressed: () {
+                              var i = idx;
+                              i--;
+                              if(i < 1){
+                                i = 0;
+                              }
+                              ref.watch(paxTopTabIndex.notifier).state = i;
+                            },
                           ),
                         ),
                       );
