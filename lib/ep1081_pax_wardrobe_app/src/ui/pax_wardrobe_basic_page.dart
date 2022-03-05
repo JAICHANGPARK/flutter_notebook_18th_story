@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 
+
 class PaxWardrobeBasicPage extends StatefulWidget {
   const PaxWardrobeBasicPage({Key? key}) : super(key: key);
 
@@ -9,10 +10,25 @@ class PaxWardrobeBasicPage extends StatefulWidget {
 }
 
 class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
+  double _widthValue = 50.0;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Basic UI "),
+    return Column(
+      children: [
+        Text("Basic information"),
+
+        Text("Width"),
+        Row(
+          children: [
+
+          ],
+        ),
+        Slider(value: _widthValue, onChanged: (double value) {
+
+        },
+
+        )
+      ],
 
     );
   }
