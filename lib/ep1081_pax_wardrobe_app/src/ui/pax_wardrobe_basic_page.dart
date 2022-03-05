@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class PaxWardrobeBasicPage extends StatefulWidget {
@@ -167,6 +168,7 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
             height: 16,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: 64,
@@ -179,8 +181,50 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                   ),
                   shape: BoxShape.circle,
                 ),
-                child: Center(
-                  child: Icon(Icons.check, size: 20,),
+                child: const Center(
+                  child: Icon(
+                    Icons.check,
+                    size: 20,
+                  ),
+                ),
+              ),
+              Container(
+                height: 64,
+                width: 64,
+                decoration: BoxDecoration(
+                  color: Colors.grey[400],
+                  shape: BoxShape.circle,
+                  image: const DecorationImage(
+                    image: CachedNetworkImageProvider(
+                        "https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631__480.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Container(
+                height: 64,
+                width: 64,
+                decoration: BoxDecoration(
+                  color: Colors.grey[400],
+                  shape: BoxShape.circle,
+                  image: const DecorationImage(
+                    image: CachedNetworkImageProvider(
+                        "https://cdn.pixabay.com/photo/2016/11/23/15/04/wood-1853403__340.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Container(
+                height: 64,
+                width: 64,
+                decoration: BoxDecoration(
+                  color: Colors.grey[400],
+                  image: const DecorationImage(
+                    image: CachedNetworkImageProvider(
+                        "https://cdn.pixabay.com/photo/2016/01/09/16/28/wood-1130494__340.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                  shape: BoxShape.circle,
                 ),
               )
             ],
