@@ -59,6 +59,9 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
             },
             label: "${_widthValue.toStringAsFixed(0)} cm",
           ),
+          const SizedBox(
+            height: 24,
+          ),
           const Text("Height"),
           const SizedBox(
             height: 16,
@@ -98,6 +101,56 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 24,
+          ),
+          const Text("Depth"),
+          const SizedBox(
+            height: 16,
+          ),
+          SizedBox(
+            height: 42,
+            width: double.infinity,
+            child: Row(
+              children: [
+                Expanded(
+                    child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "35 cm",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                )),
+                const SizedBox(
+                  width: 16,
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "58 cm",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
