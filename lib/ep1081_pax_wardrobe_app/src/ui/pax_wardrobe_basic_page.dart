@@ -51,12 +51,27 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
             thumbColor: Colors.black,
             activeColor: Colors.black,
             inactiveColor: Colors.grey,
+            divisions: 250,
             onChanged: (double value) {
               setState(() {
                 _widthValue = value;
               });
             },
             label: "${_widthValue.toStringAsFixed(0)} cm",
+          ),
+          Text("Height"),
+          SizedBox(
+            height: 8,
+          ),
+          SizedBox(
+            height: 48,
+            width: double.infinity,
+            child: Row(
+              children: [
+                Expanded(child: Container()),
+                Expanded(child: Container()),
+              ],
+            ),
           )
         ],
       ),
