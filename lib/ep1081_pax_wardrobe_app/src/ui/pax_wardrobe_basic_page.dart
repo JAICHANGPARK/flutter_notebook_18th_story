@@ -10,6 +10,7 @@ class PaxWardrobeBasicPage extends StatefulWidget {
 
 class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
   double _widthValue = 50.0;
+  
 
   @override
   Widget build(BuildContext context) {
