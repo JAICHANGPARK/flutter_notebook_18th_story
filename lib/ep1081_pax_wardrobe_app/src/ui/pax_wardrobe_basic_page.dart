@@ -33,14 +33,20 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
             padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   "50",
-                  style: TextStyle(color: Colors.grey, fontSize: 10),
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
                 ),
-                const Text(
+                Text(
                   "300",
-                  style: TextStyle(color: Colors.grey, fontSize: 10),
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
                 ),
               ],
             ),
