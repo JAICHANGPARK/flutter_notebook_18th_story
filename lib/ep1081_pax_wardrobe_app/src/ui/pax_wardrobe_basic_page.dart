@@ -158,6 +158,32 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 24,
+          ),
+          const Text("Frame color"),
+          const SizedBox(
+            height: 16,
+          ),
+          Row(
+            children: [
+              Container(
+                height: 64,
+                width: 64,
+                decoration: BoxDecoration(
+                  color: Colors.grey[400],
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Icon(Icons.check, size: 20,),
+                ),
+              )
+            ],
           )
         ],
       ),
