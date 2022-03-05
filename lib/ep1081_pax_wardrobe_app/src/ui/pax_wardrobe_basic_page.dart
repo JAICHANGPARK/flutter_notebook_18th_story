@@ -61,15 +61,48 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
           ),
           Text("Height"),
           SizedBox(
-            height: 8,
+            height: 16,
           ),
           SizedBox(
-            height: 48,
+            height: 42,
             width: double.infinity,
             child: Row(
               children: [
-                Expanded(child: Container()),
-                Expanded(child: Container()),
+                Expanded(
+                    child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "201 cm",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                )),
+                SizedBox(
+                  width: 16,
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "236 cm",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           )
