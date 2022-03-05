@@ -17,15 +17,15 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "Basic information",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
-          Text("Width"),
-          SizedBox(
+          const Text("Width"),
+          const SizedBox(
             height: 24,
           ),
           Padding(
@@ -33,11 +33,11 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "50",
                   style: TextStyle(color: Colors.grey, fontSize: 10),
                 ),
-                Text(
+                const Text(
                   "300",
                   style: TextStyle(color: Colors.grey, fontSize: 10),
                 ),
@@ -59,8 +59,8 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
             },
             label: "${_widthValue.toStringAsFixed(0)} cm",
           ),
-          Text("Height"),
-          SizedBox(
+          const Text("Height"),
+          const SizedBox(
             height: 16,
           ),
           SizedBox(
@@ -74,7 +74,7 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(24),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "201 cm",
                       style: TextStyle(
@@ -83,7 +83,7 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                     ),
                   ),
                 )),
-                SizedBox(
+                const SizedBox(
                   width: 16,
                 ),
                 Expanded(
@@ -92,7 +92,7 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(24),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "236 cm",
                         style: TextStyle(
