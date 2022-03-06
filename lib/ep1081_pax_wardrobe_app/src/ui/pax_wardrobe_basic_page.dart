@@ -269,17 +269,33 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                       ) : null,
                     ),
                   ),
-                  Container(
-                    height: 64,
-                    width: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[400],
-                      shape: BoxShape.circle,
-                      image: const DecorationImage(
-                        image: CachedNetworkImageProvider(
-                            "https://cdn.pixabay.com/photo/2016/11/23/15/04/wood-1853403__340.jpg"),
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: (){
+                      final _basic = ref.watch(paxBasicProvider.notifier);
+                      _basic.updateFrame(2);
+                    },
+                    child: Container(
+                      height: 64,
+                      width: 64,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          image: CachedNetworkImageProvider(
+                              "https://cdn.pixabay.com/photo/2016/11/23/15/04/wood-1853403__340.jpg"),
+                          fit: BoxFit.cover,
+                          border: Border.all(
+                            color: basic.frameColor == 1 ? Colors.black : Colors.transparent,
+                            width: 2,
+                          ),
+                        ),
                       ),
+                      child:  basic.frameColor == 2 ? const Center(
+                        child:  Icon(
+                          Icons.check,
+                          size: 20,
+                        ),
+                      ) : null,
                     ),
                   ),
                   Container(
@@ -294,6 +310,12 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                       ),
                       shape: BoxShape.circle,
                     ),
+                    child:  basic.frameColor == 3 ? const Center(
+                      child:  Icon(
+                        Icons.check,
+                        size: 20,
+                      ),
+                    ) : null,
                   )
                 ],
               );
