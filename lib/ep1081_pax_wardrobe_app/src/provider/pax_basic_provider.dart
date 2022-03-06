@@ -15,14 +15,14 @@ class PaxBasicController extends StateNotifier<PaxBasic> {
   }
 
   updateHeight(int index) {
-    state = state.copyWith(height: 1);
+    state = state.copyWith(height: index);
   }
 
   updateDepth(int index) {
-    state = state.copyWith(depth: 0);
+    state = state.copyWith(depth: index);
   }
 
   updateFrame(int index) {
-    state = state.copyWith(frameColor: 0);
+    state = state.copyWith(frameColor: index);
   }
 }
