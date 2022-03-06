@@ -212,25 +212,31 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
           ),
           Consumer(
             builder: (context, ref, _) {
-              
+              final basic = ref.watch(paxBasicProvider);
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 64,
-                    width: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[400],
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 2,
+                  GestureDetector(
+                    onTap: (){
+                      final _basic = ref.watch(paxBasicProvider.notifier);
+                      _basic.updateFrame(0);
+                    },
+                    child: Container(
+                      height: 64,
+                      width: 64,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 2,
+                        ),
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.check,
-                        size: 20,
+                      child: const Center(
+                        child: Icon(
+                          Icons.check,
+                          size: 20,
+                        ),
                       ),
                     ),
                   ),
