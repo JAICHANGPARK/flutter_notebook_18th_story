@@ -298,24 +298,35 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                       ) : null,
                     ),
                   ),
-                  Container(
-                    height: 64,
-                    width: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[400],
-                      image: const DecorationImage(
-                        image: CachedNetworkImageProvider(
-                            "https://cdn.pixabay.com/photo/2016/01/09/16/28/wood-1130494__340.jpg"),
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: (){
+                      final _basic = ref.watch(paxBasicProvider.notifier);
+                      _basic.updateFrame(3);
+                    },
+                    child: Container(
+                      height: 64,
+                      width: 64,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        border: Border.all(
+                          color: basic.frameColor == 3 ? Colors.black : Colors.transparent,
+                          width: 2,
+                        ),
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          image: CachedNetworkImageProvider(
+                              "https://cdn.pixabay.com/photo/2016/01/09/16/28/wood-1130494__340.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+
                       ),
-                      shape: BoxShape.circle,
+                      child:  basic.frameColor == 3 ? const Center(
+                        child:  Icon(
+                          Icons.check,
+                          size: 20,
+                        ),
+                      ) : null,
                     ),
-                    child:  basic.frameColor == 3 ? const Center(
-                      child:  Icon(
-                        Icons.check,
-                        size: 20,
-                      ),
-                    ) : null,
                   )
                 ],
               );
