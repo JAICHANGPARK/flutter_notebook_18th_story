@@ -60,17 +60,19 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
               return Slider(
                 max: 300,
                 min: 50,
-                value: b,
+                value: basic.width ?? 50,
                 thumbColor: Colors.black,
                 activeColor: Colors.black,
                 inactiveColor: Colors.grey,
                 divisions: 250,
                 onChanged: (double value) {
-                  setState(() {
-                    _widthValue = value;
-                  });
+                  final _basic = ref.watch(paxBasicProvider.notifier);
+                  _basic.updateWidth(value);
+                  // setState(() {
+                  //   _widthValue = value;
+                  // });
                 },
-                label: "${_widthValue.toStringAsFixed(0)} cm",
+                label: "${ basic.width?.toStringAsFixed(0)} cm",
               );
             }
           ),
