@@ -280,14 +280,14 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                       decoration: BoxDecoration(
                         color: Colors.grey[400],
                         shape: BoxShape.circle,
-                        image: const DecorationImage(
+                        image:  const DecorationImage(
                           image: CachedNetworkImageProvider(
                               "https://cdn.pixabay.com/photo/2016/11/23/15/04/wood-1853403__340.jpg"),
                           fit: BoxFit.cover,
-                          border: Border.all(
-                            color: basic.frameColor == 1 ? Colors.black : Colors.transparent,
-                            width: 2,
-                          ),
+                        ),
+                        border: Border.all(
+                          color: basic.frameColor == 2 ? Colors.black : Colors.transparent,
+                          width: 2,
                         ),
                       ),
                       child:  basic.frameColor == 2 ? const Center(
