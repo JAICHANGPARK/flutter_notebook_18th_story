@@ -92,14 +92,15 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
+                        color: basic.height == 0 ? Colors.black : Colors.grey[300],
                         borderRadius: BorderRadius.circular(24),
                       ),
-                      child: const Center(
+                      child: Center(
                         child: Text(
                           "201 cm",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: basic.height == 0 ? Colors.white : Colors.black,
                           ),
                         ),
                       ),
@@ -109,17 +110,23 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                     width: 16,
                   ),
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(24),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "236 cm",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                    child: GestureDetector(
+                      onTap: () {
+                        final _basic = ref.watch(paxBasicProvider.notifier);
+                        _basic.updateHeight(1);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: basic.height == 1 ? Colors.black : Colors.grey[300],
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child:  Center(
+                          child: Text(
+                            "236 cm",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: basic.height == 1 ? Colors.white : Colors.black,
+                            ),
                           ),
                         ),
                       ),
