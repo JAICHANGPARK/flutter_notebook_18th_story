@@ -68,9 +68,6 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                 onChanged: (double value) {
                   final _basic = ref.watch(paxBasicProvider.notifier);
                   _basic.updateWidth(value);
-                  // setState(() {
-                  //   _widthValue = value;
-                  // });
                 },
                 label: "${ basic.width?.toStringAsFixed(0)} cm",
               );
@@ -86,44 +83,55 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
           SizedBox(
             height: 42,
             width: double.infinity,
-            child: Row(
-              children: [
-                Expanded(
-                    child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "201 cm",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+            child: Consumer(
+              builder: (context, ref, _) {
+                final basic = ref.watch(paxBasicProvider);
+                return Row(
+                  children: [
+                    Expanded(
+                        child: GestureDetector(
+                          onTap: (){
+                            final _basic = ref.watch(paxBasicProvider.notifier);
+
+                          },
+                          child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(24),
+                      ),
+                      child: const Center(
+                          child: Text(
+                            "201 cm",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                       ),
                     ),
-                  ),
-                )),
-                const SizedBox(
-                  width: 16,
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(24),
+                        )),
+                    const SizedBox(
+                      width: 16,
                     ),
-                    child: const Center(
-                      child: Text(
-                        "236 cm",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            "236 cm",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ],
+                  ],
+                );
+              }
             ),
           ),
           const SizedBox(
