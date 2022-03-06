@@ -120,7 +120,7 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                           color: basic.height == 1 ? Colors.black : Colors.grey[300],
                           borderRadius: BorderRadius.circular(24),
                         ),
-                        child:  Center(
+                        child: Center(
                           child: Text(
                             "236 cm",
                             style: TextStyle(
@@ -146,23 +146,22 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
           SizedBox(
             height: 42,
             width: double.infinity,
-            child: Consumer(
-              builder: (context, ref, _) {
-                final basic = ref.watch(paxBasicProvider);
-                return Row(
-                  children: [
-                    Expanded(
-                        child: GestureDetector(
-                          onTap: (){
-                            final _basic = ref.watch(paxBasicProvider.notifier);
-                            _basic.updateDepth(0);
-                          },
-                          child: Container(
-                      decoration: BoxDecoration(
-                        color: basic.depth == 0 ? Colors.black : Colors.grey[300],
+            child: Consumer(builder: (context, ref, _) {
+              final basic = ref.watch(paxBasicProvider);
+              return Row(
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        final _basic = ref.watch(paxBasicProvider.notifier);
+                        _basic.updateDepth(0);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: basic.depth == 0 ? Colors.black : Colors.grey[300],
                           borderRadius: BorderRadius.circular(24),
-                      ),
-                      child:  Center(
+                        ),
+                        child: Center(
                           child: Text(
                             "35 cm",
                             style: TextStyle(
@@ -170,32 +169,39 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                               color: basic.depth == 0 ? Colors.white : Colors.black,
                             ),
                           ),
+                        ),
                       ),
                     ),
-                        )),
-                    const SizedBox(
-                      width: 16,
-                    ),
-                    Expanded(
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        final _basic = ref.watch(paxBasicProvider.notifier);
+                        _basic.updateDepth(1);
+                      },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey[300],
+                          color: basic.depth == 1 ? Colors.black : Colors.grey[300],
                           borderRadius: BorderRadius.circular(24),
                         ),
-                        child: const Center(
+                        child: Center(
                           child: Text(
                             "58 cm",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
+                              color: basic.depth == 1 ? Colors.white : Colors.black,
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ],
-                );
-              }
-            ),
+                  ),
+                ],
+              );
+            }),
           ),
           const SizedBox(
             height: 24,
