@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1081_pax_wardrobe_app/src/provider/pax_basic_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PaxWardrobeBasicPage extends StatefulWidget {
   const PaxWardrobeBasicPage({Key? key}) : super(key: key);
@@ -52,20 +54,25 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
               ],
             ),
           ),
-          Slider(
-            max: 300,
-            min: 50,
-            value: _widthValue,
-            thumbColor: Colors.black,
-            activeColor: Colors.black,
-            inactiveColor: Colors.grey,
-            divisions: 250,
-            onChanged: (double value) {
-              setState(() {
-                _widthValue = value;
-              });
-            },
-            label: "${_widthValue.toStringAsFixed(0)} cm",
+          Consumer(
+            builder: (context, ref, _) {
+              final basic = ref.watch(paxBasicProvider);
+              return Slider(
+                max: 300,
+                min: 50,
+                value: b,
+                thumbColor: Colors.black,
+                activeColor: Colors.black,
+                inactiveColor: Colors.grey,
+                divisions: 250,
+                onChanged: (double value) {
+                  setState(() {
+                    _widthValue = value;
+                  });
+                },
+                label: "${_widthValue.toStringAsFixed(0)} cm",
+              );
+            }
           ),
           const SizedBox(
             height: 24,
