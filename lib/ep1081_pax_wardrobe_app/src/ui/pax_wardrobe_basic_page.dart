@@ -227,30 +227,46 @@ class _PaxWardrobeBasicPageState extends State<PaxWardrobeBasicPage> {
                       decoration: BoxDecoration(
                         color: Colors.grey[400],
                         border: Border.all(
-                          color: Colors.black,
+                          color: basic.frameColor == 0 ? Colors.black : Colors.transparent,
                           width: 2,
                         ),
                         shape: BoxShape.circle,
                       ),
-                      child: const Center(
-                        child: Icon(
+                      child:  basic.frameColor == 0 ? const Center(
+                        child:  Icon(
                           Icons.check,
                           size: 20,
                         ),
-                      ),
+                      ) : null,
                     ),
                   ),
-                  Container(
-                    height: 64,
-                    width: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[400],
-                      shape: BoxShape.circle,
-                      image: const DecorationImage(
-                        image: CachedNetworkImageProvider(
-                            "https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631__480.jpg"),
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: (){
+                      final _basic = ref.watch(paxBasicProvider.notifier);
+                      _basic.updateFrame(1);
+                    },
+                    child: Container(
+                      height: 64,
+                      width: 64,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                        border: Border.all(
+                          color: basic.frameColor == 1 ? Colors.black : Colors.transparent,
+                          width: 2,
+                        ),
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          image: CachedNetworkImageProvider(
+                              "https://cdn.pixabay.com/photo/2015/01/07/16/37/wood-591631__480.jpg"),
+                          fit: BoxFit.cover,
+                        ),
                       ),
+                      child:  basic.frameColor == 1 ? const Center(
+                        child:  Icon(
+                          Icons.check,
+                          size: 20,
+                        ),
+                      ) : null,
                     ),
                   ),
                   Container(
