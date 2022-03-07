@@ -1,3 +1,4 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 class FundingHomePage extends StatelessWidget {
@@ -10,8 +11,8 @@ class FundingHomePage extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              left: 16,
-              right: 16,
+              left: 24,
+              right: 24,
               bottom: 16,
               top: 16,
               child: Column(
@@ -19,6 +20,7 @@ class FundingHomePage extends StatelessWidget {
                   Row(
                     children: [
                       IconButton(
+                        padding: EdgeInsets.zero,
                         onPressed: () {},
                         icon: const Icon(Icons.arrow_back),
                       ),
@@ -66,13 +68,56 @@ class FundingHomePage extends StatelessWidget {
                           ),
                           Container(
                             height: 4,
-                            decoration: const BoxDecoration(
-                              color: Colors.grey[400],
+                            decoration: BoxDecoration(
+                              color: Colors.grey[400]!,
                             ),
                           )
                         ],
                       )),
                     ],
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  SizedBox(
+                    height: 58,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 4,
+                          top: 8,
+                          right: 0,
+                          bottom: 0,
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.yellow, border: Border.all()),
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 4,
+                          right: 4,
+                          bottom: 4,
+                          child: DottedBorder(
+                            color: Colors.black,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                            left: 24,
+                            top: 0,
+                            child: Container(
+                                color: Colors.white,
+                                padding: EdgeInsets.symmetric(horizontal: 4),
+                                child: Text(
+                                  "Income per month",
+                                  style: TextStyle(fontSize: 10),
+                                )))
+                      ],
+                    ),
                   )
                 ],
               ),
