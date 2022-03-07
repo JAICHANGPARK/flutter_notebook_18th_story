@@ -27,6 +27,8 @@ dependencies:
   flutter_svg: any
   percent_indicator: ^4.0.0
 
+  dotted_border: any
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
