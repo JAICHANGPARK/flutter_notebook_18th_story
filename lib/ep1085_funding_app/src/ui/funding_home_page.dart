@@ -20,13 +20,58 @@ class FundingHomePage extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.arrow_back),
+                        icon: const Icon(Icons.arrow_back),
                       ),
-                      Expanded(
-                        child: Center(
-                          child: Text("Calculator Zakat"),
+                      const Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(right: 48),
+                          child: Center(
+                            child: Text("Calculator Zakat"),
+                          ),
                         ),
                       )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text("Profession"),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Container(
+                            height: 8,
+                            decoration: const BoxDecoration(
+                              color: Colors.teal,
+                            ),
+                          )
+                        ],
+                      )),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Expanded(
+                          child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text("Mail"),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          Container(
+                            height: 4,
+                            decoration: const BoxDecoration(
+                              color: Colors.grey[400],
+                            ),
+                          )
+                        ],
+                      )),
                     ],
                   )
                 ],
