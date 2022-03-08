@@ -273,7 +273,7 @@ class FundingHomePage extends StatelessWidget {
                                   const SizedBox(
                                     width: 16,
                                   ),
-                                  Container(
+                                  SizedBox(
                                     height: 24,
                                     width: 24,
                                   )
@@ -289,7 +289,7 @@ class FundingHomePage extends StatelessWidget {
                             color: Colors.white,
                             padding: const EdgeInsets.symmetric(horizontal: 4),
                             child: const Text(
-                              "Other income per month",
+                              "Debt / installment per month",
                               style: TextStyle(fontSize: 10),
                             ),
                           ),
