@@ -107,6 +107,7 @@ class FundingHomePage extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Expanded(child: TextField()),
+                                  SizedBox(width: 16,),
                                   Container(
                                     height: 24,
                                     width: 24,
