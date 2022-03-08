@@ -1,5 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1085_funding_app/src/provider/text_controller_pub.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class FundingHomePage extends StatelessWidget {
   const FundingHomePage({Key? key}) : super(key: key);
@@ -103,11 +105,19 @@ class FundingHomePage extends StatelessWidget {
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                               ),
-                              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                               child: Row(
                                 children: [
-                                  Expanded(child: TextField()),
-                                  SizedBox(width: 16,),
+                                   Expanded(child: Consumer(
+                                    builder: (context, ref, _) {
+                                      final c = ref.watch(incomeTextController);
+                                      return TextField(
+                                        controller: c,
+                                        
+                                      );
+                                    }
+                                  )),
+                                  const SizedBox(width: 16,),
                                   Container(
                                     height: 24,
                                     width: 24,
@@ -116,7 +126,7 @@ class FundingHomePage extends StatelessWidget {
                                       border: Border.all(color: Colors.black),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: Icon(Icons.check, size: 16,),
+                                    child: const Icon(Icons.check, size: 16,),
                                   )
                                 ],
                               ),
@@ -131,7 +141,7 @@ class FundingHomePage extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 4),
                             child: const Text(
                               "Income per month",
-                              style: const TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 10),
                             ),
                           ),
                         ),
