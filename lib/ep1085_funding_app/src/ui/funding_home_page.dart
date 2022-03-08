@@ -103,16 +103,19 @@ class FundingHomePage extends StatelessWidget {
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                               ),
+                              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                               child: Row(
                                 children: [
                                   Expanded(child: TextField()),
                                   Container(
-                                    height: 32,
-                                    width: 32,
+                                    height: 24,
+                                    width: 24,
                                     decoration: BoxDecoration(
                                       color: Colors.green,
-                                      border: Border.all(color: Colors.black)
+                                      border: Border.all(color: Colors.black),
+                                      shape: BoxShape.circle,
                                     ),
+                                    child: Icon(Icons.check, size: 16,),
                                   )
                                 ],
                               ),
