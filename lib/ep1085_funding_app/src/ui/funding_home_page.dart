@@ -396,7 +396,14 @@ class FundingHomePage extends StatelessWidget {
                   children: [
                     Positioned(
                         child: Container(
-                      color: Colors.orange,
+
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                              width: 1.5
+                            )
+
+                          ),
                     ))
                   ],
                 ),
