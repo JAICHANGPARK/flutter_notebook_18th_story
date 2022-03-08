@@ -298,51 +298,108 @@ class FundingHomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 16,
+                    height: 32,
                   ),
-                  SizedBox(
-                    height: 58,
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          left: 4,
-                          top: 8,
-                          right: 0,
-                          bottom: 0,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(),
+                  Transform.rotate(
+                    angle: 0.02,
+                    child: SizedBox(
+                      height: 58,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 4,
+                            top: 8,
+                            right: 0,
+                            bottom: 0,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(),
+                              ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          left: 0,
-                          top: 4,
-                          right: 4,
-                          bottom: 4,
-                          child: DottedBorder(
-                            color: Colors.black,
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                color: Colors.yellow,
-                              ),
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                              child: const Center(
-                                child: Text(
-                                  "Calculate Zakat",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
+                          Positioned(
+                            left: 0,
+                            top: 4,
+                            right: 4,
+                            bottom: 4,
+                            child: DottedBorder(
+                              color: Colors.black,
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                ),
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                                child: const Center(
+                                  child: Text(
+                                    "Calculate Zakat",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   )
                 ],
+              ),
+            ),
+            Positioned(
+              left: 0,
+              bottom: 0,
+              right: 0,
+              child: SizedBox(
+                  height: 220,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        child: CircleAvatar(
+                          backgroundColor: Colors.teal[200]!,
+                          radius: 200,
+                        ),
+                        top: 0,
+                        left: -300,
+                        bottom: 0,
+                        right: 64,
+                      ),
+                      const Positioned(
+                        child: CircleAvatar(
+                          backgroundColor: Colors.teal,
+                          radius: 200,
+                        ),
+                        right: -64,
+                        bottom: -250,
+                        left: -200,
+                      ),
+                      const Positioned(
+                        child: CircleAvatar(
+                          backgroundColor: Colors.black,
+                          radius: 94,
+                        ),
+                        right: -64,
+                        bottom: -24,
+                      ),
+                    ],
+                  )),
+            ),
+            Positioned(
+              left: 16,
+              bottom: 16,
+              right: 16,
+              child: SizedBox(
+                height: 210,
+                child: Stack(
+                  children: [
+                    Positioned(
+                        child: Container(
+                      color: Colors.orange,
+                    ))
+                  ],
+                ),
               ),
             )
           ],
