@@ -34,8 +34,8 @@ class FundingHomePage extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
-                    height: 24,
+                  const SizedBox(
+                    height: 36,
                   ),
                   Row(
                     children: [
@@ -44,7 +44,7 @@ class FundingHomePage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text("Profession"),
-                          SizedBox(
+                          const SizedBox(
                             height: 16,
                           ),
                           Container(
@@ -55,7 +55,7 @@ class FundingHomePage extends StatelessWidget {
                           )
                         ],
                       )),
-                      SizedBox(
+                      const SizedBox(
                         width: 16,
                       ),
                       Expanded(
@@ -63,7 +63,7 @@ class FundingHomePage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text("Mail"),
-                          SizedBox(
+                          const SizedBox(
                             height: 16,
                           ),
                           Container(
@@ -76,8 +76,8 @@ class FundingHomePage extends StatelessWidget {
                       )),
                     ],
                   ),
-                  SizedBox(
-                    height: 24,
+                  const SizedBox(
+                    height: 36,
                   ),
                   SizedBox(
                     height: 58,
@@ -100,7 +100,7 @@ class FundingHomePage extends StatelessWidget {
                           child: DottedBorder(
                             color: Colors.black,
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                               ),
                             ),
@@ -111,10 +111,10 @@ class FundingHomePage extends StatelessWidget {
                             top: 0,
                             child: Container(
                                 color: Colors.white,
-                                padding: EdgeInsets.symmetric(horizontal: 4),
-                                child: Text(
+                                padding: const EdgeInsets.symmetric(horizontal: 4),
+                                child: const Text(
                                   "Income per month",
-                                  style: TextStyle(fontSize: 10),
+                                  style: const TextStyle(fontSize: 10),
                                 )))
                       ],
                     ),
