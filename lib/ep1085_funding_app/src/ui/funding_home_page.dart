@@ -112,7 +112,7 @@ class FundingHomePage extends StatelessWidget {
                                     final c = ref.watch(incomeTextController);
                                     return TextField(
                                       controller: c,
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         border: InputBorder.none,
                                       ),
                                     );
@@ -187,7 +187,7 @@ class FundingHomePage extends StatelessWidget {
                                     final c = ref.watch(incomeTextController);
                                     return TextField(
                                       controller: c,
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         border: InputBorder.none,
                                       ),
                                     );
@@ -220,7 +220,76 @@ class FundingHomePage extends StatelessWidget {
                             color: Colors.white,
                             padding: const EdgeInsets.symmetric(horizontal: 4),
                             child: const Text(
-                              "Income per month",
+                              "Other income per month",
+                              style: TextStyle(fontSize: 10),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  SizedBox(
+                    height: 58,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 4,
+                          top: 8,
+                          right: 0,
+                          bottom: 0,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.teal,
+                              border: Border.all(),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 4,
+                          right: 4,
+                          bottom: 4,
+                          child: DottedBorder(
+                            color: Colors.black,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              child: Row(
+                                children: [
+                                  Expanded(child: Consumer(builder: (context, ref, _) {
+                                    final c = ref.watch(incomeTextController);
+                                    return TextField(
+                                      controller: c,
+                                      decoration: const InputDecoration(
+                                        border: InputBorder.none,
+                                      ),
+                                    );
+                                  })),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
+                                  Container(
+                                    height: 24,
+                                    width: 24,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 24,
+                          top: 0,
+                          child: Container(
+                            color: Colors.white,
+                            padding: const EdgeInsets.symmetric(horizontal: 4),
+                            child: const Text(
+                              "Other income per month",
                               style: TextStyle(fontSize: 10),
                             ),
                           ),
