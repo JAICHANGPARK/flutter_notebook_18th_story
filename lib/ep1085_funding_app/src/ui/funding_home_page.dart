@@ -103,19 +103,34 @@ class FundingHomePage extends StatelessWidget {
                               decoration: const BoxDecoration(
                                 color: Colors.white,
                               ),
+                              child: Row(
+                                children: [
+                                  Expanded(child: TextField()),
+                                  Container(
+                                    height: 32,
+                                    width: 32,
+                                    decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      border: Border.all(color: Colors.black)
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
                         Positioned(
-                            left: 24,
-                            top: 0,
-                            child: Container(
-                                color: Colors.white,
-                                padding: const EdgeInsets.symmetric(horizontal: 4),
-                                child: const Text(
-                                  "Income per month",
-                                  style: const TextStyle(fontSize: 10),
-                                )))
+                          left: 24,
+                          top: 0,
+                          child: Container(
+                            color: Colors.white,
+                            padding: const EdgeInsets.symmetric(horizontal: 4),
+                            child: const Text(
+                              "Income per month",
+                              style: const TextStyle(fontSize: 10),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   )
