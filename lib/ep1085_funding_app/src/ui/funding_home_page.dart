@@ -108,16 +108,18 @@ class FundingHomePage extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                               child: Row(
                                 children: [
-                                   Expanded(child: Consumer(
-                                    builder: (context, ref, _) {
-                                      final c = ref.watch(incomeTextController);
-                                      return TextField(
-                                        controller: c,
-                                        
-                                      );
-                                    }
-                                  )),
-                                  const SizedBox(width: 16,),
+                                  Expanded(child: Consumer(builder: (context, ref, _) {
+                                    final c = ref.watch(incomeTextController);
+                                    return TextField(
+                                      controller: c,
+                                      decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                      ),
+                                    );
+                                  })),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
                                   Container(
                                     height: 24,
                                     width: 24,
@@ -126,7 +128,85 @@ class FundingHomePage extends StatelessWidget {
                                       border: Border.all(color: Colors.black),
                                       shape: BoxShape.circle,
                                     ),
-                                    child: const Icon(Icons.check, size: 16,),
+                                    child: const Icon(
+                                      Icons.check,
+                                      size: 16,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 24,
+                          top: 0,
+                          child: Container(
+                            color: Colors.white,
+                            padding: const EdgeInsets.symmetric(horizontal: 4),
+                            child: const Text(
+                              "Income per month",
+                              style: TextStyle(fontSize: 10),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  SizedBox(
+                    height: 58,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 4,
+                          top: 8,
+                          right: 0,
+                          bottom: 0,
+                          child: Container(
+                            decoration: BoxDecoration(color: Colors.yellow, border: Border.all()),
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 4,
+                          right: 4,
+                          bottom: 4,
+                          child: DottedBorder(
+                            color: Colors.black,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              child: Row(
+                                children: [
+                                  Expanded(child: Consumer(builder: (context, ref, _) {
+                                    final c = ref.watch(incomeTextController);
+                                    return TextField(
+                                      controller: c,
+                                      decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                      ),
+                                    );
+                                  })),
+                                  const SizedBox(
+                                    width: 16,
+                                  ),
+                                  Container(
+                                    height: 24,
+                                    width: 24,
+                                    decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      border: Border.all(color: Colors.black),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Icon(
+                                      Icons.check,
+                                      size: 16,
+                                    ),
                                   )
                                 ],
                               ),
