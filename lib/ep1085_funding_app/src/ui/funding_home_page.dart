@@ -273,7 +273,7 @@ class FundingHomePage extends StatelessWidget {
                                   const SizedBox(
                                     width: 16,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 24,
                                     width: 24,
                                   )
