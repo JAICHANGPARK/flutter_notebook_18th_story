@@ -296,6 +296,51 @@ class FundingHomePage extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  SizedBox(
+                    height: 58,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 4,
+                          top: 8,
+                          right: 0,
+                          bottom: 0,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 0,
+                          top: 4,
+                          right: 4,
+                          bottom: 4,
+                          child: DottedBorder(
+                            color: Colors.black,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Colors.yellow,
+                              ),
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              child: const Center(
+                                child: Text(
+                                  "Calculate Zakat",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
