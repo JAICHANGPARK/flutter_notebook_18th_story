@@ -14,11 +14,45 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
     return Column(
       children: [
         Expanded(
-          child: Placeholder(),
+          child: Row(
+            children: [
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+            ],
+          ),
         ),
-        Expanded(child: Placeholder(),),
-        Expanded(child: Placeholder(),),
-        Expanded(child: Placeholder(),),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
+            ],
+          ),
+        ),
       ],
     );
   }
