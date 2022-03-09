@@ -14,8 +14,30 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
       children: [
         Expanded(
           child: Row(
-            children: [
-              Expanded(child: Text("1")),
+            children: const [
+              Expanded(
+                child: Center(
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                            text: "1",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18
+                            )
+                        ),
+                        TextSpan(
+                            text: "  ",
+                            style: TextStyle(
+                                fontSize: 12
+                            )
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               Expanded(
                 child: Center(
                   child: Text.rich(
@@ -29,13 +51,52 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                           )
                         ),
                         TextSpan(
-                          text: " ABC",
+                          text: "  ABC",
+                          style: TextStyle(
+                            fontSize: 12
+                          )
                         ),
                       ],
                     ),
                   ),
                 ),
               ),
+              Expanded(
+                child: Center(
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                            text: "3",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18
+                            )
+                        ),
+                        TextSpan(
+                            text: "  DEF",
+                            style: TextStyle(
+                                fontSize: 12
+                            )
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(child: Center(
+                child: Text("-", style: TextStyle(
+                  fontSize: 32
+                ),),
+              )),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Row(
+            children: const [
+              Expanded(child: Placeholder()),
+              Expanded(child: Placeholder()),
               Expanded(child: Placeholder()),
               Expanded(child: Placeholder()),
             ],
@@ -43,7 +104,7 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
         ),
         Expanded(
           child: Row(
-            children: [
+            children: const [
               Expanded(child: Placeholder()),
               Expanded(child: Placeholder()),
               Expanded(child: Placeholder()),
@@ -53,17 +114,7 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
         ),
         Expanded(
           child: Row(
-            children: [
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Row(
-            children: [
+            children: const [
               Expanded(child: Placeholder()),
               Expanded(child: Placeholder()),
               Expanded(child: Placeholder()),
