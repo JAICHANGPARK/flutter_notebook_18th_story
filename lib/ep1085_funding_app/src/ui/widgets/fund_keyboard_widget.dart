@@ -319,21 +319,37 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                 ),
               ),
               Expanded(
-                  child: Stack(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Stack(
                 children: [
-                  Positioned(
-                    left: 4,
-                    top: 4,
-                    right: 8,
-                    bottom: 8,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.yellow,
+                    Positioned(
+                      left: 8,
+                      top: 8,
+                      right: 8,
+                      bottom: 8,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.teal,
+                          border: Border.all()
+                        ),
                       ),
                     ),
-                  )
+                    Positioned(
+                      left: 0,
+                      top: 0,
+                      right: 12,
+                      bottom: 12,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.yellow,
+                            border: Border.all()
+                        ),
+                      ),
+                    )
                 ],
-              )),
+              ),
+                  )),
             ],
           ),
         ),
