@@ -175,10 +175,80 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
         Expanded(
           child: Row(
             children: const [
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
-              Expanded(child: Placeholder()),
+              Expanded(
+                child: Center(
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "7",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "  PQRS",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "8",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "  TUV",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                            text: "9",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            )),
+                        TextSpan(
+                            text: "  WXYZ",
+                            style: TextStyle(
+                              fontSize: 12,
+                            )),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Icon(
+                    Icons.login,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
