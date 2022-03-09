@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1085_funding_app/src/provider/text_controller_pub.dart';
+import 'package:flutter_notebook_18th_story/ep1085_funding_app/src/ui/widgets/fund_keyboard_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class FundingHomePage extends StatelessWidget {
@@ -403,16 +404,7 @@ class FundingHomePage extends StatelessWidget {
                             width: 1.5,
                           ),
                         ),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Placeholder(),
-                            ),
-                            Expanded(child: Placeholder(),),
-                            Expanded(child: Placeholder(),),
-                            Expanded(child: Placeholder(),),
-                          ],
-                        ),
+                        child: FundKeyboardWidget(),
                       ),
                     )
                   ],
