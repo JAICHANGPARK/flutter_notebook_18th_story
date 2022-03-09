@@ -402,6 +402,16 @@ class FundingHomePage extends StatelessWidget {
                             width: 1.5,
                           ),
                         ),
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: Placeholder(),
+                            ),
+                            Expanded(child: Placeholder(),),
+                            Expanded(child: Placeholder(),),
+                            Expanded(child: Placeholder(),),
+                          ],
+                        ),
                       ),
                     )
                   ],
