@@ -21,7 +21,7 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                     TextSpan(
                       children: [
                         TextSpan(text: "1", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                        TextSpan(text: "  ", style: TextStyle(fontSize: 12)),
+                        TextSpan(text: "     ", style: TextStyle(fontSize: 12)),
                       ],
                     ),
                   ),
