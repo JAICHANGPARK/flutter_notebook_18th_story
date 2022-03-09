@@ -254,7 +254,7 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
         ),
         Expanded(
           child: Row(
-            children: const [
+            children: [
               Expanded(
                 child: Center(
                   child: Text.rich(
@@ -318,8 +318,22 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                   ),
                 ),
               ),
-              
-              Expanded(child: Placeholder()),
+              Expanded(
+                  child: Stack(
+                children: [
+                  Positioned(
+                    left: 4,
+                    top: 4,
+                    right: 8,
+                    bottom: 8,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.yellow,
+                      ),
+                    ),
+                  )
+                ],
+              )),
             ],
           ),
         ),
