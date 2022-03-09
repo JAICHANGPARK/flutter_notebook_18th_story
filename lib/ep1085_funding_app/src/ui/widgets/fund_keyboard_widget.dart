@@ -11,6 +11,15 @@ class FundKeyboardWidget extends StatefulWidget {
 class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: [
+        Expanded(
+          child: Placeholder(),
+        ),
+        Expanded(child: Placeholder(),),
+        Expanded(child: Placeholder(),),
+        Expanded(child: Placeholder(),),
+      ],
+    );
   }
 }
