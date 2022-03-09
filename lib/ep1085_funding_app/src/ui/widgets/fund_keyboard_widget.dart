@@ -20,8 +20,19 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                   child: Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(text: "1", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                        TextSpan(text: "     ", style: TextStyle(fontSize: 12)),
+                        TextSpan(
+                          text: "1",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "     ",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -32,8 +43,19 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                   child: Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(text: "2", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                        TextSpan(text: "  ABC", style: TextStyle(fontSize: 12)),
+                        TextSpan(
+                          text: "2",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "  ABC",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -44,8 +66,19 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                   child: Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(text: "3", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                        TextSpan(text: "  DEF", style: TextStyle(fontSize: 12)),
+                        TextSpan(
+                          text: "3",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "  DEF",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -69,8 +102,19 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                   child: Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(text: "4", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                        TextSpan(text: "  GHI", style: TextStyle(fontSize: 12)),
+                        TextSpan(
+                          text: "4",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "  GHI",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -81,8 +125,19 @@ class _FundKeyboardWidgetState extends State<FundKeyboardWidget> {
                   child: Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(text: "5", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-                        TextSpan(text: "  JKL", style: TextStyle(fontSize: 12)),
+                        TextSpan(
+                          text: "5",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "  JKL",
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
                       ],
                     ),
                   ),
