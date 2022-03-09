@@ -404,6 +404,7 @@ class FundingHomePage extends StatelessWidget {
                             width: 1.5,
                           ),
                         ),
+                        padding: EdgeInsets.all(8),
                         child: FundKeyboardWidget(),
                       ),
                     )
