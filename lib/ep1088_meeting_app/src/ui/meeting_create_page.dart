@@ -85,12 +85,17 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                         if(index == 0){
                           return Padding(
                             padding: const EdgeInsets.only(right: 12),
-                            child: CircleAvatar(),
+                            child: CircleAvatar(
+                              radius: 32,
+                            )
+                            ,
                           );
                         }
                         return Padding(
                           padding: const EdgeInsets.only(right: 12),
-                          child: CircleAvatar(),
+                          child: CircleAvatar(
+                            radius: 32,
+                          ),
                         );
                       }),
                     )
