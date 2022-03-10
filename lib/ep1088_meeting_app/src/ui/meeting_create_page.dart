@@ -39,9 +39,12 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                     ),
                   ),
 
+                  SizedBox(height: 24,),
+
                   TextField(
                     decoration: InputDecoration(
-                      label: Text("Title")
+                      label: Text("Title"),
+
                     ),
                   )
                 ],
