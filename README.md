@@ -1,7 +1,19 @@
 # flutter_notebook_18th_story
 
 ## UI Design
-### EP1085
+
+### EP1088
+
+- Meeting App
+- by Alexandr V
+- https://dribbble.com/shots/17678736/attachments/12836221?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/5031351/screenshots/17678736/media/07a6f3fb82b9f7a69c3d9ec4d0f0d604.png"
+width="400px" >
+</img>
+
+### EP1085-1087
 
 - Crowfund App
 - by Sulton handaya
@@ -25,7 +37,7 @@ width="400px" >
 
 ### EP1079-1080
 
-- Food Delivery App 
+- Food Delivery App
 - by Johnny Kyorov
 - https://dribbble.com/shots/17550142-Food-Delivery-App-UI-Kit-02/attachments/12694325?mode=media
 
@@ -44,7 +56,6 @@ width="400px" >
 src="https://cdn.dribbble.com/users/381474/screenshots/17568751/media/eee55a30dcb5d47dd13cf10a00d08de3.png"
 width="400px" >
 </img>
-
 
 ### EP1073-1075
 
@@ -86,16 +97,18 @@ width="400px" >
 - https://dribbble.com/shots/17495096-Tuition-Tutor-App
 
 #### Packages
-- [flutter_svg](https://pub.dev/packages/flutter_svg) : Draw SVG (and some Android VectorDrawable (XML)) files on a Flutter Widget.
+
+- [flutter_svg](https://pub.dev/packages/flutter_svg) : Draw SVG (and some Android VectorDrawable (
+  XML)) files on a Flutter Widget.
 
 #### resources
+
 - https://storyset.com/
 
 <img
 src="https://cdn.dribbble.com/users/7224992/screenshots/17495096/media/ff0bf5eb2c1f6955ffcaab541d2083fe.png"
 width="400px" >
 </img>
-
 
 ### EP1060-1062
 
@@ -104,6 +117,7 @@ width="400px" >
 - https://dribbble.com/shots/17473016/attachments/12607558?mode=media
 
 #### Packages
+
 1. https://pub.dev/packages/go_router
 2. https://pub.dev/packages/flutter_lorem
 
