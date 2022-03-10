@@ -11,6 +11,8 @@ class MeetingCreatePage extends StatefulWidget {
 class _MeetingCreatePageState extends State<MeetingCreatePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      
+    );
   }
 }
