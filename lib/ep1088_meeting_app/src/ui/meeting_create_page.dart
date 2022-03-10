@@ -39,18 +39,65 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                       fontSize: 26,
                     ),
                   ),
-
-                  SizedBox(height: 24,),
-
+                  SizedBox(
+                    height: 32,
+                  ),
                   TextField(
                     decoration: InputDecoration(
-                      label: Text("Title"),
-
+                        // label: Text("Title"),
+                        labelText: "Title",
+                        labelStyle: TextStyle(
+                          color: Colors.blueGrey,
+                        )),
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      // label: Text("Title"),
+                      labelText: "Tags",
+                      labelStyle: TextStyle(
+                        color: Colors.blueGrey,
+                      ),
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
                 ],
               ),
-            )
+            ),
+            Expanded(child: Placeholder()),
+            SizedBox(
+              height: 120,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16 , top: 8, bottom: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Participants"),
+                    Expanded(
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index){
+                        if(index == 0){
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 12),
+                            child: CircleAvatar(),
+                          );
+                        }
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 12),
+                          child: CircleAvatar(),
+                        );
+                      }),
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
