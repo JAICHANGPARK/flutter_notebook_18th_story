@@ -26,11 +26,23 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 children: [
                   Text(
                     "Create",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
                   ),
                   Text(
                     "New Meeting",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
+                  ),
+
+                  TextField(
+                    decoration: InputDecoration(
+                      label: Text("Title")
+                    ),
                   )
                 ],
               ),
