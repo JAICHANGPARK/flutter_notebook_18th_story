@@ -19,9 +19,22 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
               onPressed: () {},
               icon: Icon(Icons.arrow_back),
             ),
-
-            Text("Create"),
-            Text("New Meeting")
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Create",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  ),
+                  Text(
+                    "New Meeting",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
