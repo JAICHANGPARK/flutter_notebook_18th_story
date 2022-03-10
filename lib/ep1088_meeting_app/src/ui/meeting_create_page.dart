@@ -12,7 +12,11 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: Column(
+        children: [
+          
+        ],
+      ),
     );
   }
 }
