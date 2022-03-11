@@ -68,7 +68,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 ],
               ),
             ),
-            Expanded(child: Placeholder()),
+            const Expanded(child: Placeholder()),
             SizedBox(
               height: 120,
               child: Padding(
@@ -76,23 +76,23 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Participants"),
+                    const Text("Participants"),
                     Expanded(
                       child: ListView.builder(
                         shrinkWrap: true,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index){
                         if(index == 0){
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 12),
+                          return const Padding(
+                            padding: EdgeInsets.only(right: 12),
                             child: CircleAvatar(
                               radius: 32,
                             )
                             ,
                           );
                         }
-                        return Padding(
-                          padding: const EdgeInsets.only(right: 12),
+                        return const Padding(
+                          padding: EdgeInsets.only(right: 12),
                           child: CircleAvatar(
                             radius: 32,
                           ),
