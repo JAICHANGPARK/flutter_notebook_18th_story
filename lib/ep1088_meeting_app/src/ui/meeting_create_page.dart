@@ -72,22 +72,43 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 84,
-                  width: double.infinity,
-                  child: Wrap(
-                    children: [
-                      Container(
-                        child: Center(
-                          child: Text(
-                            "UI/UX",
-                            style: TextStyle(
-                              color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: SizedBox(
+                    height: 84,
+                    width: double.infinity,
+                    child: Wrap(
+                      direction: Axis.vertical,
+                      runSpacing: 12,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xff668DeD)
+                          ),
+                          child: Center(
+                            child: Text(
+                              "UI/UX",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
-                      )
-                    ],
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Color(0xff668DeD)
+                          ),
+                          child: Center(
+                            child: Text(
+                              "UI/UX",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
