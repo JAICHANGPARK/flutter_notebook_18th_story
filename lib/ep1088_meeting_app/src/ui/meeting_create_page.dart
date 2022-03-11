@@ -88,7 +88,8 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                               child: CircleAvatar(
                                 radius: 32,
                                 backgroundColor: Color(0x55668DED),
-                                child: Icon(Icons.add, color: Color(0xff4071e9),),
+                                child: Icon(Icons.add, color: Color(0xff4071e9),
+                                size: 32,),
                               ),
                             );
                           }
@@ -96,6 +97,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                             padding: EdgeInsets.only(right: 12),
                             child: CircleAvatar(
                               radius: 32,
+                              backgroundImage: NetworkImage("https://thispersondoesnotexist.com/image"),
                             ),
                           );
                         },
