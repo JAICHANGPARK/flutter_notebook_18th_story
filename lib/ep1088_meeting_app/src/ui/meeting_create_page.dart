@@ -8,6 +8,16 @@ class MeetingCreatePage extends StatefulWidget {
 }
 
 class _MeetingCreatePageState extends State<MeetingCreatePage> {
+  List<String> _tagItems = [
+    "UI/UX",
+    "design",
+    "presentation",
+    "work",
+    "figma",
+    "web",
+    "demo",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,27 +84,22 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: SizedBox(
-                    height: 72,
-                    width: double.infinity,
-                    child: Wrap(
-                      direction: Axis.vertical,
-                      runSpacing: 12,
-                      children: List.generate(10, (index) =>   Container(
-                        decoration: BoxDecoration(
-                            color: Color(0xff668DeD)
-                        ),
-                        child: Center(
-                          child: Text(
-                            "UI/UX",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
+                  child: Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      children:_tagItems.map((e) => Container(
+                        decoration: const BoxDecoration(color: Color(0xff668DeD)),
+                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                        child: Text(
+                          "$e",
+                          style: TextStyle(
+                            color: Colors.white,
+                            
                           ),
                         ),
-                      ),)
-                    ),
-                  ),
+                      ),).toList()
+
+                  )
                 )
               ],
             )),
