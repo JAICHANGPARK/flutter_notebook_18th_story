@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MeetingCreatePage extends StatefulWidget {
@@ -88,13 +89,14 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                       spacing: 8,
                       runSpacing: 8,
                       children:_tagItems.map((e) => Container(
-                        decoration: const BoxDecoration(color: Color(0xff668DeD)),
+                        decoration:  BoxDecoration(color: Color(0xff668DeD),
+                        borderRadius: BorderRadius.circular(4)),
                         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                         child: Text(
                           "$e",
                           style: TextStyle(
                             color: Colors.white,
-                            
+                            fontSize: 12
                           ),
                         ),
                       ),).toList()
