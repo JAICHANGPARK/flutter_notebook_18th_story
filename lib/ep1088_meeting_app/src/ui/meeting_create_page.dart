@@ -68,7 +68,30 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 ],
               ),
             ),
-            const Expanded(child: Placeholder()),
+            Expanded(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 84,
+                  width: double.infinity,
+                  child: Wrap(
+                    children: [
+                      Container(
+                        child: Center(
+                          child: Text(
+                            "UI/UX",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            )),
             SizedBox(
               height: 120,
               child: Padding(
@@ -88,8 +111,11 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                               child: CircleAvatar(
                                 radius: 32,
                                 backgroundColor: Color(0x55668DED),
-                                child: Icon(Icons.add, color: Color(0xff4071e9),
-                                size: 32,),
+                                child: Icon(
+                                  Icons.add,
+                                  color: Color(0xff4071e9),
+                                  size: 32,
+                                ),
                               ),
                             );
                           }
