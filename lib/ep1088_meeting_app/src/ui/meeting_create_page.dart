@@ -80,31 +80,52 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
               ),
             ),
             Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children:_tagItems.map((e) => Container(
-                        decoration:  BoxDecoration(color: Color(0xff668DeD),
-                        borderRadius: BorderRadius.circular(4)),
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                        child: Text(
-                          "$e",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12
-                          ),
-                        ),
-                      ),).toList()
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: _tagItems
+                            .map(
+                              (e) => Container(
+                                decoration:
+                                    BoxDecoration(color: Color(0xff668DeD), borderRadius: BorderRadius.circular(4)),
+                                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                child: Text(
+                                  "$e",
+                                  style: TextStyle(color: Colors.white, fontSize: 12),
+                                ),
+                              ),
+                            )
+                            .toList(),),
 
-                  )
-                )
-              ],
-            )),
+                    Text("Date & Time"),
+
+                    Row(
+                      children: [
+                        Container(
+                          height: 48,
+                          width: 48,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                          ),
+
+                        ),
+                        Column(
+                          children: [
+                            Text("Date"),
+                            Text("Friday 26, Feb"),
+                          ],
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
             SizedBox(
               height: 120,
               child: Padding(
