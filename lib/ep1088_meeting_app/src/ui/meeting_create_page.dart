@@ -87,7 +87,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                               padding: EdgeInsets.only(right: 12),
                               child: CircleAvatar(
                                 radius: 32,
-                                backgroundColor: Color(0xff668DED),
+                                backgroundColor: Color(0x55668DED),
                                 child: Icon(Icons.add, color: Color(0xff4071e9),),
                               ),
                             );
