@@ -72,7 +72,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
             SizedBox(
               height: 120,
               child: Padding(
-                padding: const EdgeInsets.only(left: 16 , top: 8, bottom: 8),
+                padding: const EdgeInsets.only(left: 16, top: 8, bottom: 8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -80,24 +80,26 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                     Expanded(
                       child: ListView.builder(
                         shrinkWrap: true,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index){
-                        if(index == 0){
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          if (index == 0) {
+                            return const Padding(
+                              padding: EdgeInsets.only(right: 12),
+                              child: CircleAvatar(
+                                radius: 32,
+                                backgroundColor: Color(0xff668DED),
+                                child: Icon(Icons.add, color: Color(0xff4071e9),),
+                              ),
+                            );
+                          }
                           return const Padding(
                             padding: EdgeInsets.only(right: 12),
                             child: CircleAvatar(
                               radius: 32,
-                            )
-                            ,
+                            ),
                           );
-                        }
-                        return const Padding(
-                          padding: EdgeInsets.only(right: 12),
-                          child: CircleAvatar(
-                            radius: 32,
-                          ),
-                        );
-                      }),
+                        },
+                      ),
                     )
                   ],
                 ),
