@@ -20,6 +20,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
   ];
   final TextEditingController _textEditingController = TextEditingController(text: "Design Demo Meeting");
   final TextEditingController _textEditingController2 = TextEditingController(text: "demo");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +37,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:  [
+                children: [
                   const Text(
                     "Create",
                     style: TextStyle(
@@ -66,7 +67,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                   const SizedBox(
                     height: 24,
                   ),
-                   TextField(
+                  TextField(
                     controller: _textEditingController2,
                     decoration: InputDecoration(
                       // label: Text("Title"),
@@ -115,18 +116,63 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                     Row(
                       children: [
                         Container(
-                          height: 48,
-                          width: 48,
-                          decoration: const BoxDecoration(
-                            color: Colors.blue,
+                          height: 54,
+                          width: 54,
+                          decoration: BoxDecoration(
+                            color: Color(0x55668DED),
+                            borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text("Date"),
-                            const Text("Friday 26, Feb"),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text("Date"),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                "Friday 26, Feb",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 54,
+                          width: 54,
+                          decoration: BoxDecoration(
+                            color: Color(0x55668DED),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text("Time"),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                "3:00 ~ 4:30 PM",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     )
