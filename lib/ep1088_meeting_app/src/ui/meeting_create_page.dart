@@ -75,39 +75,24 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: SizedBox(
-                    height: 84,
+                    height: 72,
                     width: double.infinity,
                     child: Wrap(
                       direction: Axis.vertical,
                       runSpacing: 12,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
+                      children: List.generate(10, (index) =>   Container(
+                        decoration: BoxDecoration(
                             color: Color(0xff668DeD)
-                          ),
-                          child: Center(
-                            child: Text(
-                              "UI/UX",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "UI/UX",
+                            style: TextStyle(
+                              color: Colors.white,
                             ),
                           ),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Color(0xff668DeD)
-                          ),
-                          child: Center(
-                            child: Text(
-                              "UI/UX",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
+                      ),)
                     ),
                   ),
                 )
