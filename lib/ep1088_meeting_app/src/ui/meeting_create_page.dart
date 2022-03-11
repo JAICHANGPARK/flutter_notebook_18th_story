@@ -9,7 +9,7 @@ class MeetingCreatePage extends StatefulWidget {
 }
 
 class _MeetingCreatePageState extends State<MeetingCreatePage> {
-  List<String> _tagItems = [
+  final List<String> _tagItems = [
     "UI/UX",
     "design",
     "presentation",
@@ -18,7 +18,8 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
     "web",
     "demo",
   ];
-  TextEditingController _textEditingController = TextEditingController(text: "Design Demo Meeting");
+  final TextEditingController _textEditingController = TextEditingController(text: "Design Demo Meeting");
+  final TextEditingController _textEditingController2 = TextEditingController(text: "demo");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +66,8 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                   const SizedBox(
                     height: 24,
                   ),
-                  const TextField(
+                   TextField(
+                    controller: _textEditingController2,
                     decoration: InputDecoration(
                       // label: Text("Title"),
                       labelText: "Tags",
