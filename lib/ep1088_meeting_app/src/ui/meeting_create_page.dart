@@ -109,6 +109,9 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                       height: 32,
                     ),
                     const Text("Date & Time"),
+                    const SizedBox(
+                      height: 12,
+                    ),
                     Row(
                       children: [
                         Container(
@@ -119,6 +122,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                           ),
                         ),
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text("Date"),
                             const Text("Friday 26, Feb"),
