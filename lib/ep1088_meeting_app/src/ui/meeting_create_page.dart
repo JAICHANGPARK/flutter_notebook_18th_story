@@ -18,7 +18,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
     "web",
     "demo",
   ];
-
+  TextEditingController _textEditingController = TextEditingController(text: "Design Demo Meeting");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,36 +35,37 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
+                children:  [
+                  const Text(
                     "Create",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 26,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "New Meeting",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 26,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 32,
                   ),
                   TextField(
-                    decoration: InputDecoration(
+                    controller: _textEditingController,
+                    decoration: const InputDecoration(
                         // label: Text("Title"),
                         labelText: "Title",
                         labelStyle: TextStyle(
                           color: Colors.blueGrey,
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  TextField(
+                  const TextField(
                     decoration: InputDecoration(
                       // label: Text("Title"),
                       labelText: "Tags",
@@ -73,7 +74,7 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                 ],
@@ -92,33 +93,33 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                           .map(
                             (e) => Container(
                               decoration:
-                                  BoxDecoration(color: Color(0xff668DeD), borderRadius: BorderRadius.circular(4)),
-                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                                  BoxDecoration(color: const Color(0xff668DeD), borderRadius: BorderRadius.circular(4)),
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                               child: Text(
                                 "$e",
-                                style: TextStyle(color: Colors.white, fontSize: 12),
+                                style: const TextStyle(color: Colors.white, fontSize: 12),
                               ),
                             ),
                           )
                           .toList(),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 32,
                     ),
-                    Text("Date & Time"),
+                    const Text("Date & Time"),
                     Row(
                       children: [
                         Container(
                           height: 48,
                           width: 48,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.blue,
                           ),
                         ),
                         Column(
                           children: [
-                            Text("Date"),
-                            Text("Friday 26, Feb"),
+                            const Text("Date"),
+                            const Text("Friday 26, Feb"),
                           ],
                         ),
                       ],
