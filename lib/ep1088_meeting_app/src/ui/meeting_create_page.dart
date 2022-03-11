@@ -109,7 +109,10 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                     const SizedBox(
                       height: 32,
                     ),
-                    const Text("Date & Time"),
+                    const Text(
+                      "Date & Time",
+                      style: TextStyle(color: Colors.blueGrey),
+                    ),
                     const SizedBox(
                       height: 12,
                     ),
@@ -128,7 +131,10 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
-                              Text("Date"),
+                              Text(
+                                "Date",
+                                style: TextStyle(color: Colors.blueGrey),
+                              ),
                               SizedBox(
                                 height: 8,
                               ),
@@ -161,7 +167,10 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
-                              Text("Time"),
+                              Text(
+                                "Time",
+                                style: TextStyle(color: Colors.blueGrey),
+                              ),
                               SizedBox(
                                 height: 8,
                               ),
@@ -187,7 +196,10 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text("Participants"),
+                    const Text(
+                      "Participants",
+                      style: TextStyle(color: Colors.blueGrey),
+                    ),
                     Expanded(
                       child: ListView.builder(
                         shrinkWrap: true,
