@@ -86,24 +86,26 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        children: _tagItems
-                            .map(
-                              (e) => Container(
-                                decoration:
-                                    BoxDecoration(color: Color(0xff668DeD), borderRadius: BorderRadius.circular(4)),
-                                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                                child: Text(
-                                  "$e",
-                                  style: TextStyle(color: Colors.white, fontSize: 12),
-                                ),
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: _tagItems
+                          .map(
+                            (e) => Container(
+                              decoration:
+                                  BoxDecoration(color: Color(0xff668DeD), borderRadius: BorderRadius.circular(4)),
+                              padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                              child: Text(
+                                "$e",
+                                style: TextStyle(color: Colors.white, fontSize: 12),
                               ),
-                            )
-                            .toList(),),
-
+                            ),
+                          )
+                          .toList(),
+                    ),
+                    SizedBox(
+                      height: 32,
+                    ),
                     Text("Date & Time"),
-
                     Row(
                       children: [
                         Container(
@@ -112,7 +114,6 @@ class _MeetingCreatePageState extends State<MeetingCreatePage> {
                           decoration: BoxDecoration(
                             color: Colors.blue,
                           ),
-
                         ),
                         Column(
                           children: [
