@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/widgets/bottom_nav_widget.dart';
 
 class PodMainPage extends StatelessWidget {
   const PodMainPage({Key? key}) : super(key: key);
@@ -6,26 +7,7 @@ class PodMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: "Discover",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Search",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.apps),
-            label: "My Queue",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
-            label: "Settings",
-          )
-        ],
-      ),
+      bottomNavigationBar: BottomNavWidget(),
     );
   }
 }
