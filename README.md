@@ -64,7 +64,7 @@ width="400px" >
 - https://dribbble.com/shots/17581401-Calorie-Tracking-App/attachments/12729424?mode=media
 
 <img
-src="https://cdn.dribbble.com/users/381474/screenshots/17568751/media/eee55a30dcb5d47dd13cf10a00d08de3.png"
+src="https://cdn.dribbble.com/users/118309/screenshots/17581401/media/33f77eaa90a0013fd1e992d33685e10c.png"
 width="400px" >
 </img>
 
