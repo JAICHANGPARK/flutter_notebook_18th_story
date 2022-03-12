@@ -97,7 +97,7 @@ width="400px" >
 - https://dribbble.com/shots/17511811/attachments/12651359?mode=media
 
 <img
-src="https://cdn.dribbble.com/users/118309/screenshots/17581401/media/33f77eaa90a0013fd1e992d33685e10c.png"
+src="https://cdn.dribbble.com/users/10611617/screenshots/17511811/media/d5d41354491e37859d96daf0396c7000.jpg"
 width="400px" >
 </img>
 
