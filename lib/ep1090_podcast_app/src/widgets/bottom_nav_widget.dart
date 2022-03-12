@@ -9,6 +9,29 @@ class BottomNavWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final index = ref.watch(pageIndexProvider);
-    return Container();
+    return  BottomNavigationBar(
+      onTap: (idx){
+        ref.watch(pageIndexProvider.notifier).state = idx;
+      },
+      type: BottomNavigationBarType.fixed,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.explore),
+          label: "Discover",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          label: "Search",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.apps),
+          label: "My Queue",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings_outlined),
+          label: "Settings",
+        )
+      ],
+    );
   }
 }
