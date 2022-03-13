@@ -10,7 +10,7 @@ class PodMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarWidget(),
+      appBar: const AppBarWidget(),
       body: Consumer(
         builder: (context, ref, _) {
           final idx = ref.watch(pageIndexProvider);
