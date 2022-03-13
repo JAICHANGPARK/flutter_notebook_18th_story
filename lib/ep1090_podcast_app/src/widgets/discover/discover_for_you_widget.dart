@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DiscoverForYouWidget extends StatelessWidget {
@@ -67,7 +68,44 @@ class DiscoverForYouWidget extends StatelessWidget {
               },
               scrollDirection: Axis.horizontal,
             ),
-          )
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Episodes",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 8),
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "SEE ALL",
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Expanded(
+              child: ListView.separated(
+            itemBuilder: (context, index) {
+              return Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  color: Colors.pink
+                ),
+              );
+            },
+            separatorBuilder: (_, __) => Divider(),
+            itemCount: 10,
+          ))
         ],
       ),
     );
