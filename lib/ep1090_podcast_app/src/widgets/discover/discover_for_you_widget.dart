@@ -33,27 +33,39 @@ class DiscoverForYouWidget extends StatelessWidget {
           ),
           SizedBox(
             height: 160,
-            child: ColoredBox(
-              color: Colors.blue,
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 140,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: Colors.pink
-                          ),
-                        )
-                      ],
-                    ),
-                  );
-                },
-                scrollDirection: Axis.horizontal,
-              ),
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        width: 140,
+                        height: 100,
+                        decoration: const BoxDecoration(
+                          color: Colors.pink,
+                        ),
+                      ),
+                      const Text(
+                        "How To Lead",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const Text(
+                        "By Kane Brothers",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+              scrollDirection: Axis.horizontal,
             ),
           )
         ],
