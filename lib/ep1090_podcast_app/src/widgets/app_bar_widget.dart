@@ -26,5 +26,5 @@ class AppBarWidget extends ConsumerWidget with PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size();
+  Size get preferredSize => Size.fromHeight(64);
 }
