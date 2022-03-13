@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/provider/page_index_provider.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/widgets/app_bar_widget.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/widgets/bottom_nav_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,6 +10,7 @@ class PodMainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBarWidget(),
       body: Consumer(
         builder: (context, ref, _) {
           final idx = ref.watch(pageIndexProvider);
