@@ -31,12 +31,31 @@ class DiscoverForYouWidget extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 160,
-          child: ColoredBox(
-            color: Colors.blue,
-            child: Container(
+          SizedBox(
+            height: 160,
+            child: ColoredBox(
+              color: Colors.blue,
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 140,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.pink
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                },
+                scrollDirection: Axis.horizontal,
+              ),
             ),
-          ),)
+          )
         ],
       ),
     );
