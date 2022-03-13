@@ -13,20 +13,30 @@ class DiscoverForYouWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 "Popular Podcasts",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 8),
                 child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "SEE ALL",
-                    )),
+                  onPressed: () {},
+                  child: const Text(
+                    "SEE ALL",
+                  ),
+                ),
               ),
             ],
-          )
+          ),
+          SizedBox(height: 160,
+          child: ColoredBox(
+            color: Colors.blue,
+            child: Container(
+            ),
+          ),)
         ],
       ),
     );
