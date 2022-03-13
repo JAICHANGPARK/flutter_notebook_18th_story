@@ -3,7 +3,7 @@ import 'dart:async';
 
 final pageIndexProvider = StateProvider<int>((ref) => 0);
 
-final sdad = StreamProvider((ref) => TestStream().getidex());
+final sdad = StreamProvider((ref) => TestStream().getIdx());
 
 class TestStream {
   StreamController<int> _streamController = StreamController();
