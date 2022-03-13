@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/provider/page_index_provider.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/ui/pod_discover_screen.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/widgets/app_bar_widget.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/widgets/bottom_nav_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,9 +17,10 @@ class PodMainPage extends StatelessWidget {
           final idx = ref.watch(pageIndexProvider);
           switch (idx) {
             case 0:
-              return const Center(
-                child: Text("0"),
-              );
+              return PodDiscoverScreen();
+              // return const Center(
+              //   child: Text("0"),
+              // );
             case 1:
               return const Center(
                 child: Text("1"),
