@@ -14,6 +14,12 @@ class AppBarWidget extends ConsumerWidget with PreferredSizeWidget {
       case 0:
         title = "Discover";
         break;
+      case 1:
+        title = "Search";
+        break;
+      case 2:
+        title = "My Queue";
+        break;
       default:
         title = "Unknown";
     }
@@ -21,6 +27,15 @@ class AppBarWidget extends ConsumerWidget with PreferredSizeWidget {
       title: Text(title),
       foregroundColor: Colors.white,
       backgroundColor: Colors.black,
+
+      actions: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CircleAvatar(
+            radius: 16,
+          ),
+        ),
+      ],
     );
   }
 
