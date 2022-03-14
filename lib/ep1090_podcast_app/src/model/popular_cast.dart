@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'popular_cast.freezed.dart';
-part 'popular_cast.g.dart';
+// part 'popular_cast.g.dart';
 
 @freezed
 class PopularCast with _$PopularCast {
