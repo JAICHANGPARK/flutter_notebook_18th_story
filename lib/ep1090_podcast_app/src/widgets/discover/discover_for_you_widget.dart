@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/model/popular_cast.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/provider/popular_cast_loader.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class DiscoverForYouWidget extends StatelessWidget {
   const DiscoverForYouWidget({Key? key}) : super(key: key);
@@ -34,42 +37,58 @@ class DiscoverForYouWidget extends StatelessWidget {
           ),
           SizedBox(
             height: 160,
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        width: 140,
-                        height: 100,
-                        decoration: const BoxDecoration(
-                          color: Colors.pink,
+            child: Consumer(builder: (context, ref, _) {
+              AsyncValue<List<PopularCast>> items = ref.watch(popularCastLoadProvider);
+              return items.when(
+                data: (items) {
+                  return ListView.builder(
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              width: 140,
+                              height: 100,
+                              decoration: const BoxDecoration(
+                                color: Colors.pink,
+                              ),
+                            ),
+                            Text(
+                              // "How To Lead",
+                              items[index].title ?? "unknown",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "By ${items[index].speaker ?? "unknown"}",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      const Text(
-                        "How To Lead",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text(
-                        "By Kane Brothers",
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-              scrollDirection: Axis.horizontal,
-            ),
+                      );
+                    },
+                    scrollDirection: Axis.horizontal,
+                  );
+                },
+                error: (err, trace) {
+                  return const Center(
+                    child: Text("err"),
+                  );
+                },
+                loading: () => const Center(
+                  child: CircularProgressIndicator(),
+                ),
+              );
+            }),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Row(
@@ -98,12 +117,10 @@ class DiscoverForYouWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               return Container(
                 height: 120,
-                decoration: BoxDecoration(
-                  color: Colors.pink
-                ),
+                decoration: const BoxDecoration(color: Colors.pink),
               );
             },
-            separatorBuilder: (_, __) => Divider(),
+            separatorBuilder: (_, __) => const Divider(),
             itemCount: 10,
           ))
         ],
