@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/model/popular_cast.dart';
@@ -41,7 +42,13 @@ class DiscoverForYouWidget extends StatelessWidget {
               AsyncValue<List<PopularCast>> items = ref.watch(popularCastLoadProvider);
               return items.when(
                 data: (items) {
+                  if (items.isEmpty) {
+                    return const Center(
+                      child: Text("Empty"),
+                    );
+                  }
                   return ListView.builder(
+                    itemCount: items.length,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.only(right: 8),
@@ -52,20 +59,49 @@ class DiscoverForYouWidget extends StatelessWidget {
                             Container(
                               width: 140,
                               height: 100,
-                              decoration: const BoxDecoration(
-                                color: Colors.pink,
+                              decoration: BoxDecoration(
+                                // color: Colors.pink,
+                                image: DecorationImage(
+                                  image: CachedNetworkImageProvider(
+                                    items[index].img ?? "",
+                                  ),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.black.withOpacity(0.3),
+                                      ),
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 4,
+                                      ),
+                                      child: Text(
+                                        items[index].tag ?? "",
+                                        style: const TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    left: 8,
+                                    bottom: 8,
+                                  )
+                                ],
                               ),
                             ),
                             Text(
                               // "How To Lead",
                               items[index].title ?? "unknown",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
                               "By ${items[index].speaker ?? "unknown"}",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                                 color: Colors.grey,
                               ),
