@@ -163,7 +163,7 @@ class DiscoverForYouWidget extends StatelessWidget {
                       );
                     },
                     separatorBuilder: (_, __) => const Divider(),
-                    itemCount: 10,
+                    itemCount: items.length,
                   );
                 },
                 error: (e, s) => Center(
