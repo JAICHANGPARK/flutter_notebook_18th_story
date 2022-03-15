@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/model/discover_episode.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/model/popular_cast.dart';
+import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/provider/discover_episode_provider.dart';
 import 'package:flutter_notebook_18th_story/ep1090_podcast_app/src/provider/popular_cast_loader.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -148,17 +150,29 @@ class DiscoverForYouWidget extends StatelessWidget {
               ),
             ],
           ),
-          Expanded(
-              child: ListView.separated(
-            itemBuilder: (context, index) {
-              return Container(
-                height: 120,
-                decoration: const BoxDecoration(color: Colors.pink),
-              );
-            },
-            separatorBuilder: (_, __) => const Divider(),
-            itemCount: 10,
-          ))
+          Expanded(child: Consumer(builder: (context, ref, _) {
+            AsyncValue<List<DiscoverEpisode>> episodeItems = ref.watch(discoverEpisodeProvider);
+
+            return episodeItems.when(
+                data: (items) {
+                  return ListView.separated(
+                    itemBuilder: (context, index) {
+                      return Container(
+                        height: 120,
+                        decoration: const BoxDecoration(color: Colors.pink),
+                      );
+                    },
+                    separatorBuilder: (_, __) => const Divider(),
+                    itemCount: 10,
+                  );
+                },
+                error: (e, s) => Center(
+                      child: Text("${e.toString()}, ${s.toString()}"),
+                    ),
+                loading: () => Center(
+                      child: CircularProgressIndicator(),
+                    ));
+          }))
         ],
       ),
     );
