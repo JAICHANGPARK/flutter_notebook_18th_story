@@ -173,6 +173,43 @@ class DiscoverForYouWidget extends StatelessWidget {
                                     fit: BoxFit.cover,
                                   ),
                                 ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                      ),
+                                      child: Text(
+                                        items[index].tag ?? "",
+                                        style: const TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                    ),
+                                    Text(
+                                      items[index].title ?? "",
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      items[index].subtitle ?? "",
+                                      // overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        // fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
                               )
                             ],
                           ));
