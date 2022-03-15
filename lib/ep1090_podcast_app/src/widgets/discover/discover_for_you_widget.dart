@@ -174,7 +174,10 @@ class DiscoverForYouWidget extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(12.0),
+                                padding: const EdgeInsets.only(
+                                  left: 16,
+                                  top: 8,
+                                ),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -224,10 +227,19 @@ class DiscoverForYouWidget extends StatelessWidget {
                                             ),
                                             label: Text(
                                               items[index].duration ?? "",
-                                              style: TextStyle(color: Colors.black, fontSize: 10),
+                                              style: const TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 10,
+                                              ),
                                             ),
                                           ),
                                         ),
+                                        IconButton(
+                                          onPressed: () {},
+                                          // iconSize:
+                                          icon: Icon(Icons.playlist_add),
+                                          color: Colors.blueAccent,
+                                        )
                                       ],
                                     ),
                                   ],
