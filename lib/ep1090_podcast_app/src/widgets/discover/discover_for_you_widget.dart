@@ -159,7 +159,6 @@ class DiscoverForYouWidget extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return Container(
                           height: 120,
-                          decoration: const BoxDecoration(color: Colors.pink),
                           child: Row(
                             children: [
                               Container(
@@ -177,6 +176,7 @@ class DiscoverForYouWidget extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
@@ -205,7 +205,31 @@ class DiscoverForYouWidget extends StatelessWidget {
                                         fontSize: 12,
                                       ),
                                     ),
-
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          height: 24,
+                                          width: 64,
+                                          child: OutlinedButton.icon(
+                                            style: OutlinedButton.styleFrom(
+                                              padding: const EdgeInsets.all(4),
+                                              textStyle: const TextStyle(
+                                                fontSize: 12,
+                                              ),
+                                            ),
+                                            onPressed: () {},
+                                            icon: const Icon(
+                                              Icons.play_circle_outline,
+                                              size: 12,
+                                            ),
+                                            label: Text(
+                                              items[index].duration ?? "",
+                                              style: TextStyle(color: Colors.black, fontSize: 10),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ],
                                 ),
                               )
