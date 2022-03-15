@@ -194,17 +194,15 @@ class DiscoverForYouWidget extends StatelessWidget {
                                     Text(
                                       items[index].title ?? "",
                                       overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
                                       items[index].subtitle ?? "",
-                                      // overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 12,
-                                        // fontWeight: FontWeight.bold,
                                       ),
                                     ),
 
