@@ -158,9 +158,24 @@ class DiscoverForYouWidget extends StatelessWidget {
                   return ListView.separated(
                     itemBuilder: (context, index) {
                       return Container(
-                        height: 120,
-                        decoration: const BoxDecoration(color: Colors.pink),
-                      );
+                          height: 120,
+                          decoration: const BoxDecoration(color: Colors.pink),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 100,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: CachedNetworkImageProvider(
+                                      items[index].img ?? "",
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ));
                     },
                     separatorBuilder: (_, __) => const Divider(),
                     itemCount: items.length,
@@ -169,7 +184,7 @@ class DiscoverForYouWidget extends StatelessWidget {
                 error: (e, s) => Center(
                       child: Text("${e.toString()}, ${s.toString()}"),
                     ),
-                loading: () => Center(
+                loading: () => const Center(
                       child: CircularProgressIndicator(),
                     ));
           }))
