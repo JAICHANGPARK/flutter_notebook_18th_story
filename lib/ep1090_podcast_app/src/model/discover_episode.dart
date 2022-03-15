@@ -6,5 +6,9 @@ part 'discover_episode.freezed.dart';
 class DiscoverEpisode with _$DiscoverEpisode {
   factory DiscoverEpisode({
     String? img,
+    String? tag,
+    String? title,
+    String? subtitle,
+    String? duration,
   }) = _DiscoverEpisode;
 }
