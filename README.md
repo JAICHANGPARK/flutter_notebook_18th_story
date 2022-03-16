@@ -2,7 +2,18 @@
 
 ## UI Design
 
-### EP1090
+### EP1094
+
+- Fitness&Nutrition app
+- by Quadrato
+- https://dribbble.com/shots/17703564/attachments/12863795?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/7880777/screenshots/17703564/media/f9a08446a7448d4f979290c99f772c49.png"
+width="400px"/>
+
+
+### EP1090-1093
 
 - Pods - Podcast App
 - by Friza Prakesa
@@ -10,8 +21,7 @@
 
 <img
 src="https://cdn.dribbble.com/users/7880777/screenshots/17703564/media/f9a08446a7448d4f979290c99f772c49.png"
-width="400px" >
-</img>
+width="400px"/>
 
 ### EP1088-1089
 
