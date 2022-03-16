@@ -8,6 +8,8 @@ class FitnessNutritionMainPage extends StatefulWidget {
 }
 
 class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
+  int _index = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,25 +23,76 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                 SizedBox(
                   height: 72,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.blue,
                     ),
                   ),
                 ),
-                SizedBox(height: 16,),
+                const SizedBox(
+                  height: 16,
+                ),
                 SizedBox(
                   height: 94,
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.blue,
                     ),
                   ),
                 ),
-                SizedBox(height: 16,),
+                const SizedBox(
+                  height: 16,
+                ),
+                SizedBox(
+                  height: 480,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white.withOpacity(0.2),
+        currentIndex: _index,
+        type: BottomNavigationBarType.fixed,
+        onTap: (idx) {
+          setState(() {
+            _index = idx;
+          });
+        },
+        backgroundColor: Colors.white.withOpacity(0.1),
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: "meal plan"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: "meal plan"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: "meal plan"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: "meal plan"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: "meal plan"),
+        ],
       ),
     );
   }
