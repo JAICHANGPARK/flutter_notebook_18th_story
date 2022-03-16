@@ -11,6 +11,8 @@ class FitnessNutritionMainPage extends StatefulWidget {
 class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      
+    );
   }
 }
