@@ -61,6 +61,12 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
         currentIndex: _index,
         type: BottomNavigationBarType.fixed,
         onTap: (idx) {
+          if(idx ==2){
+            showModalBottomSheet(
+                // isScrollControlled: false,
+                enableDrag: false,
+                context: context, builder: (context)=> Container());
+          }
           setState(() {
             _index = idx;
           });
