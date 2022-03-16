@@ -28,6 +28,7 @@ dependencies:
   percent_indicator: ^4.0.0
 
   dotted_border: any
+  rulers: "^1.0.7"
 
 dev_dependencies:
   flutter_test:
