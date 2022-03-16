@@ -6,10 +6,10 @@
 
 - Fitness&Nutrition app
 - by Quadrato
-- https://dribbble.com/shots/17703564/attachments/12863795?mode=media
+- https://dribbble.com/shots/17726914-Fitness-Nutrition-app/attachments/12889376?mode=media
 
 <img
-src="https://cdn.dribbble.com/users/7880777/screenshots/17703564/media/f9a08446a7448d4f979290c99f772c49.png"
+src="https://cdn.dribbble.com/users/4988924/screenshots/17726914/media/f37b2709665f46e686db18857f61efbf.png"
 width="400px"/>
 
 
