@@ -12,7 +12,13 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+          ],
+        ),
+      ),
     );
   }
 }
