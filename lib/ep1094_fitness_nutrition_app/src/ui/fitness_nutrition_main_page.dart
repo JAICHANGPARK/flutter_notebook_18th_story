@@ -27,6 +27,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                       color: Colors.blue,
                     ),
                     child: ListView.builder(
+                      itemCount: 5,
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
