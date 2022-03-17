@@ -30,17 +30,25 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                       itemCount: 5,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
                           child: Container(
-                            height: 64,
-                            width: 64,
-                            decoration:
-                                BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(4), boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey,
-                                offset: Offset(-2, -2),
-                              )
-                            ]),
+                            height: 58,
+                            width: 58,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(4),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(-1, -1),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              children: const [
+
+                              ],
+                            ),
                           ),
                         );
                       },
