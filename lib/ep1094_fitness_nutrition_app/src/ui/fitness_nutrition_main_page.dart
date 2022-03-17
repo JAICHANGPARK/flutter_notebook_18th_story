@@ -64,7 +64,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                 Text(
                                   weeklyConverter(_day.weekday),
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 14,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -168,6 +168,8 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
         return "fri";
       case 6:
         return "sat";
+      case 7:
+        return "sun";
       default:
         return "??";
     }
