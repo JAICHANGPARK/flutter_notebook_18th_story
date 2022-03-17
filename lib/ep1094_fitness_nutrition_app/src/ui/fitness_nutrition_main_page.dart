@@ -31,45 +31,52 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                       itemCount: 5,
                       itemBuilder: (context, index) {
                         var _day = DateTime.now().add(Duration(days: index));
-                        return Padding(
-                          padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
-                          child: Container(
-                            height: 58,
-                            width: 58,
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(4),
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Colors.grey,
-                                  offset: Offset(-1, -1),
-                                )
-                              ],
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  _day.day.toString(),
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                        return GestureDetector(
+                          onTap: (){
+                            setState(() {
+                              _topIndex = index;
+                            });
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
+                            child: Container(
+                              height: 58,
+                              width: 58,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(4),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Colors.grey,
+                                    offset: Offset(-1, -1),
+                                  )
+                                ],
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    _day.day.toString(),
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  height: 4,
-                                ),
-                                Text(
-                                  weeklyConverter(_day.weekday),
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                                  const SizedBox(
+                                    height: 4,
                                   ),
-                                ),
-                              ],
+                                  Text(
+                                    weeklyConverter(_day.weekday),
+                                    style: const TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         );
