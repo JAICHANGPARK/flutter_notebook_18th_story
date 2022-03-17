@@ -28,13 +28,21 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                     ),
                     child: ListView.builder(
                       itemBuilder: (context, index) {
-                        return Container(
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(4),
-                            boxShadow: [
-                              BoxShadow()
-                            ]
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 64,
+                            width: 64,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(4),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey,
+
+                                )
+                              ]
+                            ),
                           ),
                         );
                       },
