@@ -9,7 +9,7 @@ class FitnessNutritionMainPage extends StatefulWidget {
 
 class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
   int _index = 0;
-  int _topIndex = 0;
+  int _topIndex = -1;
 
   @override
   Widget build(BuildContext context) {
