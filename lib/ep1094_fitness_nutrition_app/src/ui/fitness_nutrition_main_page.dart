@@ -34,16 +34,13 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           child: Container(
                             height: 64,
                             width: 64,
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(4),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey,
-
-                                )
-                              ]
-                            ),
+                            decoration:
+                                BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(4), boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey,
+                                offset: Offset(-2, -2),
+                              )
+                            ]),
                           ),
                         );
                       },
