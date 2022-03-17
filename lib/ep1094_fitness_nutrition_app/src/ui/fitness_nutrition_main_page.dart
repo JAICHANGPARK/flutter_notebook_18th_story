@@ -75,27 +75,27 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
         items: const [
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.room_service,
               ),
               label: "meal plan"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.format_list_bulleted,
               ),
               label: "meal plan"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.signal_cellular_alt,
               ),
               label: "meal plan"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.shopping_bag,
               ),
               label: "meal plan"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                Icons.settings,
               ),
               label: "meal plan"),
         ],
