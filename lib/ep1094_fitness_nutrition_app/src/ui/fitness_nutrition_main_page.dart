@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
 
 class FitnessNutritionMainPage extends StatefulWidget {
   const FitnessNutritionMainPage({Key? key}) : super(key: key);
@@ -25,14 +26,14 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                   height: 72,
                   child: Container(
                     decoration: const BoxDecoration(
-                      color: Colors.blue,
-                    ),
+                        // color: Colors.blue,
+                        ),
                     child: ListView.builder(
                       itemCount: 5,
                       itemBuilder: (context, index) {
                         var _day = DateTime.now().add(Duration(days: index));
                         return GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             setState(() {
                               _topIndex = index;
                             });
@@ -44,38 +45,77 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                               width: 58,
                               decoration: BoxDecoration(
                                 color: Colors.black,
-                                borderRadius: BorderRadius.circular(4),
-                                boxShadow: const [
+                                borderRadius: BorderRadius.circular(6),
+                                boxShadow: [
                                   BoxShadow(
-                                    color: Colors.grey,
-                                    offset: Offset(-1, -1),
+                                    color: Colors.white.withOpacity(0.2),
+                                    offset: const Offset(-1, -1),
                                   )
                                 ],
+                                gradient: _topIndex == index
+                                    ? const LinearGradient(
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                        colors: [
+                                            Colors.red,
+                                            Colors.deepOrange,
+                                            Colors.yellow,
+                                            Colors.green,
+                                            Colors.blue,
+                                          ])
+                                    : null,
                               ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    _day.day.toString(),
-                                    style: const TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                              padding: EdgeInsets.all(_topIndex == index ? 2 : 0),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      _day.day.toString(),
+                                      style: const TextStyle(
+                                        fontSize: 18,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text(
-                                    weeklyConverter(_day.weekday),
-                                    style: const TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
+                                    const SizedBox(
+                                      height: 4,
                                     ),
-                                  ),
-                                ],
+                                    Text(
+                                      weeklyConverter(_day.weekday),
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: _topIndex == index ? null :  Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        foreground: _topIndex == index ?  (ui.Paint()
+                                          ..shader = ui.Gradient.linear(
+                                              Offset(0, 0),
+                                              Offset(50, 0),
+                                              [
+                                                Colors.red,
+                                                Colors.deepOrange,
+                                                Colors.yellow,
+                                                Colors.green,
+                                                Colors.blueAccent,
+                                              ],
+                                              [
+                                                0.0,
+                                                0.25,
+                                                0.5,
+                                                0.75,
+                                                1.0
+                                              ]
+
+                                          )) : null
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
