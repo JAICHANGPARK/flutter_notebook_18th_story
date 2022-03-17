@@ -26,6 +26,20 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                     decoration: const BoxDecoration(
                       color: Colors.blue,
                     ),
+                    child: ListView.builder(
+                      itemBuilder: (context, index) {
+                        return Container(
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(4),
+                            boxShadow: [
+                              BoxShadow()
+                            ]
+                          ),
+                        );
+                      },
+                      scrollDirection: Axis.horizontal,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -61,11 +75,12 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
         currentIndex: _index,
         type: BottomNavigationBarType.fixed,
         onTap: (idx) {
-          if(idx ==2){
+          if (idx == 2) {
             showModalBottomSheet(
                 // isScrollControlled: false,
                 enableDrag: false,
-                context: context, builder: (context)=> Container());
+                context: context,
+                builder: (context) => Container());
           }
           setState(() {
             _index = idx;
