@@ -9,6 +9,7 @@ class FitnessNutritionMainPage extends StatefulWidget {
 
 class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
   int _index = 0;
+  int _topIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                     child: ListView.builder(
                       itemCount: 5,
                       itemBuilder: (context, index) {
+                        var _day = DateTime.now().add(Duration(days: index));
                         return Padding(
                           padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
                           child: Container(
@@ -45,8 +47,22 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                               ],
                             ),
                             child: Column(
-                              children: const [
-
+                              children: [
+                                Text(
+                                  _day.day.toString(),
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(_day.weekday.toString(),
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -131,4 +147,22 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
       ),
     );
   }
+
+  String weeklyConverter(int weekly){
+    switch(weekly){
+      case 1:
+        return "mon";
+      case 2:
+        return "tue";
+      case 3:
+        return "wed";
+      case 4:
+        return "wed";
+      case 5:
+        return "wed";
+      default:
+        return "??";
+    }
+  }
+
 }
