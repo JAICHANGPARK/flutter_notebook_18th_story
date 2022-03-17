@@ -47,6 +47,8 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                               ],
                             ),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   _day.day.toString(),
@@ -56,7 +58,11 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Text(_day.weekday.toString(),
+                                SizedBox(
+                                  height: 4,
+                                ),
+                                Text(
+                                  weeklyConverter(_day.weekday),
                                   style: TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
@@ -148,8 +154,8 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
     );
   }
 
-  String weeklyConverter(int weekly){
-    switch(weekly){
+  String weeklyConverter(int weekly) {
+    switch (weekly) {
       case 1:
         return "mon";
       case 2:
@@ -157,12 +163,13 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
       case 3:
         return "wed";
       case 4:
-        return "wed";
+        return "thr";
       case 5:
-        return "wed";
+        return "fri";
+      case 6:
+        return "sat";
       default:
         return "??";
     }
   }
-
 }
