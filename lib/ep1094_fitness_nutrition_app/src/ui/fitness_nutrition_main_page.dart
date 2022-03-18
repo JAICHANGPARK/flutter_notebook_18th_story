@@ -206,7 +206,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                   child: Container(
                     decoration:  BoxDecoration(
                         color: Colors.blue,
-                        borderRadius: BorderRadius.all(16),
+                        borderRadius: BorderRadius.circular(8),
                         gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -219,7 +219,22 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                             Colors.deepOrange,
                             Colors.red,
                           ],
-                        )),
+                        ),),
+                    padding: EdgeInsets.all(2),
+                    child: Container(
+                      height: double.infinity,
+                      width: double.infinity,
+
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.black,
+                      ),
+                      child: Column(
+                        children: [
+
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ],
