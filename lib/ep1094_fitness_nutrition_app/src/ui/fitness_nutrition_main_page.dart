@@ -221,7 +221,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                         ],
                       ),
                     ),
-                    padding: const EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(1.5),
                     child: Container(
                       height: double.infinity,
                       width: double.infinity,
@@ -233,7 +233,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                         decoration: BoxDecoration(
                           color: Colors.white.withOpacity(0.1),
                         ),
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(12),
                         child: Column(
                           children: [
                             Row(
@@ -250,25 +250,25 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white.withOpacity(0.1),
                                     borderRadius: BorderRadius.circular(16),
                                   ),
-                                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   child: Row(
-                                    children: [
-                                      const Icon(
+                                    children: const [
+                                      Icon(
                                         Icons.refresh,
                                         color: Colors.grey,
                                       ),
                                       SizedBox(
                                         width: 4,
                                       ),
-                                      const Text(
+                                      Text(
                                         "REPLACE",
-                                        style: const TextStyle(color: Colors.grey),
+                                        style: TextStyle(color: Colors.grey),
                                       ),
                                     ],
                                   ),
