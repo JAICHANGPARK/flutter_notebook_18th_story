@@ -140,13 +140,11 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                               "OBJECTIVE COMPLETION",
                               style: TextStyle(
                                 color: Colors.grey,
+                                fontSize: 12
                               ),
                             ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.chevron_right,
-                              ),
+                            Icon(
+                              Icons.chevron_right,
                               color: Colors.grey,
                             ),
                           ],
@@ -158,12 +156,14 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                               style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
+                                  color: Colors.white
                               ),
                             ),
                             Spacer(),
                             Text("1159",style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
+                                color: Colors.white
                             ),),
                             Text(" / 3000 Kcal",style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -171,6 +171,12 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                               color: Colors.grey
                             ),)
                           ],
+                        ),
+                        Container(
+                          height: 24,
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.15)
+                          ),
                         )
                       ],
                     ),
