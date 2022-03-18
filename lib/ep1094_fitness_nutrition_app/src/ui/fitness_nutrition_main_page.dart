@@ -124,7 +124,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                   height: 16,
                 ),
                 SizedBox(
-                  height: 94,
+                  height: 100,
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.1),
@@ -132,6 +132,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                     ),
                     padding: EdgeInsets.all(8),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -173,7 +174,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           ],
                         ),
                         Container(
-                          height: 24,
+                          height: 16,
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(0.15)
                           ),
