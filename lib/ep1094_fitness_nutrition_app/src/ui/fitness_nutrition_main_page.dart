@@ -224,15 +224,19 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                     child: Container(
                       height: double.infinity,
                       width: double.infinity,
-
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.black,
                       ),
-                      child: Column(
-                        children: [
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.1)
+                        ),
+                        child: Column(
+                          children: [
 
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
