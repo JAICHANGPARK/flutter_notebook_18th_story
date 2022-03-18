@@ -171,9 +171,13 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                             color: Colors.white.withOpacity(0.15),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width / 1.5,
-                            decoration: BoxDecoration(color: Colors.red),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: MediaQuery.of(context).size.width / 1.8,
+                                decoration: BoxDecoration(color: Colors.red),
+                              ),
+                            ],
                           ),
                         )
                       ],
