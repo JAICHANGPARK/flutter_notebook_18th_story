@@ -139,10 +139,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           children: const [
                             Text(
                               "OBJECTIVE COMPLETION",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 12
-                              ),
+                              style: TextStyle(color: Colors.grey, fontSize: 12),
                             ),
                             Icon(
                               Icons.chevron_right,
@@ -154,29 +151,29 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           children: const [
                             Text(
                               "40%",
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                                  color: Colors.white
-                              ),
+                              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
                             ),
                             Spacer(),
-                            Text("1159",style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                                color: Colors.white
-                            ),),
-                            Text(" / 3000 Kcal",style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                              fontSize: 12,
-                              color: Colors.grey
-                            ),)
+                            Text(
+                              "1159",
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.white),
+                            ),
+                            Text(
+                              " / 3000 Kcal",
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey),
+                            )
                           ],
                         ),
                         Container(
-                          height: 16,
+                          height: 12,
+                          width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.15)
+                            color: Colors.white.withOpacity(0.15),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width / 1.5,
+                            decoration: BoxDecoration(color: Colors.red),
                           ),
                         )
                       ],
