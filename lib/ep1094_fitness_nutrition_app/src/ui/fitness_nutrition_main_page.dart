@@ -136,7 +136,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               "OBJECTIVE COMPLETION",
                               style: TextStyle(
@@ -151,7 +151,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Text(
                               "40%",
                               style: TextStyle(
@@ -163,12 +163,12 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                             Spacer(),
                             Text("1159",style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 14,
+                              fontSize: 12,
                                 color: Colors.white
                             ),),
                             Text(" / 3000 Kcal",style: TextStyle(
                             fontWeight: FontWeight.bold,
-                              fontSize: 14,
+                              fontSize: 12,
                               color: Colors.grey
                             ),)
                           ],
