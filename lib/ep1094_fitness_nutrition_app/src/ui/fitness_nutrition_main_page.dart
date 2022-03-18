@@ -165,7 +165,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           ],
                         ),
                         Container(
-                          height: 12,
+                          height: 10,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(0.15),
@@ -175,7 +175,22 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                             children: [
                               Container(
                                 width: MediaQuery.of(context).size.width / 1.8,
-                                decoration: BoxDecoration(color: Colors.red),
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(8),
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Colors.blue,
+                                      Colors.green,
+                                      Colors.lightGreenAccent,
+                                      Colors.yellowAccent,
+                                      Colors.orangeAccent,
+                                      Colors.deepOrange,
+                                      Colors.red,
+
+                                    ],
+                                  ),
+                                ),
                               ),
                             ],
                           ),
