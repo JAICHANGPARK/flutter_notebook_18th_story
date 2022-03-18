@@ -207,7 +207,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                     decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(8),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
@@ -221,7 +221,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                         ],
                       ),
                     ),
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     child: Container(
                       height: double.infinity,
                       width: double.infinity,
@@ -230,16 +230,19 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                         color: Colors.black,
                       ),
                       child: Container(
-                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.1)),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.1),
+                        ),
+                        padding: EdgeInsets.all(8),
                         child: Column(
                           children: [
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.check,
                                   color: Colors.white,
                                 ),
-                                Text(
+                                const Text(
                                   "Breakfase",
                                   style: TextStyle(
                                     color: Colors.white,
@@ -247,16 +250,25 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
+                                Spacer(),
                                 Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   child: Row(
                                     children: [
-                                      Icon(
+                                      const Icon(
                                         Icons.refresh,
                                         color: Colors.grey,
                                       ),
-                                      Text(
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      const Text(
                                         "REPLACE",
-                                        style: TextStyle(color: Colors.grey),
+                                        style: const TextStyle(color: Colors.grey),
                                       ),
                                     ],
                                   ),
