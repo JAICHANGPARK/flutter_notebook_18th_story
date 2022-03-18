@@ -130,7 +130,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                       color: Colors.white.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -178,7 +178,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                 decoration: BoxDecoration(
                                   color: Colors.red,
                                   borderRadius: BorderRadius.circular(8),
-                                  gradient: LinearGradient(
+                                  gradient: const LinearGradient(
                                     colors: [
                                       Colors.blue,
                                       Colors.green,
@@ -187,7 +187,6 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                       Colors.orangeAccent,
                                       Colors.deepOrange,
                                       Colors.red,
-
                                     ],
                                   ),
                                 ),
@@ -205,9 +204,22 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                 SizedBox(
                   height: 480,
                   child: Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.blue,
-                    ),
+                    decoration:  BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(16),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Colors.blue,
+                            Colors.green,
+                            Colors.lightGreenAccent,
+                            Colors.yellowAccent,
+                            Colors.orangeAccent,
+                            Colors.deepOrange,
+                            Colors.red,
+                          ],
+                        )),
                   ),
                 ),
               ],
