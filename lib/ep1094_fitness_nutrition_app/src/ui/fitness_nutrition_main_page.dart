@@ -89,30 +89,25 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     Text(
                                       weeklyConverter(_day.weekday),
                                       style: TextStyle(
-                                        fontSize: 14,
-                                        color: _topIndex == index ? null :  Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        foreground: _topIndex == index ?  (ui.Paint()
-                                          ..shader = ui.Gradient.linear(
-                                              Offset(0, 0),
-                                              Offset(50, 0),
-                                              [
-                                                Colors.red,
-                                                Colors.deepOrange,
-                                                Colors.yellow,
-                                                Colors.green,
-                                                Colors.blueAccent,
-                                              ],
-                                              [
-                                                0.0,
-                                                0.25,
-                                                0.5,
-                                                0.75,
-                                                1.0
-                                              ]
-
-                                          )) : null
-                                      ),
+                                          fontSize: 14,
+                                          color: _topIndex == index ? null : Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          foreground: _topIndex == index
+                                              ? (ui.Paint()
+                                                ..shader = ui.Gradient.linear(const Offset(0, 0), const Offset(50, 0), [
+                                                  Colors.red,
+                                                  Colors.deepOrange,
+                                                  Colors.yellow,
+                                                  Colors.green,
+                                                  Colors.blueAccent,
+                                                ], [
+                                                  0.0,
+                                                  0.25,
+                                                  0.5,
+                                                  0.75,
+                                                  1.0
+                                                ]))
+                                              : null),
                                     ),
                                   ],
                                 ),
@@ -131,8 +126,53 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                 SizedBox(
                   height: 94,
                   child: Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.blue,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "OBJECTIVE COMPLETION",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.chevron_right,
+                              ),
+                              color: Colors.grey,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "40%",
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Spacer(),
+                            Text("1159",style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),),
+                            Text(" / 3000 Kcal",style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Colors.grey
+                            ),)
+                          ],
+                        )
+                      ],
                     ),
                   ),
                 ),
