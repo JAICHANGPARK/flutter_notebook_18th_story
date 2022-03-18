@@ -204,22 +204,23 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                 SizedBox(
                   height: 480,
                   child: Container(
-                    decoration:  BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Colors.blue,
-                            Colors.green,
-                            Colors.lightGreenAccent,
-                            Colors.yellowAccent,
-                            Colors.orangeAccent,
-                            Colors.deepOrange,
-                            Colors.red,
-                          ],
-                        ),),
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(8),
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.blue,
+                          Colors.green,
+                          Colors.lightGreenAccent,
+                          Colors.yellowAccent,
+                          Colors.orangeAccent,
+                          Colors.deepOrange,
+                          Colors.red,
+                        ],
+                      ),
+                    ),
                     padding: EdgeInsets.all(2),
                     child: Container(
                       height: double.infinity,
@@ -229,12 +230,39 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                         color: Colors.black,
                       ),
                       child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.1)
-                        ),
+                        decoration: BoxDecoration(color: Colors.white.withOpacity(0.1)),
                         child: Column(
                           children: [
-
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.check,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  "Breakfase",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.refresh,
+                                        color: Colors.grey,
+                                      ),
+                                      Text(
+                                        "REPLACE",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            )
                           ],
                         ),
                       ),
