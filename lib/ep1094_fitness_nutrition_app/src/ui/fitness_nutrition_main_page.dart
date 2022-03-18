@@ -128,7 +128,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(12),
                     ),
                     padding: EdgeInsets.all(8),
                     child: Column(
@@ -165,7 +165,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                           ],
                         ),
                         Container(
-                          height: 10,
+                          height: 8,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(0.15),
