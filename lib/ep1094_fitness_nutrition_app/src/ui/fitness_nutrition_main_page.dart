@@ -277,7 +277,6 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     ],
                                   ),
                                 ),
-
                               ],
                             ),
                             Expanded(child: Placeholder()),
@@ -292,11 +291,25 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 16,),
+                            SizedBox(
+                              height: 16,
+                            ),
                             Row(
                               children: [
-                                Expanded(child: Placeholder()),
-
+                                Expanded(
+                                    child: Container(
+                                  height: 48,
+                                  decoration: BoxDecoration(),
+                                  child: Center(
+                                    child: Text(
+                                      "DELETE MEAL",
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                )),
                               ],
                             )
                           ],
