@@ -202,7 +202,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                   height: 16,
                 ),
                 SizedBox(
-                  height: 480,
+                  height: 540,
                   width: double.infinity,
                   child: Container(
                     decoration: BoxDecoration(
@@ -279,15 +279,84 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                 ),
                               ],
                             ),
+                            const SizedBox(
+                              height: 16,
+                            ),
                             const Expanded(child: Placeholder()),
+                            const SizedBox(
+                              height: 16,
+                            ),
                             SizedBox(
                               height: 42,
                               child: Row(
                                 children: [
-                                  const Expanded(child: const Placeholder()),
-                                  const Expanded(child: const Placeholder()),
-                                  const Expanded(child: const Placeholder()),
-                                  const Expanded(child: const Placeholder()),
+                                  Expanded(
+                                      child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(4),
+                                        border: Border.all(
+                                          color: Colors.blue,
+                                        )),
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Icon(
+                                          Icons.local_fire_department,
+                                          color: Colors.blue,
+                                          size: 16,
+                                        ),
+                                        Text(
+                                          "748 kcal",
+                                          style: TextStyle(
+                                            color: Colors.blue,
+                                            fontSize: 12,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )),
+                                  const SizedBox(
+                                    width: 8,
+                                  ),
+                                  Expanded(
+                                      child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(4),
+                                        border: Border.all(
+                                          color: Colors.yellow,
+                                        )),
+                                    child: Column(
+                                      children: [],
+                                    ),
+                                  )),
+                                  const SizedBox(
+                                    width: 8,
+                                  ),
+                                  Expanded(
+                                      child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(4),
+                                        border: Border.all(
+                                          color: Colors.red,
+                                        )),
+                                    child: Column(
+                                      children: [],
+                                    ),
+                                  )),
+                                  const SizedBox(
+                                    width: 8,
+                                  ),
+                                  Expanded(
+                                      child: Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(4),
+                                        border: Border.all(
+                                          color: Colors.pink,
+                                        )),
+                                    child: Column(
+                                      children: [],
+                                    ),
+                                  )),
                                 ],
                               ),
                             ),
@@ -322,9 +391,8 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                   ),
                                   child: const Center(
                                     child: const Text(
-                                      "DELETE MEAL",
+                                      "ADD MEAL",
                                       style: const TextStyle(
-                                        color: Colors.grey,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
