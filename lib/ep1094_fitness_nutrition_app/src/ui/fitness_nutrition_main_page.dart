@@ -299,7 +299,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                         )),
                                     child: Column(
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.local_fire_department,
                                           color: Colors.blue,
@@ -325,9 +325,23 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                         border: Border.all(
                                           color: Colors.yellow,
                                         )),
-                                    child: Column(
-                                      children: [],
-                                    ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: const [
+                                            Icon(
+                                              Icons.rice_bowl,
+                                              color: Colors.yellow,
+                                              size: 16,
+                                            ),
+                                            Text(
+                                              "70g Carbs",
+                                              style: TextStyle(
+                                                color: Colors.yellow,
+                                                fontSize: 12,
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                   )),
                                   const SizedBox(
                                     width: 8,
@@ -339,9 +353,23 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                         border: Border.all(
                                           color: Colors.red,
                                         )),
-                                    child: Column(
-                                      children: [],
-                                    ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: const [
+                                            Icon(
+                                              Icons.egg_alt,
+                                              color: Colors.red,
+                                              size: 16,
+                                            ),
+                                            Text(
+                                              "65g Prote",
+                                              style: TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 12,
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                   )),
                                   const SizedBox(
                                     width: 8,
@@ -353,9 +381,23 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                         border: Border.all(
                                           color: Colors.pink,
                                         )),
-                                    child: Column(
-                                      children: [],
-                                    ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          children: const [
+                                            Icon(
+                                              Icons.water_drop,
+                                              color: Colors.pink,
+                                              size: 16,
+                                            ),
+                                            Text(
+                                              "23g Fats",
+                                              style: TextStyle(
+                                                color: Colors.pink,
+                                                fontSize: 12,
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                   )),
                                 ],
                               ),
