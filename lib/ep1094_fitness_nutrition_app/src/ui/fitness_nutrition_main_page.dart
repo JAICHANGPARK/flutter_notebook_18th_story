@@ -243,7 +243,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                   color: Colors.white,
                                 ),
                                 const Text(
-                                  "Breakfase",
+                                  "Breakfast",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 18,
