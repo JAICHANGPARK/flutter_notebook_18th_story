@@ -203,6 +203,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                 ),
                 SizedBox(
                   height: 480,
+                  width: double.infinity,
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.blue,
@@ -230,11 +231,14 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                         color: Colors.black,
                       ),
                       child: Container(
+                        height: double.infinity,
+                        width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white.withOpacity(0.1),
                         ),
                         padding: const EdgeInsets.all(12),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
@@ -273,24 +277,26 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     ],
                                   ),
                                 ),
-                                Expanded(child: Placeholder()),
-                                SizedBox(
-                                  height: 42,
-                                  child: Row(
-                                    children: [
-                                      Expanded(child: Placeholder()),
-                                      Expanded(child: Placeholder()),
-                                      Expanded(child: Placeholder()),
-                                      Expanded(child: Placeholder()),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 16,),
-                                Row(
-                                  children: [
 
-                                  ],
-                                )
+                              ],
+                            ),
+                            Expanded(child: Placeholder()),
+                            SizedBox(
+                              height: 42,
+                              child: Row(
+                                children: [
+                                  Expanded(child: Placeholder()),
+                                  Expanded(child: Placeholder()),
+                                  Expanded(child: Placeholder()),
+                                  Expanded(child: Placeholder()),
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 16,),
+                            Row(
+                              children: [
+                                Expanded(child: Placeholder()),
+
                               ],
                             )
                           ],
