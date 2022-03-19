@@ -284,6 +284,12 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                       Expanded(child: Placeholder()),
                                     ],
                                   ),
+                                ),
+                                SizedBox(height: 16,),
+                                Row(
+                                  children: [
+
+                                  ],
                                 )
                               ],
                             )
