@@ -279,31 +279,51 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                 ),
                               ],
                             ),
-                            Expanded(child: Placeholder()),
+                            const Expanded(child: Placeholder()),
                             SizedBox(
                               height: 42,
                               child: Row(
                                 children: [
-                                  Expanded(child: Placeholder()),
-                                  Expanded(child: Placeholder()),
-                                  Expanded(child: Placeholder()),
-                                  Expanded(child: Placeholder()),
+                                  const Expanded(child: const Placeholder()),
+                                  const Expanded(child: const Placeholder()),
+                                  const Expanded(child: const Placeholder()),
+                                  const Expanded(child: const Placeholder()),
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 16,
                             ),
                             Row(
                               children: [
                                 Expanded(
                                     child: Container(
-                                  height: 48,
-                                  decoration: BoxDecoration(),
-                                  child: Center(
-                                    child: Text(
+                                  height: 36,
+                                  decoration: const BoxDecoration(),
+                                  child: const Center(
+                                    child: const Text(
                                       "DELETE MEAL",
                                       style: TextStyle(
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                )),
+                                const SizedBox(
+                                  width: 16,
+                                ),
+                                Expanded(
+                                    child: Container(
+                                  height: 36,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(24),
+                                  ),
+                                  child: const Center(
+                                    child: const Text(
+                                      "DELETE MEAL",
+                                      style: const TextStyle(
                                         color: Colors.grey,
                                         fontWeight: FontWeight.bold,
                                       ),
