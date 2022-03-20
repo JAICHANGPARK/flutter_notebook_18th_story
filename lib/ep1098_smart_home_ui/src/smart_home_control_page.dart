@@ -15,22 +15,32 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
         child: Column(
           children: [
             Container(
-              height: 84,
-              decoration: BoxDecoration(
+              height: 72,
+              decoration: const BoxDecoration(
                   color: Colors.blue,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(16),
                     bottomRight: Radius.circular(16),
                   )),
+              padding: const EdgeInsets.only(right: 48),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.arrow_back_ios_new),
+                    icon: const Icon(Icons.arrow_back_ios_new),
                     color: Colors.white,
                   ),
-                  Text("")
+                  const Expanded(
+                    child: Center(
+                      child: Text(
+                        "Living Room",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             )
