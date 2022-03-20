@@ -8,6 +8,8 @@ class SmartHomeControlPage extends StatefulWidget {
 }
 
 class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
+  bool _switchValue = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,11 +39,72 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                         "Living Room",
                         style: TextStyle(
                           color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 24, bottom: 16, left: 16),
+              child: Container(
+                height: 72,
+                color: Colors.pink,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SizedBox(
+                height: 320,
+                child: Container(
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: Container(
+                height: 64,
+                color: Colors.orange,
+                child: Row(
+                  children: [
+                    Expanded(child: Placeholder()),
+                    Expanded(child: Placeholder()),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Card(
+                elevation: 4,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Samsung AC"),
+                          Text("Connected"),
+                        ],
+                      ),
+                      Spacer(),
+                      Switch.adaptive(
+                          value: _switchValue,
+                          onChanged: (v) {
+                            setState(() {
+                              _switchValue = v;
+                            });
+                          })
+                    ],
+                  ),
+                ),
               ),
             )
           ],
