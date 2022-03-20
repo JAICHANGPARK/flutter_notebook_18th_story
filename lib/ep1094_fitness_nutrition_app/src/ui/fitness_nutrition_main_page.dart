@@ -287,19 +287,19 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                 child: ListView.builder(
                               itemBuilder: (context, index) {
                                 return Padding(
-                                  padding: EdgeInsets.only(bottom: 16),
+                                  padding: const EdgeInsets.only(bottom: 16),
                                   child: Container(
                                     decoration: BoxDecoration(
                                       color: Colors.white.withOpacity(0.1),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
-                                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                                     child: Row(
                                       children: [
                                         Container(
                                           height: 32,
                                           width: 32,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             shape: BoxShape.circle,
                                             gradient: LinearGradient(
                                               colors: [
@@ -313,8 +313,8 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                               end: Alignment.topRight,
                                             ),
                                           ),
-                                          padding: EdgeInsets.all(2),
-                                          child: CircleAvatar(
+                                          padding: const EdgeInsets.all(2),
+                                          child: const CircleAvatar(
                                             foregroundColor: Colors.white,
                                             backgroundColor: Colors.black,
                                             child: Icon(Icons.check,
@@ -325,7 +325,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                           padding: const EdgeInsets.symmetric(horizontal: 16),
                                           child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
+                                            children: const [
                                               Text(
                                                 "Smoking Salmon",
                                                 style: TextStyle(
@@ -482,7 +482,7 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                   height: 36,
                                   decoration: const BoxDecoration(),
                                   child: const Center(
-                                    child: const Text(
+                                    child: Text(
                                       "DELETE MEAL",
                                       style: TextStyle(
                                         color: Colors.grey,
@@ -502,9 +502,9 @@ class _FitnessNutritionMainPageState extends State<FitnessNutritionMainPage> {
                                     borderRadius: BorderRadius.circular(24),
                                   ),
                                   child: const Center(
-                                    child: const Text(
+                                    child: Text(
                                       "ADD MEAL",
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
