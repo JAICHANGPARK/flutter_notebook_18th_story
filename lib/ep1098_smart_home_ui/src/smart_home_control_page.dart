@@ -90,8 +90,19 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Samsung AC"),
-                          Text("Connected"),
+                          Text(
+                            "Samsung AC",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text("Connected", style: TextStyle(
+                            color: Colors.green,
+                            fontWeight: FontWeight.bold,
+                          ),),
                         ],
                       ),
                       Spacer(),
