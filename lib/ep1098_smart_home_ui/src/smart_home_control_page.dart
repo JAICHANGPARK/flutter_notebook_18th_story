@@ -14,6 +14,13 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
     return Scaffold(
       body: Column(
         children: [
+          Container(
+            height: 120,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+
+            ),
+          )
 
         ],
       ),
