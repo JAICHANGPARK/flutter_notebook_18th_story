@@ -2,7 +2,17 @@
 
 ## UI Design
 
-### EP1094
+### EP1098
+
+- Smart Home UI
+- by Robina Bajracharya
+- https://dribbble.com/shots/17762288-Smart-Home-UI/attachments/12928489?mode=media
+
+<img
+src="https://cdn.dribbble.com/users/5322475/screenshots/17762288/media/84ed5639eabf05278a0f6f7f39c2c47a.png"
+width="400px"/>
+
+### EP1094-1097
 
 - Fitness&Nutrition app
 - by Quadrato
@@ -11,7 +21,6 @@
 <img
 src="https://cdn.dribbble.com/users/4988924/screenshots/17726914/media/f37b2709665f46e686db18857f61efbf.png"
 width="400px"/>
-
 
 ### EP1090-1093
 
