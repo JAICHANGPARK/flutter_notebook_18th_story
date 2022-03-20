@@ -12,7 +12,11 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Column(
+        children: [
 
+        ],
+      ),
     );
   }
 }
