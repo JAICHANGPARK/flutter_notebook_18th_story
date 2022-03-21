@@ -70,7 +70,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                           shape: BoxShape.circle,
                         ),
                       ),
-                      Text("")
+                      Text("AC")
                     ],
                   );
                 }),
