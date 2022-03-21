@@ -49,10 +49,31 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 24, bottom: 16, left: 16),
+              padding: const EdgeInsets.only(
+                top: 24,
+                bottom: 16,
+                left: 16,
+              ),
               child: Container(
                 height: 72,
                 color: Colors.pink,
+                child: ListView.builder(
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Container(
+                        height: 48,
+                        width: 48,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      Text("")
+                    ],
+                  );
+                }),
               ),
             ),
             Padding(
@@ -68,7 +89,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 16,
               ),
-              child: Container(
+              child: SizedBox(
                 height: 54,
                 child: Row(
                   children: [
@@ -94,16 +115,22 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                     )),
                     Expanded(
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: const [
-                        Text("Current humidity", style: TextStyle(
-                          color: Colors.grey,
-                        ),),
-                        Text("40%",  style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),),
+                        Text(
+                          "Current humidity",
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Text(
+                          "40%",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     )),
                   ],
