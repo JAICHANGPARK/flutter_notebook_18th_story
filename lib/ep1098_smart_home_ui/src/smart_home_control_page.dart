@@ -72,15 +72,28 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                 height: 64,
                 color: Colors.orange,
                 child: Row(
-                  children:  [
-                    Expanded(child: Column(
+                  children: [
+                    Expanded(
+                        child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
-                        Text("Current temperature"),
-                        Text("18°C"),
+                        Text(
+                          "Current temperature",
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Text(
+                          "18°C",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     )),
-                    Expanded(child: Column(
+                    Expanded(
+                        child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text("Current humidity"),
@@ -104,17 +117,16 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                         children: const [
                           Text(
                             "Samsung AC",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black87
-                            ),
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87),
                           ),
                           SizedBox(height: 4),
-                          Text("Connected", style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                          ),),
+                          Text(
+                            "Connected",
+                            style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                       Spacer(),
