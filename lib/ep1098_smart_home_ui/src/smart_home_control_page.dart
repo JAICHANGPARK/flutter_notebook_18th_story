@@ -57,25 +57,47 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
               ),
               child: Container(
                 height: 72,
-                color: Colors.pink,
                 child: ListView.builder(
                     itemCount: categoryItems.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-                      Container(
-                        height: 48,
-                        width: 48,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 12),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 48,
+                              width: 48,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    spreadRadius: 2,
+                                    blurRadius: 4
+
+                                  )
+                                ],
+                              ),
+                              child: Icon(
+                                categoryItems[index].iconData,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              categoryItems[index].title,
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )
+                          ],
                         ),
-                        child: const Icon(Icons.ac_unit),
-                      ),
-                      const Text("AC")
-                    ],
-                  );
-                }),
+                      );
+                    }),
               ),
             ),
             Padding(
