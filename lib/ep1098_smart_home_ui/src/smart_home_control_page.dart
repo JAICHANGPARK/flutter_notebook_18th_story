@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1098_smart_home_ui/src/model/living_room_category.dart';
 
@@ -58,46 +59,46 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
               child: Container(
                 height: 72,
                 child: ListView.builder(
-                    itemCount: categoryItems.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(right: 12),
-                        child: Column(
-                          children: [
-                            Container(
-                              height: 48,
-                              width: 48,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.1),
-                                    spreadRadius: 2,
-                                    blurRadius: 4
-
-                                  )
-                                ],
-                              ),
-                              child: Icon(
-                                categoryItems[index].iconData,
-                              ),
+                  itemCount: categoryItems.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 48,
+                            width: 48,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  spreadRadius: 2,
+                                  blurRadius: 4,
+                                )
+                              ],
                             ),
-                            const SizedBox(
-                              height: 8,
+                            child: Icon(
+                              categoryItems[index].iconData,
                             ),
-                            Text(
-                              categoryItems[index].title,
-                              style: const TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
-                          ],
-                        ),
-                      );
-                    }),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            categoryItems[index].title,
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
             Padding(
@@ -105,7 +106,75 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
               child: SizedBox(
                 height: 320,
                 child: Container(
-                  color: Colors.blue,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        right: 0,
+                        top: 16,
+                        bottom: 16,
+                        child: Row(
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.remove,
+                              ),
+                            ),
+                            const Expanded(child: Placeholder()),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.add,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                          left: 8,
+                          bottom: 24,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Min",
+                                style: const TextStyle(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(height: 4,),
+                              const Text(
+                                "16°C",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                ),
+                              )
+                            ],
+                          )),
+                      Positioned(
+                          right: 8,
+                          bottom: 24,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                "Max",
+                                style: const TextStyle(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(height: 4,),
+                              const Text(
+                                "32°C",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                ),
+                              )
+                            ],
+                          ))
+                    ],
+                  ),
                 ),
               ),
             ),
