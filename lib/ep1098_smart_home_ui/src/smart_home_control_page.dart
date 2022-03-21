@@ -84,12 +84,12 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                 categoryItems[index].iconData,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Text(
                               categoryItems[index].title,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
