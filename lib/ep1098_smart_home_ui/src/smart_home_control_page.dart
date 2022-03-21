@@ -72,9 +72,21 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                 height: 64,
                 color: Colors.orange,
                 child: Row(
-                  children: [
-                    Expanded(child: Placeholder()),
-                    Expanded(child: Placeholder()),
+                  children:  [
+                    Expanded(child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text("Current temperature"),
+                        Text("18°C"),
+                      ],
+                    )),
+                    Expanded(child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text("Current humidity"),
+                        Text("40%"),
+                      ],
+                    )),
                   ],
                 ),
               ),
@@ -89,7 +101,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Samsung AC",
                             style: TextStyle(
