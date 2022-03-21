@@ -69,6 +69,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                         ),
+                        child: Icon(Icons.),
                       ),
                       Text("AC")
                     ],
