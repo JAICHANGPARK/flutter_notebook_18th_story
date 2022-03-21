@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_18th_story/ep1098_smart_home_ui/src/model/living_room_category.dart';
 
 class SmartHomeControlPage extends StatefulWidget {
   const SmartHomeControlPage({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                 height: 72,
                 color: Colors.pink,
                 child: ListView.builder(
-                    itemCount: 10,
+                    itemCount: categoryItems.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                   return Column(
@@ -66,12 +67,12 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                       Container(
                         height: 48,
                         width: 48,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(Icons.),
+                        child: const Icon(Icons.ac_unit),
                       ),
-                      Text("AC")
+                      const Text("AC")
                     ],
                   );
                 }),
@@ -163,7 +164,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Switch.adaptive(
                           value: _switchValue,
                           onChanged: (v) {
