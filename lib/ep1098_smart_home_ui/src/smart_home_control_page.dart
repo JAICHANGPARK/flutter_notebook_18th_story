@@ -69,13 +69,13 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                 horizontal: 16,
               ),
               child: Container(
-                height: 64,
-                color: Colors.orange,
+                height: 54,
                 child: Row(
                   children: [
                     Expanded(
                         child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: const [
                         Text(
                           "Current temperature",
@@ -94,10 +94,16 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                     )),
                     Expanded(
                         child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: const [
-                        Text("Current humidity"),
-                        Text("40%"),
+                        Text("Current humidity", style: TextStyle(
+                          color: Colors.grey,
+                        ),),
+                        Text("40%",  style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),),
                       ],
                     )),
                   ],
