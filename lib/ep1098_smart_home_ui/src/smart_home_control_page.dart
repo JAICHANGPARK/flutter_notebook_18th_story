@@ -180,8 +180,17 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                         _sliderValue = d;
                                       });
                                     },
+                                    innerWidget: (d){
+                                      return Center(child: Text("${d.toStringAsFixed(0)}°C",
+                                      style: TextStyle(
+                                        fontSize: 32,
+                                        color: Colors.white,
+                                      ),));
+                                    },
                                     appearance: CircularSliderAppearance(
                                       // spinnerMode: true,
+                                      startAngle: 0,
+                                      angleRange: 360,
                                       customColors: CustomSliderColors(
                                         trackColor: Colors.grey,
                                         progressBarColor: Colors.blue,
