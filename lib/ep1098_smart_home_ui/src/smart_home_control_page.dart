@@ -121,7 +121,49 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                 Icons.remove,
                               ),
                             ),
-                            const Expanded(child: Placeholder()),
+                            Expanded(
+                                child: Stack(
+                              children: [
+                                Positioned(
+                                  left: 16,
+                                  top: 16,
+                                  right: 16,
+                                  bottom: 16,
+                                  child: Center(
+                                    child: Divider(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 16,
+                                  top: 16,
+                                  right: 16,
+                                  bottom: 16,
+                                  child: Center(
+                                    child: VerticalDivider(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 24,
+                                  top: 24,
+                                  right: 24,
+                                  bottom: 24,
+                                  child: Container(decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    shape: BoxShape.circle,
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Colors.blue,
+                                        Colors.lightBlueAccent
+                                      ]
+                                    )
+                                  ),),
+                                )
+                              ],
+                            )),
                             IconButton(
                               onPressed: () {},
                               icon: const Icon(
@@ -136,15 +178,17 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                           bottom: 24,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
+                            children: const [
+                              Text(
                                 "Min",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
-                              const SizedBox(height: 4,),
-                              const Text(
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Text(
                                 "16°C",
                                 style: TextStyle(
                                   color: Colors.grey,
@@ -157,15 +201,17 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                           bottom: 24,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
+                            children: const [
+                              Text(
                                 "Max",
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
-                              const SizedBox(height: 4,),
-                              const Text(
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Text(
                                 "32°C",
                                 style: TextStyle(
                                   color: Colors.grey,
