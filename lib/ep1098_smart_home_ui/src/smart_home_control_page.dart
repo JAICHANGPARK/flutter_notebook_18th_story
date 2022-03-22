@@ -139,7 +139,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                             children: [
                               const Text(
                                 "Min",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
@@ -160,7 +160,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                             children: [
                               const Text(
                                 "Max",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
