@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_18th_story/ep1098_smart_home_ui/src/model/living_room_category.dart';
+import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class SmartHomeControlPage extends StatefulWidget {
   const SmartHomeControlPage({Key? key}) : super(key: key);
@@ -124,7 +125,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                             Expanded(
                                 child: Stack(
                               children: [
-                                Positioned(
+                                const Positioned(
                                   left: 24,
                                   top: 24,
                                   right: 24,
@@ -135,7 +136,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                     ),
                                   ),
                                 ),
-                                Positioned(
+                                const Positioned(
                                   left: 24,
                                   top: 24,
                                   right: 24,
@@ -143,6 +144,8 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                   child: Center(
                                     child: VerticalDivider(
                                       color: Colors.blue,
+                                      endIndent: 8,
+                                      indent: 8,
                                     ),
                                   ),
                                 ),
@@ -151,7 +154,7 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                   top: 36,
                                   right: 36,
                                   bottom: 36,
-                                  child: Container(decoration: BoxDecoration(
+                                  child: Container(decoration: const BoxDecoration(
                                     color: Colors.blue,
                                     shape: BoxShape.circle,
                                     gradient: LinearGradient(
@@ -161,7 +164,20 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                       ]
                                     )
                                   ),),
-                                )
+                                ),
+                                 Positioned(
+                                  left: 0,
+                                  top: 0,
+                                  right: 0,
+                                  bottom: 0,
+                                  child: SleekCircularSlider(
+                                    min: 0,
+                                    max: 100,
+                                    appearance: CircularSliderAppearance(
+                                      spinnerMode: true
+                                    ),
+                                  ),
+                                ),
                               ],
                             )),
                             IconButton(
