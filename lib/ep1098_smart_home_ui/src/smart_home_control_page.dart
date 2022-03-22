@@ -12,6 +12,7 @@ class SmartHomeControlPage extends StatefulWidget {
 
 class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
   bool _switchValue = true;
+  double _sliderValue = 1.0;
 
   @override
   Widget build(BuildContext context) {
@@ -173,8 +174,27 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                   child: SleekCircularSlider(
                                     min: 0,
                                     max: 100,
+                                    initialValue: _sliderValue,
+                                    onChange: (d){
+                                      setState(() {
+                                        _sliderValue = d;
+                                      });
+                                    },
                                     appearance: CircularSliderAppearance(
-                                      spinnerMode: true
+                                      // spinnerMode: true,
+                                      customColors: CustomSliderColors(
+                                        trackColor: Colors.grey,
+                                        progressBarColor: Colors.blue,
+                                        dotColor: Colors.blue,
+                                      ),
+                                      counterClockwise: true,
+                                      customWidths: CustomSliderWidths(
+                                        progressBarWidth: 2,
+                                        trackWidth: 2,
+                                        handlerSize: 8
+                                      )
+
+
                                     ),
                                   ),
                                 ),
