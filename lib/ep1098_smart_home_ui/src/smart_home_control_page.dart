@@ -125,23 +125,12 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                 child: Stack(
                               children: [
                                 Positioned(
-                                  left: 16,
-                                  top: 16,
-                                  right: 16,
-                                  bottom: 16,
+                                  left: 24,
+                                  top: 24,
+                                  right: 24,
+                                  bottom: 24,
                                   child: Center(
                                     child: Divider(
-                                      color: Colors.blue,
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  left: 16,
-                                  top: 16,
-                                  right: 16,
-                                  bottom: 16,
-                                  child: Center(
-                                    child: VerticalDivider(
                                       color: Colors.blue,
                                     ),
                                   ),
@@ -151,6 +140,17 @@ class _SmartHomeControlPageState extends State<SmartHomeControlPage> {
                                   top: 24,
                                   right: 24,
                                   bottom: 24,
+                                  child: Center(
+                                    child: VerticalDivider(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 36,
+                                  top: 36,
+                                  right: 36,
+                                  bottom: 36,
                                   child: Container(decoration: BoxDecoration(
                                     color: Colors.blue,
                                     shape: BoxShape.circle,
